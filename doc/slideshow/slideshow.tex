@@ -3,6 +3,8 @@
 \usetheme[progressbar=frametitle]{metropolis}
 \usepackage[italian]{babel}
 
+\usepackage{paralist}
+
 \usepackage{appendixnumberbeamer}
 
 \usepackage{booktabs}
@@ -18,7 +20,7 @@
 \subtitle{Progetto del corso di Ricerca Operativa}
 \date{13 dicembre 2022}
 \author{Michele Vaccari - Matricola 121955}
-\institute{Università degli studi di Ferrara\\Corso di laurea magistrale in Ingegneria Informatica e dell'Automazione\\AA 2021-2022}
+\institute{Università degli studi di Ferrara\\Corso di laurea magistrale in Ingegneria Informatica e dell'Automazione\\AA 2020-2021}
 
 % logo of my university
 \titlegraphic{%
@@ -38,14 +40,23 @@
 \section{Introduzione}
 
 \begin{frame}{Descrizione del problema}
-	A partire dalla base (nodo \emph{0} del grafo) un corriere deve soddisfare \emph{n} richieste di prelievo e consegna di documenti:
-	\begin{itemize}
-		\item 
-		ogni documento è prelevato in un nodo e consegnato in un altro nodo;
-		\item
-		ogni nodo è riferito a una singola richiesta, ma nel tragitto tra punto di prelievo e consegna si possono prelevare/consegnare altri documenti.
-	\end{itemize}
-	Noto il tempo di percorrenza dei singoli archi, si vuole minimizzare la durata del percorso, con partenza e rientro al deposito.
+
+	\metroset{block=fill}
+	\begin{block}{Progettino 24 - TSP con pick up and delivery (1 persona)}
+		A partire dalla base (nodo $0$ del grafo) un corriere deve soddisfare $n$ richieste di prelievo e consegna di documenti:
+		\begin{compactitem}
+			\item 	ogni documento è prelevato in un nodo e consegnato in un altro nodo;
+			\item ogni nodo è riferito a una singola richiesta, ma nel tragitto tra punto di prelievo e consegna si possono prelevare/consegnare altri documenti.
+		\end{compactitem}
+		Noto il tempo di percorrenza dei singoli archi, si vuole minimizzare la durata del percorso, con partenza e rientro al deposito.
+	\end{block}
+	
+	Inoltre:
+	\begin{compactitem}
+		\item il veicolo ha una capacità massima $Q$;
+		\item la richiesta è quantificata nel seguente modo: dal nodo $i$ al nodo $j$ si spedisce una quantità $q_{ij}$;
+		\item si può passare più volte per lo stesso nodo.
+	\end{compactitem}
 \end{frame}
 
 %\begin{frame}[allowframebreaks]{Modello matematico}
