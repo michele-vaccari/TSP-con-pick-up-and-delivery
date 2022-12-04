@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Beamer files
+/doc/slideshow/*.pdf
+/doc/slideshow/*.toc
+/doc/slideshow/*.gz
+/doc/slideshow/*.snm
+/doc/slideshow/*.out
+/doc/slideshow/*.nav
+/doc/slideshow/*.aux
