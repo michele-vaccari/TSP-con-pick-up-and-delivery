@@ -34,12 +34,13 @@
 
 \begin{frame}{Indice}
   \setbeamertemplate{section in toc}[sections numbered]
-  \tableofcontents[hideallsubsections]
+  \tableofcontents
 \end{frame}
 
 \section{Introduzione}
 
-\begin{frame}{Descrizione del problema}
+\subsection{Descrizione del problema}
+\begin{frame}{\subsecname}
 
 	\metroset{block=fill}
 	\begin{block}{Progettino 24 - TSP con pick up and delivery (1 persona)}
@@ -50,16 +51,12 @@
 		\end{compactitem}
 		Noto il tempo di percorrenza dei singoli archi, si vuole minimizzare la durata del percorso, con partenza e rientro al deposito.
 	\end{block}
-	
-	Inoltre:
-	\begin{compactitem}
-		\item il veicolo ha una capacità massima $Q$;
-		\item la richiesta è quantificata nel seguente modo: dal nodo $i$ al nodo $j$ si spedisce una quantità $q_{ij}$;
-		\item si può passare più volte per lo stesso nodo.
-	\end{compactitem}
+
 \end{frame}
 
-%\begin{frame}[allowframebreaks]{Modello matematico}
+%\begin{frame}[allowframebreaks]{Considerazioni sul problerma}
+%	Questo problema di ottimizzazione è NP-hard, poiché coincide con il TSP quando la capacità del veicolo è sufficientemente grande.
+%	Anche il problema di verificare se esiste una soluzione ammissibile è un problema fortemente NP-hard, dato che il problema della 3-partizione è un caso particolare (si veda [10] per i dettagli).
 %\end{frame}
 
 %\begin{frame}[allowframebreaks]{Interpretazione dei risultati del modello teorico nel problema reale}
