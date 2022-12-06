@@ -1,8 +1,9 @@
-from tsppd.problem.node import Node
-from tsppd.problem.request import Request
+from tsppd.problem.generator import Generator
 
 if __name__ == '__main__':
-    node = Node(0,1,2)
-    print(node)
-    request = Request(1,2)
-    print(request)
+    nodes_number = 10
+    requests_number = 20
+
+    generator = Generator(nodes_number, requests_number)
+    instance = generator.generate_instance()
+    print(instance)
