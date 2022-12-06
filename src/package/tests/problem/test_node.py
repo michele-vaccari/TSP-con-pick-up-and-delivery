@@ -6,4 +6,4 @@ def test_node_property():
 
 def test_node_to_string():
     node = Node(0, 1, 2)
-    assert str(node) == "node -> id = 0 x = 1 y = 2"
+    assert str(node) == "node[0] = (1, 2)"

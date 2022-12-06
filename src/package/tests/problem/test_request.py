@@ -6,4 +6,4 @@ def test_request_property():
 
 def test_request_to_string():
     request = Request(1, 2)
-    assert str(request) == "pickup node id = 1 delivery node id = 2"
+    assert str(request) == "(1, 2)"

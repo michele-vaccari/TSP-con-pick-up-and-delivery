@@ -23,5 +23,11 @@ class Node:
     def y(self):
         return self._y
 
+    def __eq__(self, other):
+        """Overrides the default implementation"""
+        if isinstance(other, Node):
+            return self.id == other.id and self.x == other.x and self.y == other.y
+        return NotImplemented
+
     def __str__(self):
-        return "node -> id = {} x = {} y = {}".format(self._id, self._x, self._y)
+        return "node[{}] = ({}, {})".format(self._id, self._x, self._y)

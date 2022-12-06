@@ -16,5 +16,11 @@ class Request:
     def id_delivery_node(self):
         return self._id_delivery_node
 
+    def __eq__(self, other):
+        """Overrides the default implementation"""
+        if isinstance(other, Request):
+            return self.id_pickup_node == other.id_pickup_node and self.id_delivery_node == other.id_delivery_node
+        return NotImplemented
+
     def __str__(self):
-        return "pickup node id = {} delivery node id = {}".format(self.id_pickup_node, self.id_delivery_node)
+        return "({}, {})".format(self.id_pickup_node, self.id_delivery_node)
