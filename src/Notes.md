@@ -4,11 +4,17 @@
 
 ### Package
 
+#### Create package
 * Creare il package ```tsppd``` nella cartella ```package```:
     ```bat
     py -m build
     ```
 
+#### Run tests
+* Installare il package ```pytest``` e dopo aver attivato il ```venv``` dentro i tests nella cartella ```package``` lanciare il comando:
+    ```bat
+    pytest tests
+    ```
 ### CLI
 
 * Creare un ```venv``` in python:
