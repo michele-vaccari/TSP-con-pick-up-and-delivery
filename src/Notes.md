@@ -24,7 +24,7 @@
 
 * Installare la libreria ```tsppd``` nel progetto ```cli```:
     ```bat
-    pip install /path/to/wheelfile.whl
+    pip install C:\dev\TSP-con-pick-up-and-delivery\src\package\dist\tsppd-0.0.1-py3-none-any.whl --force-reinstall
     ```
 
 * Usare la libreria ```tsppd``` nel progetto ```cli```:

@@ -1,15 +1,15 @@
 class Node:
 
-    def __init__(self, name: str, x: float, y: float):
+    def __init__(self, id: int, x: float, y: float):
         """
         Create node for TSPPD problem.
-        :param name: node name
+        :param id: node id
         :param x: node abscissa
         :param y: node ordinate
         """
-        self.name = name
+        self.id = id
         self.x = x
         self.y = y
 
     def __str__(self):
-        return str(self.name) + " x = {} y = {}".format(self.x, self.y)
+        return "node -> id = {} x = {} y = {}".format(self.id, self.x, self.y)
