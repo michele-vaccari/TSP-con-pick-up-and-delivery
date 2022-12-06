@@ -7,9 +7,21 @@ class Node:
         :param x: node abscissa
         :param y: node ordinate
         """
-        self.id = id
-        self.x = x
-        self.y = y
+        self._id = id
+        self._x = x
+        self._y = y
+
+    @property
+    def id(self):
+        return self._id
+    
+    @property
+    def x(self):
+        return self._x
+    
+    @property
+    def y(self):
+        return self._y
 
     def __str__(self):
-        return "node -> id = {} x = {} y = {}".format(self.id, self.x, self.y)
+        return "node -> id = {} x = {} y = {}".format(self._id, self._x, self._y)
