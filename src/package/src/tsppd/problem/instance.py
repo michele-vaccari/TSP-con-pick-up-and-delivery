@@ -1,3 +1,5 @@
+import json
+
 class Instance:
     def __init__(self, nodes: list, weighted_edges: list, requests: list):
         """
@@ -22,9 +24,31 @@ class Instance:
     def requests(self):
         return self._requests
     
-    #TODO
-    #def write_to_file(self, path: str):
+    
+    def save_to_json(self, path: str):
+        with open(path, "w", encoding="utf-8") as output:
+            json.dump(self._to_json(), output, ensure_ascii=False, indent=4)
+
     #def read_from_file(self, path: str):
+
+    def _to_json(self):
+        json_nodes = []
+        for node in self.nodes:
+            json_nodes.append(node.to_json())
+        
+        json_weighted_edges = []
+        for weighted_edge in self.weighted_edges:
+            json_weighted_edges.append(weighted_edge.to_json())
+        
+        json_requests = []
+        for request in self.requests:
+            json_requests.append(request.to_json())
+
+        return {
+            "nodes": json_nodes,
+            "weighted_edges": json_weighted_edges,
+            "requests": json_requests
+        }
 
     def __str__(self):
         output = "NODES:\n"

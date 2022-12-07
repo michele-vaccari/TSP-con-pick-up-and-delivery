@@ -15,6 +15,9 @@ class Request:
     @property
     def id_delivery_node(self):
         return self._id_delivery_node
+    
+    def to_json(self):
+        return { "id_pickup_node": self.id_pickup_node, "id_delivery_node": self.id_delivery_node }
 
     def __eq__(self, other):
         """Overrides the default implementation"""
