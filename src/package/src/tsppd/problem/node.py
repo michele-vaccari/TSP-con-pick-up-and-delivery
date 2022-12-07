@@ -25,6 +25,9 @@ class Node:
     def y(self):
         return self._y
     
+    def to_json(self):
+        return { "id": self.id, "x": self.x, "y": self.y }
+    
     def euclidean_distance(self, other):
         if isinstance(other, Node):
             return round(math.sqrt((self.x - other.x) ** 2 + (self.y - other.y) ** 2), 2)
