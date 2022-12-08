@@ -21,6 +21,10 @@ class WeightedEdge:
     @property
     def weight(self):
         return self._weight
+
+    @classmethod
+    def from_json(self, json_node):
+        return WeightedEdge(int(json_node["id_i_node"]), int(json_node["id_j_node"]), float(json_node["weight"]))
     
     def to_json(self):
         return { "id_i_node": self.id_i_node, "id_j_node": self.id_j_node, "weight": self.weight }
