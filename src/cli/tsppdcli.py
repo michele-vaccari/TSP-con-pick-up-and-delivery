@@ -1,4 +1,5 @@
 from tsppd.problem.generator import Generator
+from tsppd.problem.instance import Instance
 import click
 
 @click.group()
@@ -18,6 +19,10 @@ def generate_instance(nodes, requests, weights_as_euclidean_distance, output_ins
 
     if output_instance_path:
         instance.save_to_json(output_instance_path)
+    
+    print("\n\nSAVED INSTANCE\n\n")
+    saved_instance = Instance.read_from_json(output_instance_path)
+    print(saved_instance)
 
 cli.add_command(generate_instance)
 

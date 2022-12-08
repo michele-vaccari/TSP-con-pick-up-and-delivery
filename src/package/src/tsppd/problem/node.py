@@ -25,6 +25,10 @@ class Node:
     def y(self):
         return self._y
     
+    @classmethod
+    def from_json(self, json_node):
+        return Node(int(json_node["id"]), int(json_node["x"]), int(json_node["y"]))
+    
     def to_json(self):
         return { "id": self.id, "x": self.x, "y": self.y }
     

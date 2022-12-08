@@ -1,5 +1,7 @@
 import json
-
+from .node import Node
+from .weightedEdge import WeightedEdge
+from .request import Request
 class Instance:
     def __init__(self, nodes: list, weighted_edges: list, requests: list):
         """
@@ -24,12 +26,30 @@ class Instance:
     def requests(self):
         return self._requests
     
-    
+    @classmethod
+    def read_from_json(self, path: str):
+        json_file = open(path)
+        json_instance = json.loads(json_file.read())
+        json_nodes = json_instance["nodes"]
+        json_weighted_edges = json_instance["weighted_edges"]
+        json_requests = json_instance["requests"]
+        json_file.close()
+
+        nodes = []
+        for json_node in json_nodes:
+            nodes.append(Node.from_json(json_node))
+        weighted_edges = []
+        for json_weighted_edge in json_weighted_edges:
+            weighted_edges.append(WeightedEdge.from_json(json_weighted_edge))
+        requests = []
+        for json_request in json_requests:
+            requests.append(Request.from_json(json_request))
+        
+        return Instance(nodes, weighted_edges, requests)
+
     def save_to_json(self, path: str):
         with open(path, "w", encoding="utf-8") as output:
             json.dump(self._to_json(), output, ensure_ascii=False, indent=4)
-
-    #def read_from_file(self, path: str):
 
     def _to_json(self):
         json_nodes = []
