@@ -46,6 +46,12 @@ class Instance:
             requests.append(Request.from_json(json_request))
         
         return Instance(nodes, weighted_edges, requests)
+    
+    def get_cost_between(self, id_i_node, id_j_node):
+        for weighted_edge in self.weighted_edges:
+            if (weighted_edge.id_i_node == id_i_node and
+                weighted_edge.id_j_node == id_j_node):
+                return weighted_edge.weight
 
     def save_to_json(self, path: str):
         with open(path, "w", encoding="utf-8") as output:
