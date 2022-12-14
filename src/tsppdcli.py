@@ -8,13 +8,12 @@ def cli():
     pass
 
 @click.command()
-@click.option('--nodes', help='Number of nodes.', type = click.INT)
 @click.option('--requests', help='Number of requests.', type = click.INT)
 @click.option('--weights-as-euclidean-distance/--weights-random', default=False, help='Weights are the Euclidean distance of the nodes / Weights are randomly generated.')
 @click.option('--output-instance-path', default=None, help='Path where to save the instance in JSON format.', type = click.STRING)
-def generate_instance(nodes, requests, weights_as_euclidean_distance, output_instance_path):
+def generate_instance(requests, weights_as_euclidean_distance, output_instance_path):
     """Generates an instance of the tsppd problem."""
-    generator = Generator(nodes, requests, weights_as_euclidean_distance)
+    generator = Generator(requests, weights_as_euclidean_distance)
     instance = generator.generate_instance()
     print(instance)
 
@@ -45,12 +44,12 @@ if __name__ == '__main__':
 
     cli()
 
-    # tsppdcli.py generate-instance --nodes 10 --requests 20
-    # tsppdcli.py generate-instance --nodes 10 --requests 20 --weights-random
-    # tsppdcli.py generate-instance --nodes 10 --requests 20 --weights-as-euclidean-distance
-    # tsppdcli.py generate-instance --nodes 10 --requests 20 --output-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\10-nodes-20-request-weights-random.json
-    # tsppdcli.py generate-instance --nodes 10 --requests 20 --weights-random --output-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\10-nodes-20-request-weights-random.json
-    # tsppdcli.py generate-instance --nodes 10 --requests 20 --weights-as-euclidean-distance --output-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\10-nodes-20-request-weights-euclidean-distance.json
+    # tsppdcli.py generate-instance --requests 10
+    # tsppdcli.py generate-instance --requests 10 --weights-random
+    # tsppdcli.py generate-instance --requests 10 --weights-as-euclidean-distance
+    # tsppdcli.py generate-instance --requests 10 --output-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\10-request-weights-random.json
+    # tsppdcli.py generate-instance --requests 10 --weights-random --output-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\10-request-weights-random.json
+    # tsppdcli.py generate-instance --requests 10 --weights-as-euclidean-distance --output-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\10-request-weights-euclidean-distance.json
 
     # TODO
-    # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\10-nodes-20-request-weights-random.json --solver-method enumerator
+    # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\10-request-weights-random.json --solver-method enumerator

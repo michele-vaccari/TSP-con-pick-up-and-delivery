@@ -33,10 +33,10 @@ class Enumerator:
                 current_solution_cost + weighted_edge.weight >= self._best_solution.cost):
                 continue
             
-            #pickup_nodes_of_id_j_node = self.instance.get_pickup_nodes(weighted_edge._id_j_node)
-            #if (self.instance.is_delivery_node(weighted_edge._id_j_node) and
-                #not(all(node in self._current_solution_nodes_id for node in pickup_nodes_of_id_j_node))):
-                #continue
+            pickup_nodes_of_id_j_node = self.instance.get_pickup_nodes(weighted_edge._id_j_node)
+            if (self.instance.is_delivery_node(weighted_edge._id_j_node) and
+                not(all(node in self._current_solution_nodes_id for node in pickup_nodes_of_id_j_node))):
+                continue
             
             self._current_solution_nodes_id.append(weighted_edge._id_j_node)
 

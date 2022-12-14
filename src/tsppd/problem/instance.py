@@ -78,7 +78,7 @@ class Instance:
 
     def _to_json(self):
         json_nodes = []
-        for node in self.nodes:
+        for node in self.nodes.values():
             json_nodes.append(node.to_json())
         
         json_weighted_edges = []
