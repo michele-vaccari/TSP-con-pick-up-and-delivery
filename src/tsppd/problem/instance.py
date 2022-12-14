@@ -3,7 +3,7 @@ from .node import Node
 from .weightedEdge import WeightedEdge
 from .request import Request
 class Instance:
-    def __init__(self, nodes: list, weighted_edges: list, requests: list):
+    def __init__(self, nodes: dict, weighted_edges: list, requests: list):
         """
         Instance of TSPPD problem.
         :param nodes: list of problem nodes
@@ -35,12 +35,15 @@ class Instance:
         json_requests = json_instance["requests"]
         json_file.close()
 
-        nodes = []
+        nodes = dict()
         for json_node in json_nodes:
-            nodes.append(Node.from_json(json_node))
+            node = Node.from_json(json_node)
+            nodes[node.id] = node
         weighted_edges = []
         for json_weighted_edge in json_weighted_edges:
-            weighted_edges.append(WeightedEdge.from_json(json_weighted_edge))
+            weighted_edge = WeightedEdge.from_json(json_weighted_edge)
+            nodes[weighted_edge.id_i_node].add_weighted_edge(weighted_edge)
+            weighted_edges.append(weighted_edge)
         requests = []
         for json_request in json_requests:
             requests.append(Request.from_json(json_request))
@@ -52,6 +55,22 @@ class Instance:
             if (weighted_edge.id_i_node == id_i_node and
                 weighted_edge.id_j_node == id_j_node):
                 return weighted_edge.weight
+    
+    def get_node(self, node_id) -> Node:
+        return self.nodes[node_id]
+    
+    def is_delivery_node(self, node_id):
+        for request in self.requests:
+            if (node_id == request.id_delivery_node):
+                return True
+        return False
+    
+    def get_pickup_nodes(self, delivery_node_id):
+        pickup_nodes = []
+        for request in self.requests:
+            if (delivery_node_id == request.id_delivery_node):
+                pickup_nodes.append(request.id_pickup_node)
+        return pickup_nodes
 
     def save_to_json(self, path: str):
         with open(path, "w", encoding="utf-8") as output:
@@ -78,7 +97,7 @@ class Instance:
 
     def __str__(self):
         output = "NODES:\n"
-        for node in self.nodes:
+        for node in self.nodes.values():
             output += str(node) + "\n"
         output += "WEIGHTED EDGES:\n"
         for weigted_edge in self.weighted_edges:
