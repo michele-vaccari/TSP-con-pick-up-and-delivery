@@ -22,34 +22,26 @@ class Solution:
     def cost(self):
         cost = 0
 
-        solution_nodes_id_iterator = iter(self.solution_nodes_id)
+        current_node_id_iterator = iter(self.solution_nodes_id)
+        next_node_id_iterator = iter(self.solution_nodes_id)
+        next(next_node_id_iterator, None)
         while True:
-            current_node_id = next(solution_nodes_id_iterator, None)
+            current_node_id = next(current_node_id_iterator, None)
             if current_node_id == None:
                 if cost == 0:
                     return None
                 else:
                     return cost
-            next_node_id = next(solution_nodes_id_iterator, None)
+            next_node_id = next(next_node_id_iterator, None)
             if next_node_id == None:
                 if cost == 0:
                     return None
                 else:
                     return cost
             cost += self.instance.get_cost_between(current_node_id, next_node_id)
-            current_node_id = next_node_id
     
     def __str__(self):
-        output = "NODES:\n"
-        for node in self.instance.nodes.values():
-            output += str(node) + "\n"
-        output += "WEIGHTED EDGES:\n"
-        for weigted_edge in self.instance.weighted_edges:
-            output += str(weigted_edge) + "\n"
-        output += "REQUESTS:\n"
-        for request in self.instance.requests:
-            output += str(request) + "\n"
-        output += "SOLUTION NODES ID:\n"
+        output = "SOLUTION NODES ID:\n"
         for solution_node_id in self._solution_nodes_id:
             output += str(solution_node_id) + "\n"
         output += "SOLUTION COST: {}\n".format(self.cost)

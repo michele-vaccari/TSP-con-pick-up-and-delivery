@@ -31,6 +31,8 @@ class Generator:
         self._nodes[depot_node_id] = depot_node
         requests = self._generate_requests()
         weighted_edges = self._generate_weighted_edges()
+        for weighted_edge in weighted_edges:
+            self._nodes[weighted_edge.id_i_node].add_weighted_edge(weighted_edge)
         return Instance(self._nodes, weighted_edges, requests)
         
     def _generate_node(self, node_id: int) -> Node:
