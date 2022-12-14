@@ -42,3 +42,10 @@
 ### Python
 
 * I dizionari in python: https://stackoverflow.com/questions/1024847/how-can-i-add-new-keys-to-a-dictionary
+
+### Note test fatti
+* Ho un MemoryError con n = 7
+
+* 2 minuti per n = 7 [(((2*7)!)/1000000000)/60]
+
+* 6 ore per n = 8
