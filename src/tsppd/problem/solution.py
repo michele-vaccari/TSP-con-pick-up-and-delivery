@@ -1,14 +1,14 @@
 from .instance import Instance
 
 class Solution:
-    def __init__(self, instance: Instance, starting_solution_nodes_id: list):
+    def __init__(self, instance: Instance, solution_nodes_id: list):
         """
         Instance of TSPPD problem.
         :param instance: TSPPD problem instance
-        :param starting_solution_nodes_id: node id list of the starting solution. The list is an ordered list with FIFO policy.
+        :param solution_nodes_id: node id list of the solution. The list is an ordered list with FIFO policy.
         """
         self._instances = instance
-        self._solution_nodes_id = starting_solution_nodes_id
+        self._solution_nodes_id = solution_nodes_id
 
     @property
     def instance(self):
@@ -26,16 +26,22 @@ class Solution:
         while True:
             current_node_id = next(solution_nodes_id_iterator, None)
             if current_node_id == None:
-                return cost
+                if cost == 0:
+                    return None
+                else:
+                    return cost
             next_node_id = next(solution_nodes_id_iterator, None)
             if next_node_id == None:
-                return cost
+                if cost == 0:
+                    return None
+                else:
+                    return cost
             cost += self.instance.get_cost_between(current_node_id, next_node_id)
             current_node_id = next_node_id
     
     def __str__(self):
         output = "NODES:\n"
-        for node in self.instance.nodes:
+        for node in self.instance.nodes.values():
             output += str(node) + "\n"
         output += "WEIGHTED EDGES:\n"
         for weigted_edge in self.instance.weighted_edges:

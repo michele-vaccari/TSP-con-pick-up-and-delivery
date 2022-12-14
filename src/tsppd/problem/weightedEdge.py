@@ -28,6 +28,11 @@ class WeightedEdge:
     
     def to_json(self):
         return { "id_i_node": self.id_i_node, "id_j_node": self.id_j_node, "weight": self.weight }
+    
+    def __gt__(self, other):
+        if isinstance(other, WeightedEdge):
+            return self.weight > other.weight
+        return NotImplemented
 
     def __str__(self):
         return "({}, {}, {})".format(self.id_i_node, self.id_j_node, self.weight)

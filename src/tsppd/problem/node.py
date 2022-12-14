@@ -1,4 +1,5 @@
 import math
+from .weightedEdge import WeightedEdge
 
 class Node:
 
@@ -12,6 +13,7 @@ class Node:
         self._id = id
         self._x = x
         self._y = y
+        self._weighted_edges = []
 
     @property
     def id(self):
@@ -25,9 +27,19 @@ class Node:
     def y(self):
         return self._y
     
+    @property
+    def weighted_edges(self):
+        return self._weighted_edges
+    
     @classmethod
     def from_json(self, json_node):
         return Node(int(json_node["id"]), int(json_node["x"]), int(json_node["y"]))
+    
+    def add_weighted_edge(self, weighted_edge: WeightedEdge):
+        self._weighted_edges.append(weighted_edge)
+    
+    def sort_weighted_edges_by_ascending_weight(self):
+        self._weighted_edges.sort()
     
     def to_json(self):
         return { "id": self.id, "x": self.x, "y": self.y }
@@ -44,4 +56,9 @@ class Node:
         return NotImplemented
 
     def __str__(self):
-        return "node[{}] = ({}, {})".format(self._id, self._x, self._y)
+        output = "node[{}] = ({}, {})\n".format(self._id, self._x, self._y)
+        output += "Weighted edge of node[{}]:\n".format(self._id)
+        for weighted_edge in self.weighted_edges:
+            output += "{}\n".format(str(weighted_edge))
+        return output
+        
