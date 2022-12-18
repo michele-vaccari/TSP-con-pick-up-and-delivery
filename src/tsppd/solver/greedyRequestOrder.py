@@ -1,6 +1,6 @@
 from ..problem.instance import Instance
 
-class GreedyPickupFirst:
+class GreedyRequestOrder:
 
     @classmethod
     def get_best_admissible_node(self, instance: Instance, tour, nodes_to_visit):
@@ -12,14 +12,11 @@ class GreedyPickupFirst:
             return self.get_best_admissible_node(instance, tour, nodes_to_visit)
     
     def _get_best_node(instance: Instance, nodes_to_visit):
-        # first return pickup node
-        for node in nodes_to_visit:
-            if (instance.is_pickup_node(node)):
-                return node
-        # then return delivery node
-        for node in nodes_to_visit:
-            if (instance.is_delivery_node(node)):
-                return node
+        for request in instance.requests:
+            if (request.id_pickup_node in nodes_to_visit):
+                return request.id_pickup_node
+            elif (request.id_delivery_node in nodes_to_visit):
+                return request.id_delivery_node
         return None
 
     def _is_partial_solution_admissible(instance, node_id, tour):
