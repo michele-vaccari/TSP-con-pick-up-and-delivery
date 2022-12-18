@@ -59,6 +59,12 @@ class Instance:
     def get_node(self, node_id) -> Node:
         return self.nodes[node_id]
     
+    def is_pickup_node(self, node_id):
+        for request in self.requests:
+            if (node_id == request.id_pickup_node):
+                return True
+        return False
+    
     def is_delivery_node(self, node_id):
         for request in self.requests:
             if (node_id == request.id_delivery_node):
