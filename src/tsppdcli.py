@@ -6,6 +6,7 @@ from tsppd.solver.greedyTemplate import GreedyTemplate
 from tsppd.solver.greedyPickupFirst import GreedyPickupFirst
 from tsppd.solver.greedyRequestOrder import GreedyRequestOrder
 from tsppd.solver.greedyNearestNeighbor import GreedyNearestNeighbor
+from tsppd.solver.greedyRandom import GreedyRandom
 from tsppd.solver.cityInsert import CityInsert
 from tsppd.solver.citySwap import CitySwap
 import click
@@ -33,7 +34,7 @@ cli.add_command(generate_instance)
 
 @click.command()
 @click.option('--input-instance-path', required=True, default=None, help='Path where read the instance in JSON format.', type = click.STRING)
-@click.option('--solver-method', required=True, default=None, help='Choose the solver method to use.', type=click.Choice(['brute-force-enumerator', 'oneil-hoffman-enumerator', 'greedy-pickup-first', 'greedy-request-order', 'greedy-nearest-neighbor', 'city-swap', 'city-insert'], case_sensitive=False))
+@click.option('--solver-method', required=True, default=None, help='Choose the solver method to use.', type=click.Choice(['brute-force-enumerator', 'oneil-hoffman-enumerator', 'greedy-pickup-first', 'greedy-request-order', 'greedy-nearest-neighbor', 'greedy-random', 'city-swap', 'city-insert'], case_sensitive=False))
 def solve(input_instance_path, solver_method):
     """Solve an instance of the tsppd problem."""
     print("\n\nREADED INSTANCE\n\n")
@@ -67,6 +68,12 @@ def solve(input_instance_path, solver_method):
         greedyTemplate = GreedyTemplate(instance, greedyNearestNeighbor)
         solution = greedyTemplate.calculate_solution()
         print("\nGREEDY NEAREST-NEIGHBOR SOLUTION: \n")
+        print(solution)
+    elif (solver_method == "greedy-random"):
+        greedyRandom = GreedyRandom()
+        greedyTemplate = GreedyTemplate(instance, greedyRandom)
+        solution = greedyTemplate.calculate_solution()
+        print("\nGREEDY RANDOM SOLUTION: \n")
         print(solution)
     elif (solver_method == "city-swap"):
         best_greedy_solution = compute_all_greedy_and_get_best_greedy_solution(instance)
@@ -105,6 +112,11 @@ def compute_all_greedy_and_get_best_greedy_solution(instance: Instance):
     greedyNearestNeighborSolution = greedyTemplate.calculate_solution()
     solutions["Greedy Nearest Neighbor"] = greedyNearestNeighborSolution
 
+    greedyRandom = GreedyRandom()
+    greedyTemplate = GreedyTemplate(instance, greedyRandom)
+    greedyRandomSolution = greedyTemplate.calculate_solution()
+    solutions["Greedy Random"] = greedyRandomSolution
+
     best_solution = min(solutions.values())
     best_solution_method = ([k for k,v in solutions.items() if v == best_solution])
     print("The best greedy solution is obtain with: " + best_solution_method[0])
@@ -128,6 +140,7 @@ if __name__ == '__main__':
     # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method greedy-pickup-first
     # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method greedy-request-order
     # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method greedy-nearest-neighbor
+    # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method greedy-random
 
     # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method city-swap
     # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method city-insert
