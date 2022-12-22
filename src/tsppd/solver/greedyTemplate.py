@@ -10,6 +10,7 @@ class GreedyTemplate:
         """
         self._instance = instance
         self._greedy = greedy
+        self._tour = []
 
     @property
     def instance(self):
@@ -36,5 +37,3 @@ class GreedyTemplate:
 
     def calculate_solution(self) -> Solution:
         return self._compute_greedy()
-    
-    _tour = []

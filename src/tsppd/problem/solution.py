@@ -40,6 +40,16 @@ class Solution:
                     return cost
             cost += self.instance.get_cost_between(current_node_id, next_node_id)
     
+    def __gt__(self, other):
+        if isinstance(other, Solution):
+            return self.cost > other.cost
+        return NotImplemented
+    
+    def __eq__(self, other):
+        if isinstance(other, Solution):
+            return self.instance == other.instance and self.solution_nodes_id == other.solution_nodes_id
+        return NotImplemented
+
     def __str__(self):
         output = "SOLUTION NODES ID:\n"
         for solution_node_id in self._solution_nodes_id:
