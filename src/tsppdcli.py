@@ -10,6 +10,7 @@ from tsppd.solver.greedyRandom import GreedyRandom
 from tsppd.solver.cityInsert import CityInsert
 from tsppd.solver.citySwap import CitySwap
 from tsppd.solver.simulatedAnnealing import SimulatedAnnealing
+from tsppd.solver.tabuSearch import TabuSearch
 import click
 
 @click.group()
@@ -35,7 +36,7 @@ cli.add_command(generate_instance)
 
 @click.command()
 @click.option('--input-instance-path', required=True, default=None, help='Path where read the instance in JSON format.', type = click.STRING)
-@click.option('--solver-method', required=True, default=None, help='Choose the solver method to use.', type=click.Choice(['brute-force-enumerator', 'oneil-hoffman-enumerator', 'greedy-pickup-first', 'greedy-request-order', 'greedy-nearest-neighbor', 'greedy-random', 'city-swap', 'city-insert', 'simulated-annealing'], case_sensitive=False))
+@click.option('--solver-method', required=True, default=None, help='Choose the solver method to use.', type=click.Choice(['brute-force-enumerator', 'oneil-hoffman-enumerator', 'greedy-pickup-first', 'greedy-request-order', 'greedy-nearest-neighbor', 'greedy-random', 'city-swap', 'city-insert', 'simulated-annealing', 'tabu-search'], case_sensitive=False))
 def solve(input_instance_path, solver_method):
     """Solve an instance of the tsppd problem."""
     print("\n\nREADED INSTANCE\n\n")
@@ -95,11 +96,19 @@ def solve(input_instance_path, solver_method):
     elif (solver_method == "simulated-annealing"):
         best_greedy_solution = compute_all_greedy_and_get_best_greedy_solution(instance)
 
-        simulatedAnnealing = SimulatedAnnealing(instance, best_greedy_solution)
-        simulatedAnnealingSolution = simulatedAnnealing.calculate_solution()
+        tabuSearch = SimulatedAnnealing(instance, best_greedy_solution)
+        tabuSearchSolution = tabuSearch.calculate_solution()
 
         print("\nSIMULATED ANNEALING SOLUTION: \n")
-        print(simulatedAnnealingSolution)
+        print(tabuSearchSolution)
+    elif (solver_method == "tabu-search"):
+        best_greedy_solution = compute_all_greedy_and_get_best_greedy_solution(instance)
+
+        tabuSearch = TabuSearch(instance, best_greedy_solution)
+        tabuSearchSolution = tabuSearch.calculate_solution()
+
+        print("\nTABU SEARCH SOLUTION: \n")
+        print(tabuSearchSolution)
 
 cli.add_command(solve)
 
