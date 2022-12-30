@@ -71,6 +71,18 @@ class Instance:
                 return True
         return False
     
+    def get_pickup_node(self, delivery_node_id):
+        for request in self.requests:
+            if (delivery_node_id == request.id_delivery_node):
+                return request.id_pickup_node
+        return None
+    
+    def get_delivery_node(self, pickup_node_id):
+        for request in self.requests:
+            if (pickup_node_id == request.id_pickup_node):
+                return request.id_delivery_node
+        return None
+    
     def get_pickup_nodes(self, delivery_node_id):
         pickup_nodes = []
         for request in self.requests:
