@@ -11,6 +11,7 @@ from tsppd.solver.cityInsert import CityInsert
 from tsppd.solver.citySwap import CitySwap
 from tsppd.solver.simulatedAnnealing import SimulatedAnnealing
 from tsppd.solver.tabuSearch import TabuSearch
+from tsppd.solver.largeNeighborhoodSearch import LargeNeighborhoodSearch
 from tsppd.solver.geneticAlgorithm import GeneticAlgoritm
 import click
 
@@ -37,7 +38,7 @@ cli.add_command(generate_instance)
 
 @click.command()
 @click.option('--input-instance-path', required=True, default=None, help='Path where read the instance in JSON format.', type = click.STRING)
-@click.option('--solver-method', required=True, default=None, help='Choose the solver method to use.', type=click.Choice(['brute-force-enumerator', 'oneil-hoffman-enumerator', 'greedy-pickup-first', 'greedy-request-order', 'greedy-nearest-neighbor', 'greedy-random', 'city-swap', 'city-insert', 'simulated-annealing', 'tabu-search', 'genetic-algorithm'], case_sensitive=False))
+@click.option('--solver-method', required=True, default=None, help='Choose the solver method to use.', type=click.Choice(['brute-force-enumerator', 'oneil-hoffman-enumerator', 'greedy-pickup-first', 'greedy-request-order', 'greedy-nearest-neighbor', 'greedy-random', 'city-swap', 'city-insert', 'simulated-annealing', 'tabu-search', 'large-neighborhood-search', 'genetic-algorithm'], case_sensitive=False))
 def solve(input_instance_path, solver_method):
     """Solve an instance of the tsppd problem."""
     print("\n\nREADED INSTANCE\n\n")
@@ -110,6 +111,14 @@ def solve(input_instance_path, solver_method):
 
         print("\nTABU SEARCH SOLUTION: \n")
         print(tabuSearchSolution)
+    elif (solver_method == "large-neighborhood-search"):
+        best_greedy_solution = compute_all_greedy_and_get_best_greedy_solution(instance)
+
+        largeNeighborhoodSearch = LargeNeighborhoodSearch(instance, best_greedy_solution)
+        largeNeighborhoodSearchSolution = largeNeighborhoodSearch.calculate_solution()
+
+        print("\nLARGE NEIGHBORHOOD SEARCH SOLUTION: \n")
+        print(largeNeighborhoodSearchSolution)
     elif (solver_method == "genetic-algorithm"):
         geneticAlgorithm = GeneticAlgoritm(instance)
         geneticAlgorithmSolution = geneticAlgorithm.calculate_solution()
