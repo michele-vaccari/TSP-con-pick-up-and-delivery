@@ -40,7 +40,7 @@ cli.add_command(generate_instance)
 
 @click.command()
 @click.option('--input-instance-path', required=True, default=None, help='Path where read the instance in JSON format.', type = click.STRING)
-@click.option('--solver-method', required=True, default=None, help='Choose the solver method to use.', type=click.Choice(['brute-force-enumerator', 'oneil-hoffman-enumerator', 'greedy-pickup-first', 'greedy-request-order', 'greedy-nearest-neighbor', 'greedy-random', 'city-swap', 'city-insert', 'simulated-annealing', 'tabu-search', 'large-neighborhood-search', 'genetic-algorithm', 'greedy-randomized-adaptive-search-procedure', 'multi-start-local-search', 'greedy-randomized-adaptive-search-procedure-with-path-relinking'], case_sensitive=False))
+@click.option('--solver-method', required=True, default=None, help='Choose the solver method to use.', type=click.Choice(['brute-force-enumerator', 'oneil-hoffman-enumerator', 'greedy-pickup-first', 'greedy-request-order', 'greedy-nearest-neighbor', 'greedy-random', 'city-swap', 'city-insert', 'simulated-annealing', 'tabu-search', 'large-neighborhood-search', 'multi-start-local-search', 'greedy-randomized-adaptive-search-procedure', 'greedy-randomized-adaptive-search-procedure-with-path-relinking', 'genetic-algorithm'], case_sensitive=False))
 def solve(input_instance_path, solver_method):
     """Solve an instance of the tsppd problem."""
     print("\n\nREADED INSTANCE\n\n")
