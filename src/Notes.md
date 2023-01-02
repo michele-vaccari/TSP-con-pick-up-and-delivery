@@ -1,0 +1,51 @@
+# Note
+
+## Comandi utili
+
+### Package
+
+#### Create package
+* Creare il package ```tsppd``` nella cartella ```package```:
+    ```bat
+    py -m build
+    ```
+
+#### Run tests
+* Installare il package ```pytest``` e dopo aver attivato il ```venv``` dentro i tests nella cartella ```package``` lanciare il comando:
+    ```bat
+    pytest tests
+    ```
+### CLI
+
+* Creare un ```venv``` in python:
+    ```bat
+    rem All'interno della cartella di progetto
+    python -m venv venv
+    ```
+* Attivare un ```venv``` in python:
+    ```bat
+    rem All'interno della cartella di progeto che contiene un venv
+    venv\Scripts\activate.bat
+    ```
+
+* Installare la libreria ```tsppd``` nel progetto ```cli```:
+    ```bat
+    pip install C:\dev\TSP-con-pick-up-and-delivery\src\package\dist\tsppd-0.0.1-py3-none-any.whl --force-reinstall
+    ```
+
+* Usare la libreria ```tsppd``` nel progetto ```cli```:
+    ```python
+    import mypythonlib
+    from mypythonlib import myfunctions
+    ```
+
+### Python
+
+* I dizionari in python: https://stackoverflow.com/questions/1024847/how-can-i-add-new-keys-to-a-dictionary
+
+### Note test fatti
+* Ho un MemoryError con n = 7
+
+* 2 minuti per n = 7 [(((2*7)!)/1000000000)/60]
+
+* 6 ore per n = 8
