@@ -50,7 +50,6 @@ L’applicazione è formata da 3 componenti:
 
 * Installare le seguenti librerie:
     ```bat
-    pip install --force-reinstall -v "pip==22.3.1"
     pip install --force-reinstall -v "click==8.1.3"
     pip install --force-reinstall -v "numpy==1.24.1"
     pip install --force-reinstall -v "pytest==7.2.0"
