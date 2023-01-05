@@ -15,7 +15,13 @@ from tsppd.solver.largeNeighborhoodSearch import LargeNeighborhoodSearch
 from tsppd.solver.multiStartLocalSearch import MultiStartLocalSearch
 from tsppd.solver.greedyRandomizedAdaptiveSearchProcedure import GreedyRandomizedAdaptiveSearchProcedure
 from tsppd.solver.geneticAlgorithm import GeneticAlgoritm
+
+from tsppd.benchmark.bruteForceEnumeratorBenchmark import BruteForceEnumeratorBenchmark
+
 import click
+import openpyxl
+import os
+from stopwatch import Stopwatch
 
 @click.group()
 def cli():
@@ -177,27 +183,73 @@ def compute_all_greedy_and_get_best_greedy_solution(instance: Instance):
     print(best_solution)
     return best_solution
 
+def benchmark_instance_generator(requests_benchmark_start, requests_benchmark_end, workbook_path):
+    workbook = openpyxl.Workbook()
+    sheet = workbook.active
+    
+    # Genero istanze da R = 2..30
+    # asimmetriche
+    weights_as_euclidean_distance = False
+
+    # title
+    row_index = 1
+    column_index = 1
+    sheet.cell(row = row_index, column = column_index).value = "Generazione delle istanze da R = 2 a R = 30"
+
+    # header
+    row_index += 1
+    sheet.cell(row=row_index , column = column_index).value = "Numero di richieste"
+    column_index += 1
+    sheet.cell(row=row_index , column = column_index).value = "Durata (in secondi)"
+
+    # data
+    for requests in range(requests_benchmark_start,requests_benchmark_end + 1):
+        row_index += 1
+        sheet.cell(row=row_index, column=1).value = requests
+        stopwatch = Stopwatch(2)
+        generator = Generator(requests, weights_as_euclidean_distance)
+        instance = generator.generate_instance()
+        output_instance_path = "benchmark/{}-request-weights-random.json".format(requests)
+        instance.save_to_json(output_instance_path)
+        stopwatch.stop()
+        sheet.cell(row=row_index, column=2).value = stopwatch.duration
+        
+    workbook.save(workbook_path)
+
+@click.command()
+@click.option('--output-excel-spreadsheets-dir-path', default=None, help='Directory path where to save the excel spreadsheets.', type = click.STRING)
+def benchmark(output_excel_spreadsheets_dir_path):
+    """Generates benchmarks of the algorithms implemented to solve the tsppd problem."""
+
+    # Instance generator
+    algoritm_name = "Instance generator"
+    print("{} benchmark - START\n".format(algoritm_name))
+    stopwatch = Stopwatch(2)
+    requests_benchmark_start = 2
+    requests_benchmark_end = 30
+    workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
+    benchmark_instance_generator(requests_benchmark_start, requests_benchmark_end, workbook_path)
+    stopwatch.stop()
+    print("{} benchmark - END\n".format(algoritm_name))
+    print("See the results on: {}".format(workbook_path))
+    print("Time taken for {} benchmark: {} seconds".format(algoritm_name.lower(), stopwatch.duration))
+
+    ## Brute force enumerator
+    algoritm_name = "Brute force enumerator"
+    print("{} benchmark - START\n".format(algoritm_name))
+    workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
+    requests_benchmark_start = 2
+    requests_benchmark_end = 5
+    stopwatch.restart()
+    bruteForceEnumeratorBenchmark = BruteForceEnumeratorBenchmark(requests_benchmark_start, requests_benchmark_end, workbook_path)
+    bruteForceEnumeratorBenchmark.benchmark_brute_force_enumerator()
+    stopwatch.stop()
+    print("{} benchmark - END\n".format(algoritm_name))
+    print("See the results on: {}".format(workbook_path))
+    print("Time taken for {} benchmark: {} seconds".format(algoritm_name.lower(), stopwatch.duration))
+
+cli.add_command(benchmark)
+
 if __name__ == '__main__':
 
     cli()
-
-    # tsppdcli.py generate-instance --requests 10
-    # tsppdcli.py generate-instance --requests 10 --weights-random
-    # tsppdcli.py generate-instance --requests 10 --weights-as-euclidean-distance
-    # tsppdcli.py generate-instance --requests 10 --output-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\10-request-weights-random.json
-    # tsppdcli.py generate-instance --requests 10 --weights-random --output-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\10-request-weights-random.json
-    # tsppdcli.py generate-instance --requests 10 --weights-as-euclidean-distance --output-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\10-request-weights-euclidean-distance.json
-
-    # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method brute-force-enumerator
-    # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method oneil-hoffman-enumerator
-    
-    # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method greedy-pickup-first
-    # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method greedy-request-order
-    # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method greedy-nearest-neighbor
-    # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method greedy-random
-
-    # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method city-swap
-    # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method city-insert
-
-    # TODO
-    # tsppdcli.py solve --input-instance-path C:\dev\TSP-con-pick-up-and-delivery\src\instances\2-request-weights-random.json --solver-method oneil-hoffman-enumerator --statistics

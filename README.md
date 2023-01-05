@@ -53,6 +53,8 @@ L’applicazione è formata da 3 componenti:
     pip install --force-reinstall -v "click==8.1.3"
     pip install --force-reinstall -v "numpy==1.24.1"
     pip install --force-reinstall -v "pytest==7.2.0"
+    pip install --force-reinstall -v "openpyxl==3.0.10"
+    pip install --force-reinstall -v "stopwatch==2.0.1"
     ```
 
 ## Esempi di utilizzo
