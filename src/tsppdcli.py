@@ -17,6 +17,7 @@ from tsppd.solver.greedyRandomizedAdaptiveSearchProcedure import GreedyRandomize
 from tsppd.solver.geneticAlgorithm import GeneticAlgoritm
 
 from tsppd.benchmark.bruteForceEnumeratorBenchmark import BruteForceEnumeratorBenchmark
+from tsppd.benchmark.oneilHoffmanEnumeratorBenchmark import OneilHoffmanEnumeratorBenchmark
 
 import click
 import openpyxl
@@ -239,10 +240,24 @@ def benchmark(output_excel_spreadsheets_dir_path):
     print("{} benchmark - START\n".format(algoritm_name))
     workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
     requests_benchmark_start = 2
-    requests_benchmark_end = 5
+    requests_benchmark_end = 4
     stopwatch.restart()
     bruteForceEnumeratorBenchmark = BruteForceEnumeratorBenchmark(requests_benchmark_start, requests_benchmark_end, workbook_path)
-    bruteForceEnumeratorBenchmark.benchmark_brute_force_enumerator()
+    bruteForceEnumeratorBenchmark.benchmark()
+    stopwatch.stop()
+    print("{} benchmark - END\n".format(algoritm_name))
+    print("See the results on: {}".format(workbook_path))
+    print("Time taken for {} benchmark: {} seconds".format(algoritm_name.lower(), stopwatch.duration))
+
+    ## Oneil Hoffman enumerator
+    algoritm_name = "Oneil Hoffman enumerator"
+    print("{} benchmark - START\n".format(algoritm_name))
+    workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
+    requests_benchmark_start = 2
+    requests_benchmark_end = 4
+    stopwatch.restart()
+    oneilHoffmanEnumeratorBenchmark = OneilHoffmanEnumeratorBenchmark(requests_benchmark_start, requests_benchmark_end, workbook_path)
+    oneilHoffmanEnumeratorBenchmark.benchmark()
     stopwatch.stop()
     print("{} benchmark - END\n".format(algoritm_name))
     print("See the results on: {}".format(workbook_path))
