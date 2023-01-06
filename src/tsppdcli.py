@@ -23,6 +23,7 @@ from tsppd.benchmark.greedyRequestOrderBenchmark import GreedyRequestOrderBenchm
 from tsppd.benchmark.greedyNearestNeighborBenchmark import GreedyNearestNeighborBenchmark
 from tsppd.benchmark.greedyRandomBenchmark import GreedyRandomBenchmark
 from tsppd.benchmark.cityInsertBenchmark import CityInsertBenchmark
+from tsppd.benchmark.citySwapBenchmark import CitySwapBenchmark
 
 import click
 import openpyxl
@@ -360,6 +361,18 @@ def benchmark(output_excel_spreadsheets_dir_path):
     stopwatch.restart()
     cityInsertBenchmark = CityInsertBenchmark(greedy_best_solutions, greedy_requests_benchmark_start, greedy_requests_benchmark_end, workbook_path)
     cityInsertBenchmark.benchmark()
+    stopwatch.stop()
+    print("{} benchmark - END".format(algoritm_name))
+    print("See the results on: {}".format(workbook_path))
+    print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
+
+    # City Swap
+    algoritm_name = "City Swap"
+    print("\n{} benchmark - START".format(algoritm_name))
+    workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
+    stopwatch.restart()
+    citySwapBenchmark = CitySwapBenchmark(greedy_best_solutions, greedy_requests_benchmark_start, greedy_requests_benchmark_end, workbook_path)
+    citySwapBenchmark.benchmark()
     stopwatch.stop()
     print("{} benchmark - END".format(algoritm_name))
     print("See the results on: {}".format(workbook_path))
