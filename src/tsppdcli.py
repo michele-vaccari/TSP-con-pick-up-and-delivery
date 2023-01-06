@@ -22,6 +22,7 @@ from tsppd.benchmark.greedyPickupFirstBenchmark import GreedyPickupFirstBenchmar
 from tsppd.benchmark.greedyRequestOrderBenchmark import GreedyRequestOrderBenchmark
 from tsppd.benchmark.greedyNearestNeighborBenchmark import GreedyNearestNeighborBenchmark
 from tsppd.benchmark.greedyRandomBenchmark import GreedyRandomBenchmark
+from tsppd.benchmark.cityInsertBenchmark import CityInsertBenchmark
 
 import click
 import openpyxl
@@ -226,102 +227,143 @@ def benchmark_instance_generator(requests_benchmark_start, requests_benchmark_en
 def benchmark(output_excel_spreadsheets_dir_path):
     """Generates benchmarks of the algorithms implemented to solve the tsppd problem."""
 
-    # Instance generator
-    algoritm_name = "Instance generator"
-    print("{} benchmark - START\n".format(algoritm_name))
-    stopwatch = Stopwatch(2)
     requests_benchmark_start = 2
     requests_benchmark_end = 30
+
+    # Instance generator
+    algoritm_name = "Instance generator"
+    print("{} benchmark - START".format(algoritm_name))
+    stopwatch = Stopwatch(2)
     workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
     benchmark_instance_generator(requests_benchmark_start, requests_benchmark_end, workbook_path)
     stopwatch.stop()
-    print("{} benchmark - END\n".format(algoritm_name))
+    print("{} benchmark - END".format(algoritm_name))
     print("See the results on: {}".format(workbook_path))
-    print("Time taken for {} benchmark: {} seconds".format(algoritm_name.lower(), stopwatch.duration))
+    print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
+
+    enumerator_requests_benchmark_start = 2
+    enumerator_requests_benchmark_end = 3
 
     # Brute force enumerator
     algoritm_name = "Brute force enumerator"
-    print("{} benchmark - START\n".format(algoritm_name))
+    print("{} benchmark - START".format(algoritm_name))
     workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
-    requests_benchmark_start = 2
-    requests_benchmark_end = 3
     stopwatch.restart()
-    bruteForceEnumeratorBenchmark = BruteForceEnumeratorBenchmark(requests_benchmark_start, requests_benchmark_end, workbook_path)
+    bruteForceEnumeratorBenchmark = BruteForceEnumeratorBenchmark(enumerator_requests_benchmark_start, enumerator_requests_benchmark_end, workbook_path)
     bruteForceEnumeratorBenchmark.benchmark()
     stopwatch.stop()
-    print("{} benchmark - END\n".format(algoritm_name))
+    print("{} benchmark - END".format(algoritm_name))
     print("See the results on: {}".format(workbook_path))
-    print("Time taken for {} benchmark: {} seconds".format(algoritm_name.lower(), stopwatch.duration))
+    print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
 
     # Oneil Hoffman enumerator
     algoritm_name = "Oneil Hoffman enumerator"
-    print("{} benchmark - START\n".format(algoritm_name))
+    print("{} benchmark - START".format(algoritm_name))
     workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
-    requests_benchmark_start = 2
-    requests_benchmark_end = 3
     stopwatch.restart()
-    oneilHoffmanEnumeratorBenchmark = OneilHoffmanEnumeratorBenchmark(requests_benchmark_start, requests_benchmark_end, workbook_path)
+    oneilHoffmanEnumeratorBenchmark = OneilHoffmanEnumeratorBenchmark(enumerator_requests_benchmark_start, enumerator_requests_benchmark_end, workbook_path)
     oneilHoffmanEnumeratorBenchmark.benchmark()
     stopwatch.stop()
-    print("{} benchmark - END\n".format(algoritm_name))
+    print("{} benchmark - END".format(algoritm_name))
     print("See the results on: {}".format(workbook_path))
-    print("Time taken for {} benchmark: {} seconds".format(algoritm_name.lower(), stopwatch.duration))
+    print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
+
+    greedy_requests_benchmark_start = 2
+    greedy_requests_benchmark_end = 3
 
     # Greedy Pickup First
     algoritm_name = "Greedy Pickup First"
-    print("{} benchmark - START\n".format(algoritm_name))
+    print("{} benchmark - START".format(algoritm_name))
     workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
-    requests_benchmark_start = 2
-    requests_benchmark_end = 3
     stopwatch.restart()
-    greedyPickupFirstBenchmark = GreedyPickupFirstBenchmark(requests_benchmark_start, requests_benchmark_end, workbook_path)
+    greedyPickupFirstBenchmark = GreedyPickupFirstBenchmark(greedy_requests_benchmark_start, greedy_requests_benchmark_end, workbook_path)
     greedyPickupFirstBenchmark.benchmark()
     stopwatch.stop()
-    print("{} benchmark - END\n".format(algoritm_name))
+    print("{} benchmark - END".format(algoritm_name))
     print("See the results on: {}".format(workbook_path))
-    print("Time taken for {} benchmark: {} seconds".format(algoritm_name.lower(), stopwatch.duration))
+    print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
 
     # Greedy Request Order
     algoritm_name = "Greedy Request Order"
-    print("{} benchmark - START\n".format(algoritm_name))
+    print("{} benchmark - START".format(algoritm_name))
     workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
-    requests_benchmark_start = 2
-    requests_benchmark_end = 3
     stopwatch.restart()
-    greedyRequestOrderBenchmark = GreedyRequestOrderBenchmark(requests_benchmark_start, requests_benchmark_end, workbook_path)
+    greedyRequestOrderBenchmark = GreedyRequestOrderBenchmark(greedy_requests_benchmark_start, greedy_requests_benchmark_end, workbook_path)
     greedyRequestOrderBenchmark.benchmark()
     stopwatch.stop()
-    print("{} benchmark - END\n".format(algoritm_name))
+    print("{} benchmark - END".format(algoritm_name))
     print("See the results on: {}".format(workbook_path))
-    print("Time taken for {} benchmark: {} seconds".format(algoritm_name.lower(), stopwatch.duration))
+    print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
 
     # Greedy Nearest Neighbor
     algoritm_name = "Greedy Nearest Neighbor"
-    print("{} benchmark - START\n".format(algoritm_name))
+    print("{} benchmark - START".format(algoritm_name))
     workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
-    requests_benchmark_start = 2
-    requests_benchmark_end = 3
     stopwatch.restart()
-    greedyNearestNeighborBenchmark = GreedyNearestNeighborBenchmark(requests_benchmark_start, requests_benchmark_end, workbook_path)
+    greedyNearestNeighborBenchmark = GreedyNearestNeighborBenchmark(greedy_requests_benchmark_start, greedy_requests_benchmark_end, workbook_path)
     greedyNearestNeighborBenchmark.benchmark()
     stopwatch.stop()
-    print("{} benchmark - END\n".format(algoritm_name))
+    print("{} benchmark - END".format(algoritm_name))
     print("See the results on: {}".format(workbook_path))
-    print("Time taken for {} benchmark: {} seconds".format(algoritm_name.lower(), stopwatch.duration))
+    print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
 
-    ## Greedy Random
+    # Greedy Random
     algoritm_name = "Greedy Random"
-    print("{} benchmark - START\n".format(algoritm_name))
+    print("{} benchmark - START".format(algoritm_name))
     workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
-    requests_benchmark_start = 2
-    requests_benchmark_end = 3
     stopwatch.restart()
-    greedyRandomBenchmark = GreedyRandomBenchmark(requests_benchmark_start, requests_benchmark_end, workbook_path)
+    greedyRandomBenchmark = GreedyRandomBenchmark(greedy_requests_benchmark_start, greedy_requests_benchmark_end, workbook_path)
     greedyRandomBenchmark.benchmark()
     stopwatch.stop()
-    print("{} benchmark - END\n".format(algoritm_name))
+    print("{} benchmark - END".format(algoritm_name))
     print("See the results on: {}".format(workbook_path))
-    print("Time taken for {} benchmark: {} seconds".format(algoritm_name.lower(), stopwatch.duration))
+    print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
+
+    # Compute best greedy solution
+    greedy_solutions = dict()
+    for key, value in greedyPickupFirstBenchmark.solutions.items():
+        if key in greedy_solutions:
+            greedy_solutions[key].append(["Greedy Pickup First", value])
+        else:
+            greedy_solutions[key] = [["Greedy Pickup First", value]]
+    for key, value in greedyRequestOrderBenchmark.solutions.items():
+        if key in greedy_solutions:
+            greedy_solutions[key].append(["Greedy Request Order", value])
+        else:
+            greedy_solutions[key] = [["Greedy Request Order", value]]
+    for key, value in greedyNearestNeighborBenchmark.solutions.items():
+        if key in greedy_solutions:
+            greedy_solutions[key].append(["Greedy Nearest Neighbor", value])
+        else:
+            greedy_solutions[key] = [["Greedy Nearest Neighbor", value]]
+    for key, value in greedyRandomBenchmark.solutions.items():
+        if key in greedy_solutions:
+            greedy_solutions[key].append(["Greedy Random", value])
+        else:
+            greedy_solutions[key] = [["Greedy Random", value]]
+
+    print("Greedy best solutions:")
+    greedy_best_solutions = dict()
+    for key, value in greedy_solutions.items():
+        greedy_request_solution = dict()
+        for element in value:
+            greedy_request_solution[element[0]] = element[1]
+        best_greedy_solution = min(greedy_request_solution.values())
+        best_solution_method = ([k for k,v in greedy_request_solution.items() if v == best_greedy_solution])
+        greedy_best_solutions[key] = [best_solution_method, best_greedy_solution]
+        print("* for R = {} the best solution is obtained with {} with solution path: {} and cost {}".format(key, best_solution_method[0], ' -> '.join(str(node_id) for node_id in best_greedy_solution.solution_nodes_id), best_greedy_solution.cost))
+
+    # City Insert
+    algoritm_name = "City Insert"
+    print("\n{} benchmark - START".format(algoritm_name))
+    workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
+    stopwatch.restart()
+    cityInsertBenchmark = CityInsertBenchmark(greedy_best_solutions, greedy_requests_benchmark_start, greedy_requests_benchmark_end, workbook_path)
+    cityInsertBenchmark.benchmark()
+    stopwatch.stop()
+    print("{} benchmark - END".format(algoritm_name))
+    print("See the results on: {}".format(workbook_path))
+    print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
 
 cli.add_command(benchmark)
 

@@ -12,6 +12,11 @@ class GreedyNearestNeighborBenchmark():
         self._workbook_path = workbook_path
 
         self._stopwatch = None
+        self._solutions = dict()
+    
+    @property
+    def solutions(self):
+        return self._solutions
     
     def benchmark(self):
         workbook = openpyxl.Workbook()
@@ -45,6 +50,7 @@ class GreedyNearestNeighborBenchmark():
             solution = greedyTemplate.calculate_solution()
 
             self._stopwatch.stop()
+            self._solutions[requests] = solution
 
             # value of resume sheet
             row_index += 1
