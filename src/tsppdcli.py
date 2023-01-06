@@ -24,6 +24,7 @@ from tsppd.benchmark.greedyNearestNeighborBenchmark import GreedyNearestNeighbor
 from tsppd.benchmark.greedyRandomBenchmark import GreedyRandomBenchmark
 from tsppd.benchmark.cityInsertBenchmark import CityInsertBenchmark
 from tsppd.benchmark.citySwapBenchmark import CitySwapBenchmark
+from tsppd.benchmark.simulatedAnnealingBenchmark import SimulatedAnnealingBenchmark
 
 import click
 import openpyxl
@@ -373,6 +374,18 @@ def benchmark(output_excel_spreadsheets_dir_path):
     stopwatch.restart()
     citySwapBenchmark = CitySwapBenchmark(greedy_best_solutions, greedy_requests_benchmark_start, greedy_requests_benchmark_end, workbook_path)
     citySwapBenchmark.benchmark()
+    stopwatch.stop()
+    print("{} benchmark - END".format(algoritm_name))
+    print("See the results on: {}".format(workbook_path))
+    print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
+
+    # Simulated Annealing
+    algoritm_name = "Simulated Annealing"
+    print("\n{} benchmark - START".format(algoritm_name))
+    workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
+    stopwatch.restart()
+    simulatedAnnealingBenchmark = SimulatedAnnealingBenchmark(greedy_best_solutions, greedy_requests_benchmark_start, greedy_requests_benchmark_end, workbook_path)
+    simulatedAnnealingBenchmark.benchmark()
     stopwatch.stop()
     print("{} benchmark - END".format(algoritm_name))
     print("See the results on: {}".format(workbook_path))

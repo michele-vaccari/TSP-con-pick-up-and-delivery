@@ -4,7 +4,10 @@ from ..problem.solution import Solution
 import random
 import math
 
-class SimulatedAnnealing:
+from ..utils.observerPattern import Subject, Observer
+from typing import List
+
+class SimulatedAnnealing(Subject):
     def __init__(self, instance: Instance, initial_solution: Solution):
         """
         Simulated Annealing method of the TSPPD problem.
@@ -18,6 +21,12 @@ class SimulatedAnnealing:
         self._cooling_rate = 0.92
         self._iterations_for_temperature = 5
 
+        self._observers: List[Observer] = []
+        self._feasible_solutions_counter = 0
+        self._current_solution = None
+        self._best_solution = None
+        self._current_temperature = self._initial_temperature
+
     @property
     def instance(self):
         return self._instance
@@ -25,6 +34,52 @@ class SimulatedAnnealing:
     @property
     def initial_solution(self):
         return self._initial_solution
+    
+    @property
+    def initial_temperature(self):
+        return self._initial_temperature
+
+    @property
+    def final_temperature(self):
+        return self._final_temperature
+    
+    @property
+    def cooling_rate(self):
+        return self._cooling_rate
+
+    @property
+    def iterations_for_temperature(self):
+        return self._iterations_for_temperature
+    
+    @property
+    def feasible_solutions_counter(self):
+        return self._feasible_solutions_counter
+    
+    @property
+    def current_solution(self):
+        return self._current_solution
+    
+    @property
+    def current_temperature(self):
+        return self._current_temperature
+    
+    @property
+    def best_solution(self):
+        return self._best_solution
+
+    def attach(self, observer: Observer) -> None:
+        self._observers.append(observer)
+
+    def detach(self, observer: Observer) -> None:
+        self._observers.remove(observer)
+
+    def notify_new_solution(self) -> None:
+        for observer in self._observers:
+            observer.new_solution_found(self)
+    
+    def notify_best_new_solution(self) -> None:
+        for observer in self._observers:
+            observer.new_best_solution_found(self)
 
     def _is_tour_admissible(self, tour):
         for i in range(0, len(tour)):
@@ -55,16 +110,22 @@ class SimulatedAnnealing:
         while current_temperature > self._final_temperature:
             for _ in range(self._iterations_for_temperature):
                 next_solution = self._random_city_swap()
+                self._current_solution = next_solution
+                self._feasible_solutions_counter += 1
+                self.notify_new_solution()
                 delta = next_solution.cost - current_solution.cost
                 if delta < 0:
                     current_solution = next_solution
                     if current_solution.cost < best_solution.cost:
                         best_solution = next_solution
+                        self._best_solution = best_solution
+                        self.notify_best_new_solution()
                 else:
                     r = random.uniform(0, 1)
                     if r < math.exp(-delta/current_temperature):
                         current_solution = next_solution
             current_temperature = current_temperature * self._cooling_rate
+            self._current_temperature = current_temperature
         return best_solution
     
     def calculate_solution(self) -> Solution:
