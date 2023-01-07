@@ -28,6 +28,7 @@ from tsppd.benchmark.simulatedAnnealingBenchmark import SimulatedAnnealingBenchm
 from tsppd.benchmark.TabuSearchBenchmark import TabuSearchBenchmark
 from tsppd.benchmark.largeNeighborhoodSearchBenchmark import LargeNeighborhoodSearchBenchmark
 from tsppd.benchmark.multiStartLocalSearchBenchmark import MultiStartLocalSearchBenchmark
+from tsppd.benchmark.greedyRandomizedAdaptiveSearchProcedureBenchmark import GreedyRandomizedAdaptiveSearchProcedureBenchmark
 
 import click
 import openpyxl
@@ -428,6 +429,18 @@ def benchmark(output_excel_spreadsheets_dir_path):
     stopwatch.restart()
     multiStartLocalSearchBenchmark = MultiStartLocalSearchBenchmark(multi_start_local_search_requests_benchmark_start, multi_start_local_search_requests_benchmark_end, workbook_path)
     multiStartLocalSearchBenchmark.benchmark()
+    stopwatch.stop()
+    print("{} benchmark - END".format(algoritm_name))
+    print("See the results on: {}".format(workbook_path))
+    print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
+
+    # Greedy Randomized Adaptive Search Procedure
+    algoritm_name = "Greedy Randomized Adaptive Search Procedure"
+    print("{} benchmark - START".format(algoritm_name))
+    workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
+    stopwatch.restart()
+    greedyRandomizedAdaptiveSearchProcedureBenchmark = GreedyRandomizedAdaptiveSearchProcedureBenchmark(multi_start_local_search_requests_benchmark_start, multi_start_local_search_requests_benchmark_end, workbook_path)
+    greedyRandomizedAdaptiveSearchProcedureBenchmark.benchmark()
     stopwatch.stop()
     print("{} benchmark - END".format(algoritm_name))
     print("See the results on: {}".format(workbook_path))

@@ -5,10 +5,10 @@ from .greedyTemplate import GreedyTemplate
 from .greedyRandom import GreedyRandom
 from tsppd.solver.largeNeighborhoodSearch import LargeNeighborhoodSearch
 
+import copy
+
 from ..utils.observerPattern import Subject, Observer
 from typing import List
-
-import copy
 
 class MultiStartLocalSearch(Subject):
     def __init__(self, instance: Instance):
