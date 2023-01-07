@@ -33,7 +33,7 @@ class GreedyRandomizedAdaptiveSearchProcedureBenchmark(Observer):
     def new_best_solution_found(self, subject: Subject) -> None:
         return NotImplemented
     
-    def benchmark(self):
+    def benchmark(self, path_relinking = False):
         workbook = openpyxl.Workbook()
         sheet = workbook.active
         sheet.title = "Riassunto"
@@ -78,7 +78,7 @@ class GreedyRandomizedAdaptiveSearchProcedureBenchmark(Observer):
 
             greedyRandomizedAdaptiveSearchProcedure = GreedyRandomizedAdaptiveSearchProcedure(instance)
             greedyRandomizedAdaptiveSearchProcedure.attach(self)
-            solution = greedyRandomizedAdaptiveSearchProcedure.calculate_solution(False)
+            solution = greedyRandomizedAdaptiveSearchProcedure.calculate_solution(path_relinking)
             greedyRandomizedAdaptiveSearchProcedure.detach(self)
 
             self._stopwatch.stop()
