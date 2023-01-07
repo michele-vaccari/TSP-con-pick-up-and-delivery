@@ -217,6 +217,7 @@ def benchmark_instance_generator(requests_benchmark_start, requests_benchmark_en
 
     # data
     for requests in range(requests_benchmark_start,requests_benchmark_end + 1):
+        print("* computation with R = {} ...".format(requests))
         row_index += 1
         sheet.cell(row=row_index, column=1).value = requests
         stopwatch = Stopwatch(2)

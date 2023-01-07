@@ -59,6 +59,7 @@ class MultiStartLocalSearchBenchmark(Observer):
 
         # data
         for requests in range(self._requests_benchmark_start, self._requests_benchmark_end + 1):
+            print("* computation with R = {} ...".format(requests))
             self._current_requests = requests
 
             # header of solution trend sheet
