@@ -108,5 +108,13 @@ Options:
   --help                          Show this message and exit.
 ```
 
+### Eseguire i benchmark di tutti gli algoritmi
+* Aprire un terminale Powershell
+* Attivare il virtual enviroment di python
+* Lanciare la cli nel seguente modo:
+  ```bat
+  python tsppdcli.py benchmark --output-excel-spreadsheets-dir-path benchmark | tee output.txt
+  ```
+
 ## Come contribuire al progetto
 Se vuoi partecipare allo sviluppo di questo progetto o per ulteriori delucidazioni contattami all'indirizzo: [michele.vaccari@edu.unife.it](mailto:michele.vaccari@edu.unife.it)
