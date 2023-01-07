@@ -29,6 +29,7 @@ from tsppd.benchmark.TabuSearchBenchmark import TabuSearchBenchmark
 from tsppd.benchmark.largeNeighborhoodSearchBenchmark import LargeNeighborhoodSearchBenchmark
 from tsppd.benchmark.multiStartLocalSearchBenchmark import MultiStartLocalSearchBenchmark
 from tsppd.benchmark.greedyRandomizedAdaptiveSearchProcedureBenchmark import GreedyRandomizedAdaptiveSearchProcedureBenchmark
+from tsppd.benchmark.geneticAlgorithmBenchmark import GeneticAlgorithmBenchmark
 
 import click
 import openpyxl
@@ -453,6 +454,18 @@ def benchmark(output_excel_spreadsheets_dir_path):
     stopwatch.restart()
     greedyRandomizedAdaptiveSearchProcedureBenchmark = GreedyRandomizedAdaptiveSearchProcedureBenchmark(multi_start_local_search_requests_benchmark_start, multi_start_local_search_requests_benchmark_end, workbook_path)
     greedyRandomizedAdaptiveSearchProcedureBenchmark.benchmark(True)
+    stopwatch.stop()
+    print("{} benchmark - END".format(algoritm_name))
+    print("See the results on: {}".format(workbook_path))
+    print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
+
+    # Genetic Algorithm
+    algoritm_name = "Genetic Algorithm"
+    print("{} benchmark - START".format(algoritm_name))
+    workbook_path = os.path.join(output_excel_spreadsheets_dir_path, "{} benchmark.xlsx".format(algoritm_name))
+    stopwatch.restart()
+    geneticAlgorithmBenchmark = GeneticAlgorithmBenchmark(multi_start_local_search_requests_benchmark_start, multi_start_local_search_requests_benchmark_end, workbook_path)
+    geneticAlgorithmBenchmark.benchmark()
     stopwatch.stop()
     print("{} benchmark - END".format(algoritm_name))
     print("See the results on: {}".format(workbook_path))
