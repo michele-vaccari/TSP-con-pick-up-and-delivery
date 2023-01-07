@@ -197,6 +197,11 @@ def compute_all_greedy_and_get_best_greedy_solution(instance: Instance):
     return best_solution
 
 def benchmark_instance_generator(requests_benchmark_start, requests_benchmark_end, workbook_path):
+    # create output instances dir
+    instance_dir_path = os.path.join(os.path.dirname(workbook_path), "instances")
+    if not os.path.exists(instance_dir_path):
+        os.makedirs(instance_dir_path)
+
     workbook = openpyxl.Workbook()
     sheet = workbook.active
     
@@ -223,7 +228,7 @@ def benchmark_instance_generator(requests_benchmark_start, requests_benchmark_en
         stopwatch = Stopwatch(2)
         generator = Generator(requests, weights_as_euclidean_distance)
         instance = generator.generate_instance()
-        output_instance_path = "benchmark/{}-request-weights-random.json".format(requests)
+        output_instance_path = "{}/{}-request-weights-random.json".format(instance_dir_path, requests)
         instance.save_to_json(output_instance_path)
         stopwatch.stop()
         sheet.cell(row=row_index, column=2).value = stopwatch.duration
@@ -234,6 +239,10 @@ def benchmark_instance_generator(requests_benchmark_start, requests_benchmark_en
 @click.option('--output-excel-spreadsheets-dir-path', default=None, help='Directory path where to save the excel spreadsheets.', type = click.STRING)
 def benchmark(output_excel_spreadsheets_dir_path):
     """Generates benchmarks of the algorithms implemented to solve the tsppd problem."""
+
+    # create output_excel_spreadsheets_dir_path
+    if not os.path.exists(output_excel_spreadsheets_dir_path):
+        os.makedirs(output_excel_spreadsheets_dir_path)
 
     requests_benchmark_start = 2
     requests_benchmark_end = 30

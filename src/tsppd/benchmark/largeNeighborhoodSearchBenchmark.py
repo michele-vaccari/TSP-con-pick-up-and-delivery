@@ -5,6 +5,7 @@ from tsppd.solver.largeNeighborhoodSearch import LargeNeighborhoodSearch
 
 import openpyxl
 from stopwatch import Stopwatch
+import os
 
 class LargeNeighborhoodSearchBenchmark(Observer):
     def __init__(self, greedy_best_solutions, requests_benchmark_start , requests_benchmark_end, workbook_path):
@@ -44,6 +45,11 @@ class LargeNeighborhoodSearchBenchmark(Observer):
         self._stopwatch.start()
     
     def benchmark(self):
+        # create output instances dir
+        instance_dir_path = os.path.join(os.path.dirname(self._workbook_path), "instances")
+        if not os.path.exists(instance_dir_path):
+            os.makedirs(instance_dir_path)
+        
         workbook = openpyxl.Workbook()
         sheet = workbook.active
         sheet.title = "Riassunto"
@@ -94,7 +100,7 @@ class LargeNeighborhoodSearchBenchmark(Observer):
 
             self._stopwatch = Stopwatch(2)
         
-            input_instance_path = "benchmark/{}-request-weights-random.json".format(requests)
+            input_instance_path = "{}/{}-request-weights-random.json".format(instance_dir_path, requests)
             instance = Instance.read_from_json(input_instance_path)
 
             largeNeighborhoodSearch = LargeNeighborhoodSearch(instance, self._greedy_best_solutions[requests][1])
