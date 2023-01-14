@@ -1,6 +1,9 @@
 from ..problem.instance import Instance
 from ..problem.solution import Solution
 
+from ..utils.observerPattern import Subject, Observer
+from typing import List
+
 class OneilHoffmanEnumerator:
     def __init__(self, instance: Instance):
         """
@@ -11,9 +14,40 @@ class OneilHoffmanEnumerator:
         self._tour = []
         self._best_solution = None
 
+        self._feasible_solutions_counter = 0
+        self._observers: List[Observer] = []
+
+        self._current_solution = None
+
     @property
     def instance(self):
         return self._instance
+    
+    @property
+    def feasible_solutions_counter(self):
+        return self._feasible_solutions_counter
+    
+    @property
+    def current_solution(self):
+        return self._current_solution
+
+    @property
+    def best_solution(self):
+        return self._best_solution
+    
+    def attach(self, observer: Observer) -> None:
+        self._observers.append(observer)
+
+    def detach(self, observer: Observer) -> None:
+        self._observers.remove(observer)
+
+    def notify_new_solution(self) -> None:
+        for observer in self._observers:
+            observer.new_solution_found(self)
+    
+    def notify_best_new_solution(self) -> None:
+        for observer in self._observers:
+            observer.new_best_solution_found(self)
 
     def _initialize(self):
         for node in self._instance.nodes.values():
@@ -48,9 +82,11 @@ class OneilHoffmanEnumerator:
                 solution.append(0) # ending node is the depot node
                 current_solution = Solution(self.instance, solution)
                 self._feasible_solutions_counter += 1
-                print("Feasible solution: " + str(self._feasible_solutions_counter) + "\n")
+                self._current_solution = current_solution
+                self.notify_new_solution()
                 if self._best_solution == None or current_solution.cost <= self._best_solution.cost:
                     self._best_solution = current_solution
+                    self.notify_best_new_solution()
             else:
                 self._enumerate()
             
@@ -62,5 +98,3 @@ class OneilHoffmanEnumerator:
         self._initialize()
         best_solution = self._enumerate()
         return best_solution
-    
-    _feasible_solutions_counter = 0

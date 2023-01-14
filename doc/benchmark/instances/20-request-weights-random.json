@@ -1,0 +1,8493 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "x": 197,
+            "y": 347
+        },
+        {
+            "id": 1,
+            "x": 270,
+            "y": 189
+        },
+        {
+            "id": 3,
+            "x": 345,
+            "y": 39
+        },
+        {
+            "id": 2,
+            "x": 118,
+            "y": 393
+        },
+        {
+            "id": 4,
+            "x": 283,
+            "y": 255
+        },
+        {
+            "id": 5,
+            "x": 4,
+            "y": 30
+        },
+        {
+            "id": 6,
+            "x": 340,
+            "y": 244
+        },
+        {
+            "id": 7,
+            "x": 170,
+            "y": 213
+        },
+        {
+            "id": 8,
+            "x": 91,
+            "y": 298
+        },
+        {
+            "id": 9,
+            "x": 22,
+            "y": 185
+        },
+        {
+            "id": 10,
+            "x": 319,
+            "y": 6
+        },
+        {
+            "id": 11,
+            "x": 91,
+            "y": 47
+        },
+        {
+            "id": 12,
+            "x": 311,
+            "y": 167
+        },
+        {
+            "id": 13,
+            "x": 265,
+            "y": 8
+        },
+        {
+            "id": 14,
+            "x": 39,
+            "y": 72
+        },
+        {
+            "id": 15,
+            "x": 164,
+            "y": 91
+        },
+        {
+            "id": 16,
+            "x": 372,
+            "y": 276
+        },
+        {
+            "id": 17,
+            "x": 145,
+            "y": 393
+        },
+        {
+            "id": 18,
+            "x": 204,
+            "y": 195
+        },
+        {
+            "id": 19,
+            "x": 159,
+            "y": 36
+        },
+        {
+            "id": 20,
+            "x": 6,
+            "y": 72
+        },
+        {
+            "id": 21,
+            "x": 215,
+            "y": 272
+        },
+        {
+            "id": 22,
+            "x": 244,
+            "y": 85
+        },
+        {
+            "id": 23,
+            "x": 335,
+            "y": 106
+        },
+        {
+            "id": 24,
+            "x": 128,
+            "y": 395
+        },
+        {
+            "id": 25,
+            "x": 375,
+            "y": 261
+        },
+        {
+            "id": 26,
+            "x": 393,
+            "y": 275
+        },
+        {
+            "id": 27,
+            "x": 232,
+            "y": 55
+        },
+        {
+            "id": 28,
+            "x": 336,
+            "y": 45
+        },
+        {
+            "id": 29,
+            "x": 342,
+            "y": 296
+        },
+        {
+            "id": 30,
+            "x": 53,
+            "y": 102
+        },
+        {
+            "id": 31,
+            "x": 164,
+            "y": 279
+        },
+        {
+            "id": 32,
+            "x": 203,
+            "y": 10
+        },
+        {
+            "id": 33,
+            "x": 260,
+            "y": 246
+        },
+        {
+            "id": 34,
+            "x": 356,
+            "y": 323
+        },
+        {
+            "id": 35,
+            "x": 39,
+            "y": 283
+        },
+        {
+            "id": 36,
+            "x": 288,
+            "y": 253
+        },
+        {
+            "id": 37,
+            "x": 335,
+            "y": 305
+        },
+        {
+            "id": 38,
+            "x": 266,
+            "y": 193
+        },
+        {
+            "id": 39,
+            "x": 31,
+            "y": 16
+        },
+        {
+            "id": 40,
+            "x": 201,
+            "y": 56
+        }
+    ],
+    "weighted_edges": [
+        {
+            "id_i_node": 0,
+            "id_j_node": 1,
+            "weight": 83
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 3,
+            "weight": 8
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 2,
+            "weight": 7
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 4,
+            "weight": 72
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 5,
+            "weight": 63
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 6,
+            "weight": 17
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 7,
+            "weight": 33
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 8,
+            "weight": 22
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 9,
+            "weight": 63
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 10,
+            "weight": 53
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 11,
+            "weight": 48
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 12,
+            "weight": 19
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 13,
+            "weight": 8
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 14,
+            "weight": 46
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 15,
+            "weight": 12
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 16,
+            "weight": 31
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 17,
+            "weight": 49
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 18,
+            "weight": 60
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 19,
+            "weight": 28
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 20,
+            "weight": 18
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 21,
+            "weight": 28
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 22,
+            "weight": 66
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 23,
+            "weight": 45
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 24,
+            "weight": 2
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 25,
+            "weight": 27
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 26,
+            "weight": 77
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 27,
+            "weight": 76
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 28,
+            "weight": 63
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 29,
+            "weight": 61
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 30,
+            "weight": 90
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 31,
+            "weight": 81
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 32,
+            "weight": 40
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 33,
+            "weight": 64
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 34,
+            "weight": 88
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 35,
+            "weight": 95
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 36,
+            "weight": 93
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 37,
+            "weight": 89
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 38,
+            "weight": 87
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 39,
+            "weight": 89
+        },
+        {
+            "id_i_node": 0,
+            "id_j_node": 40,
+            "weight": 1
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 0,
+            "weight": 45
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 3,
+            "weight": 29
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 2,
+            "weight": 67
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 4,
+            "weight": 22
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 5,
+            "weight": 32
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 6,
+            "weight": 5
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 7,
+            "weight": 22
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 8,
+            "weight": 34
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 9,
+            "weight": 51
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 10,
+            "weight": 51
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 11,
+            "weight": 48
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 12,
+            "weight": 92
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 13,
+            "weight": 78
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 14,
+            "weight": 89
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 15,
+            "weight": 61
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 16,
+            "weight": 81
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 17,
+            "weight": 44
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 18,
+            "weight": 74
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 19,
+            "weight": 15
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 20,
+            "weight": 15
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 21,
+            "weight": 53
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 22,
+            "weight": 91
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 23,
+            "weight": 68
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 24,
+            "weight": 6
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 25,
+            "weight": 11
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 26,
+            "weight": 39
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 27,
+            "weight": 5
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 28,
+            "weight": 63
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 29,
+            "weight": 59
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 30,
+            "weight": 83
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 31,
+            "weight": 8
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 32,
+            "weight": 15
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 33,
+            "weight": 64
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 34,
+            "weight": 70
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 35,
+            "weight": 46
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 36,
+            "weight": 15
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 37,
+            "weight": 71
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 38,
+            "weight": 43
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 39,
+            "weight": 50
+        },
+        {
+            "id_i_node": 1,
+            "id_j_node": 40,
+            "weight": 77
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 0,
+            "weight": 93
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 1,
+            "weight": 64
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 2,
+            "weight": 45
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 4,
+            "weight": 53
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 5,
+            "weight": 41
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 6,
+            "weight": 62
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 7,
+            "weight": 72
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 8,
+            "weight": 100
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 9,
+            "weight": 33
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 10,
+            "weight": 2
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 11,
+            "weight": 15
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 12,
+            "weight": 84
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 13,
+            "weight": 73
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 14,
+            "weight": 37
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 15,
+            "weight": 62
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 16,
+            "weight": 94
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 17,
+            "weight": 72
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 18,
+            "weight": 8
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 19,
+            "weight": 40
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 20,
+            "weight": 42
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 21,
+            "weight": 75
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 22,
+            "weight": 4
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 23,
+            "weight": 11
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 24,
+            "weight": 33
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 25,
+            "weight": 17
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 26,
+            "weight": 36
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 27,
+            "weight": 87
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 28,
+            "weight": 22
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 29,
+            "weight": 40
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 30,
+            "weight": 32
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 31,
+            "weight": 83
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 32,
+            "weight": 38
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 33,
+            "weight": 49
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 34,
+            "weight": 26
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 35,
+            "weight": 45
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 36,
+            "weight": 37
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 37,
+            "weight": 17
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 38,
+            "weight": 78
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 39,
+            "weight": 1
+        },
+        {
+            "id_i_node": 3,
+            "id_j_node": 40,
+            "weight": 12
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 0,
+            "weight": 47
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 1,
+            "weight": 46
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 3,
+            "weight": 62
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 4,
+            "weight": 41
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 5,
+            "weight": 5
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 6,
+            "weight": 63
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 7,
+            "weight": 77
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 8,
+            "weight": 9
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 9,
+            "weight": 88
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 10,
+            "weight": 62
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 11,
+            "weight": 66
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 12,
+            "weight": 33
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 13,
+            "weight": 39
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 14,
+            "weight": 45
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 15,
+            "weight": 35
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 16,
+            "weight": 6
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 17,
+            "weight": 1
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 18,
+            "weight": 38
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 19,
+            "weight": 50
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 20,
+            "weight": 76
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 21,
+            "weight": 18
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 22,
+            "weight": 33
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 23,
+            "weight": 59
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 24,
+            "weight": 67
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 25,
+            "weight": 37
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 26,
+            "weight": 35
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 27,
+            "weight": 93
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 28,
+            "weight": 18
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 29,
+            "weight": 33
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 30,
+            "weight": 4
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 31,
+            "weight": 17
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 32,
+            "weight": 56
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 33,
+            "weight": 81
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 34,
+            "weight": 58
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 35,
+            "weight": 79
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 36,
+            "weight": 58
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 37,
+            "weight": 71
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 38,
+            "weight": 20
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 39,
+            "weight": 37
+        },
+        {
+            "id_i_node": 2,
+            "id_j_node": 40,
+            "weight": 26
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 0,
+            "weight": 37
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 1,
+            "weight": 58
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 3,
+            "weight": 69
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 2,
+            "weight": 76
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 5,
+            "weight": 78
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 6,
+            "weight": 14
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 7,
+            "weight": 50
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 8,
+            "weight": 100
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 9,
+            "weight": 60
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 10,
+            "weight": 99
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 11,
+            "weight": 65
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 12,
+            "weight": 61
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 13,
+            "weight": 34
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 14,
+            "weight": 93
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 15,
+            "weight": 24
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 16,
+            "weight": 84
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 17,
+            "weight": 70
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 18,
+            "weight": 96
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 19,
+            "weight": 32
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 20,
+            "weight": 35
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 21,
+            "weight": 36
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 22,
+            "weight": 37
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 23,
+            "weight": 53
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 24,
+            "weight": 20
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 25,
+            "weight": 64
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 26,
+            "weight": 99
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 27,
+            "weight": 94
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 28,
+            "weight": 72
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 29,
+            "weight": 54
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 30,
+            "weight": 64
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 31,
+            "weight": 22
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 32,
+            "weight": 23
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 33,
+            "weight": 63
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 34,
+            "weight": 18
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 35,
+            "weight": 74
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 36,
+            "weight": 34
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 37,
+            "weight": 75
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 38,
+            "weight": 34
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 39,
+            "weight": 35
+        },
+        {
+            "id_i_node": 4,
+            "id_j_node": 40,
+            "weight": 88
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 0,
+            "weight": 20
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 1,
+            "weight": 20
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 3,
+            "weight": 68
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 2,
+            "weight": 10
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 4,
+            "weight": 22
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 6,
+            "weight": 77
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 7,
+            "weight": 1
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 8,
+            "weight": 36
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 9,
+            "weight": 58
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 10,
+            "weight": 24
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 11,
+            "weight": 38
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 12,
+            "weight": 47
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 13,
+            "weight": 23
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 14,
+            "weight": 60
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 15,
+            "weight": 88
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 16,
+            "weight": 57
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 17,
+            "weight": 65
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 18,
+            "weight": 13
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 19,
+            "weight": 85
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 20,
+            "weight": 46
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 21,
+            "weight": 18
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 22,
+            "weight": 53
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 23,
+            "weight": 61
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 24,
+            "weight": 77
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 25,
+            "weight": 46
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 26,
+            "weight": 91
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 27,
+            "weight": 85
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 28,
+            "weight": 41
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 29,
+            "weight": 91
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 30,
+            "weight": 41
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 31,
+            "weight": 91
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 32,
+            "weight": 49
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 33,
+            "weight": 71
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 34,
+            "weight": 68
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 35,
+            "weight": 72
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 36,
+            "weight": 93
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 37,
+            "weight": 21
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 38,
+            "weight": 14
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 39,
+            "weight": 54
+        },
+        {
+            "id_i_node": 5,
+            "id_j_node": 40,
+            "weight": 46
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 0,
+            "weight": 54
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 1,
+            "weight": 99
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 3,
+            "weight": 83
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 2,
+            "weight": 22
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 4,
+            "weight": 72
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 5,
+            "weight": 47
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 7,
+            "weight": 39
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 8,
+            "weight": 77
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 9,
+            "weight": 35
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 10,
+            "weight": 36
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 11,
+            "weight": 90
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 12,
+            "weight": 69
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 13,
+            "weight": 86
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 14,
+            "weight": 76
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 15,
+            "weight": 95
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 16,
+            "weight": 97
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 17,
+            "weight": 75
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 18,
+            "weight": 80
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 19,
+            "weight": 27
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 20,
+            "weight": 12
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 21,
+            "weight": 20
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 22,
+            "weight": 22
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 23,
+            "weight": 73
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 24,
+            "weight": 38
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 25,
+            "weight": 2
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 26,
+            "weight": 89
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 27,
+            "weight": 2
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 28,
+            "weight": 92
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 29,
+            "weight": 58
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 30,
+            "weight": 32
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 31,
+            "weight": 13
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 32,
+            "weight": 39
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 33,
+            "weight": 36
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 34,
+            "weight": 2
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 35,
+            "weight": 20
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 36,
+            "weight": 67
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 37,
+            "weight": 5
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 38,
+            "weight": 100
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 39,
+            "weight": 51
+        },
+        {
+            "id_i_node": 6,
+            "id_j_node": 40,
+            "weight": 8
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 0,
+            "weight": 65
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 1,
+            "weight": 64
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 3,
+            "weight": 16
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 2,
+            "weight": 5
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 4,
+            "weight": 60
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 5,
+            "weight": 67
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 6,
+            "weight": 100
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 8,
+            "weight": 62
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 9,
+            "weight": 6
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 10,
+            "weight": 40
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 11,
+            "weight": 5
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 12,
+            "weight": 31
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 13,
+            "weight": 3
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 14,
+            "weight": 18
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 15,
+            "weight": 3
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 16,
+            "weight": 43
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 17,
+            "weight": 70
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 18,
+            "weight": 66
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 19,
+            "weight": 9
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 20,
+            "weight": 99
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 21,
+            "weight": 78
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 22,
+            "weight": 36
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 23,
+            "weight": 81
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 24,
+            "weight": 68
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 25,
+            "weight": 3
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 26,
+            "weight": 30
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 27,
+            "weight": 70
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 28,
+            "weight": 76
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 29,
+            "weight": 51
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 30,
+            "weight": 46
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 31,
+            "weight": 18
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 32,
+            "weight": 3
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 33,
+            "weight": 45
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 34,
+            "weight": 42
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 35,
+            "weight": 16
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 36,
+            "weight": 95
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 37,
+            "weight": 60
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 38,
+            "weight": 72
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 39,
+            "weight": 29
+        },
+        {
+            "id_i_node": 7,
+            "id_j_node": 40,
+            "weight": 41
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 0,
+            "weight": 13
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 1,
+            "weight": 3
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 3,
+            "weight": 41
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 2,
+            "weight": 25
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 4,
+            "weight": 22
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 5,
+            "weight": 56
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 6,
+            "weight": 91
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 7,
+            "weight": 38
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 9,
+            "weight": 47
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 10,
+            "weight": 60
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 11,
+            "weight": 95
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 12,
+            "weight": 24
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 13,
+            "weight": 86
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 14,
+            "weight": 87
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 15,
+            "weight": 58
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 16,
+            "weight": 55
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 17,
+            "weight": 79
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 18,
+            "weight": 90
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 19,
+            "weight": 65
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 20,
+            "weight": 20
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 21,
+            "weight": 1
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 22,
+            "weight": 73
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 23,
+            "weight": 76
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 24,
+            "weight": 86
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 25,
+            "weight": 65
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 26,
+            "weight": 56
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 27,
+            "weight": 87
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 28,
+            "weight": 93
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 29,
+            "weight": 70
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 30,
+            "weight": 41
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 31,
+            "weight": 6
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 32,
+            "weight": 35
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 33,
+            "weight": 29
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 34,
+            "weight": 44
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 35,
+            "weight": 92
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 36,
+            "weight": 78
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 37,
+            "weight": 65
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 38,
+            "weight": 43
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 39,
+            "weight": 40
+        },
+        {
+            "id_i_node": 8,
+            "id_j_node": 40,
+            "weight": 99
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 0,
+            "weight": 85
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 1,
+            "weight": 80
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 3,
+            "weight": 61
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 2,
+            "weight": 85
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 4,
+            "weight": 90
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 5,
+            "weight": 65
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 6,
+            "weight": 4
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 7,
+            "weight": 83
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 8,
+            "weight": 25
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 10,
+            "weight": 28
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 11,
+            "weight": 85
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 12,
+            "weight": 67
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 13,
+            "weight": 99
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 14,
+            "weight": 62
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 15,
+            "weight": 37
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 16,
+            "weight": 6
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 17,
+            "weight": 34
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 18,
+            "weight": 97
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 19,
+            "weight": 54
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 20,
+            "weight": 52
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 21,
+            "weight": 87
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 22,
+            "weight": 53
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 23,
+            "weight": 29
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 24,
+            "weight": 68
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 25,
+            "weight": 71
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 26,
+            "weight": 25
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 27,
+            "weight": 75
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 28,
+            "weight": 51
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 29,
+            "weight": 3
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 30,
+            "weight": 17
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 31,
+            "weight": 20
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 32,
+            "weight": 6
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 33,
+            "weight": 36
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 34,
+            "weight": 15
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 35,
+            "weight": 30
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 36,
+            "weight": 31
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 37,
+            "weight": 27
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 38,
+            "weight": 80
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 39,
+            "weight": 83
+        },
+        {
+            "id_i_node": 9,
+            "id_j_node": 40,
+            "weight": 82
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 0,
+            "weight": 45
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 1,
+            "weight": 14
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 3,
+            "weight": 14
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 2,
+            "weight": 89
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 4,
+            "weight": 93
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 5,
+            "weight": 75
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 6,
+            "weight": 26
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 7,
+            "weight": 33
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 8,
+            "weight": 93
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 9,
+            "weight": 94
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 11,
+            "weight": 37
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 12,
+            "weight": 16
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 13,
+            "weight": 45
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 14,
+            "weight": 48
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 15,
+            "weight": 75
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 16,
+            "weight": 36
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 17,
+            "weight": 35
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 18,
+            "weight": 18
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 19,
+            "weight": 4
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 20,
+            "weight": 5
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 21,
+            "weight": 40
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 22,
+            "weight": 94
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 23,
+            "weight": 86
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 24,
+            "weight": 56
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 25,
+            "weight": 63
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 26,
+            "weight": 24
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 27,
+            "weight": 54
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 28,
+            "weight": 50
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 29,
+            "weight": 87
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 30,
+            "weight": 54
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 31,
+            "weight": 56
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 32,
+            "weight": 41
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 33,
+            "weight": 78
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 34,
+            "weight": 99
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 35,
+            "weight": 74
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 36,
+            "weight": 31
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 37,
+            "weight": 73
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 38,
+            "weight": 83
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 39,
+            "weight": 66
+        },
+        {
+            "id_i_node": 10,
+            "id_j_node": 40,
+            "weight": 85
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 0,
+            "weight": 93
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 1,
+            "weight": 40
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 3,
+            "weight": 92
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 2,
+            "weight": 16
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 4,
+            "weight": 6
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 5,
+            "weight": 75
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 6,
+            "weight": 27
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 7,
+            "weight": 29
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 8,
+            "weight": 67
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 9,
+            "weight": 95
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 10,
+            "weight": 46
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 12,
+            "weight": 52
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 13,
+            "weight": 24
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 14,
+            "weight": 4
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 15,
+            "weight": 82
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 16,
+            "weight": 29
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 17,
+            "weight": 53
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 18,
+            "weight": 10
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 19,
+            "weight": 30
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 20,
+            "weight": 57
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 21,
+            "weight": 57
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 22,
+            "weight": 28
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 23,
+            "weight": 13
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 24,
+            "weight": 72
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 25,
+            "weight": 3
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 26,
+            "weight": 25
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 27,
+            "weight": 87
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 28,
+            "weight": 23
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 29,
+            "weight": 52
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 30,
+            "weight": 75
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 31,
+            "weight": 33
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 32,
+            "weight": 97
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 33,
+            "weight": 8
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 34,
+            "weight": 2
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 35,
+            "weight": 79
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 36,
+            "weight": 87
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 37,
+            "weight": 30
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 38,
+            "weight": 78
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 39,
+            "weight": 63
+        },
+        {
+            "id_i_node": 11,
+            "id_j_node": 40,
+            "weight": 10
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 0,
+            "weight": 54
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 1,
+            "weight": 34
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 3,
+            "weight": 8
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 2,
+            "weight": 54
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 4,
+            "weight": 71
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 5,
+            "weight": 72
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 6,
+            "weight": 61
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 7,
+            "weight": 3
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 8,
+            "weight": 77
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 9,
+            "weight": 72
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 10,
+            "weight": 36
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 11,
+            "weight": 33
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 13,
+            "weight": 17
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 14,
+            "weight": 39
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 15,
+            "weight": 5
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 16,
+            "weight": 60
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 17,
+            "weight": 90
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 18,
+            "weight": 75
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 19,
+            "weight": 79
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 20,
+            "weight": 41
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 21,
+            "weight": 100
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 22,
+            "weight": 30
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 23,
+            "weight": 7
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 24,
+            "weight": 11
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 25,
+            "weight": 52
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 26,
+            "weight": 81
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 27,
+            "weight": 65
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 28,
+            "weight": 76
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 29,
+            "weight": 29
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 30,
+            "weight": 45
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 31,
+            "weight": 79
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 32,
+            "weight": 12
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 33,
+            "weight": 40
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 34,
+            "weight": 76
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 35,
+            "weight": 25
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 36,
+            "weight": 50
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 37,
+            "weight": 73
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 38,
+            "weight": 90
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 39,
+            "weight": 83
+        },
+        {
+            "id_i_node": 12,
+            "id_j_node": 40,
+            "weight": 1
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 0,
+            "weight": 21
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 1,
+            "weight": 50
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 3,
+            "weight": 74
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 2,
+            "weight": 8
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 4,
+            "weight": 100
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 5,
+            "weight": 82
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 6,
+            "weight": 30
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 7,
+            "weight": 11
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 8,
+            "weight": 63
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 9,
+            "weight": 63
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 10,
+            "weight": 56
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 11,
+            "weight": 45
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 12,
+            "weight": 48
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 14,
+            "weight": 56
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 15,
+            "weight": 58
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 16,
+            "weight": 63
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 17,
+            "weight": 73
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 18,
+            "weight": 14
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 19,
+            "weight": 90
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 20,
+            "weight": 36
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 21,
+            "weight": 51
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 22,
+            "weight": 6
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 23,
+            "weight": 64
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 24,
+            "weight": 75
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 25,
+            "weight": 40
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 26,
+            "weight": 62
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 27,
+            "weight": 95
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 28,
+            "weight": 66
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 29,
+            "weight": 30
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 30,
+            "weight": 72
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 31,
+            "weight": 46
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 32,
+            "weight": 59
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 33,
+            "weight": 86
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 34,
+            "weight": 37
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 35,
+            "weight": 35
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 36,
+            "weight": 32
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 37,
+            "weight": 66
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 38,
+            "weight": 29
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 39,
+            "weight": 10
+        },
+        {
+            "id_i_node": 13,
+            "id_j_node": 40,
+            "weight": 19
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 0,
+            "weight": 5
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 1,
+            "weight": 61
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 3,
+            "weight": 64
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 2,
+            "weight": 35
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 4,
+            "weight": 74
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 5,
+            "weight": 64
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 6,
+            "weight": 88
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 7,
+            "weight": 55
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 8,
+            "weight": 48
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 9,
+            "weight": 55
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 10,
+            "weight": 35
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 11,
+            "weight": 6
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 12,
+            "weight": 15
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 13,
+            "weight": 85
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 15,
+            "weight": 10
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 16,
+            "weight": 41
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 17,
+            "weight": 100
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 18,
+            "weight": 34
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 19,
+            "weight": 99
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 20,
+            "weight": 30
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 21,
+            "weight": 36
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 22,
+            "weight": 57
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 23,
+            "weight": 39
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 24,
+            "weight": 50
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 25,
+            "weight": 54
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 26,
+            "weight": 81
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 27,
+            "weight": 26
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 28,
+            "weight": 63
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 29,
+            "weight": 96
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 30,
+            "weight": 70
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 31,
+            "weight": 40
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 32,
+            "weight": 17
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 33,
+            "weight": 100
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 34,
+            "weight": 33
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 35,
+            "weight": 55
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 36,
+            "weight": 37
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 37,
+            "weight": 97
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 38,
+            "weight": 2
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 39,
+            "weight": 16
+        },
+        {
+            "id_i_node": 14,
+            "id_j_node": 40,
+            "weight": 41
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 0,
+            "weight": 67
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 1,
+            "weight": 63
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 3,
+            "weight": 59
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 2,
+            "weight": 51
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 4,
+            "weight": 89
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 5,
+            "weight": 51
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 6,
+            "weight": 97
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 7,
+            "weight": 52
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 8,
+            "weight": 78
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 9,
+            "weight": 20
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 10,
+            "weight": 86
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 11,
+            "weight": 58
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 12,
+            "weight": 98
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 13,
+            "weight": 86
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 14,
+            "weight": 3
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 16,
+            "weight": 73
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 17,
+            "weight": 71
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 18,
+            "weight": 83
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 19,
+            "weight": 58
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 20,
+            "weight": 88
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 21,
+            "weight": 29
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 22,
+            "weight": 42
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 23,
+            "weight": 45
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 24,
+            "weight": 23
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 25,
+            "weight": 53
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 26,
+            "weight": 79
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 27,
+            "weight": 72
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 28,
+            "weight": 25
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 29,
+            "weight": 99
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 30,
+            "weight": 85
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 31,
+            "weight": 26
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 32,
+            "weight": 2
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 33,
+            "weight": 9
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 34,
+            "weight": 32
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 35,
+            "weight": 70
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 36,
+            "weight": 53
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 37,
+            "weight": 14
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 38,
+            "weight": 46
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 39,
+            "weight": 88
+        },
+        {
+            "id_i_node": 15,
+            "id_j_node": 40,
+            "weight": 58
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 0,
+            "weight": 81
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 1,
+            "weight": 49
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 3,
+            "weight": 75
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 2,
+            "weight": 78
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 4,
+            "weight": 50
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 5,
+            "weight": 12
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 6,
+            "weight": 86
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 7,
+            "weight": 30
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 8,
+            "weight": 1
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 9,
+            "weight": 3
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 10,
+            "weight": 64
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 11,
+            "weight": 48
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 12,
+            "weight": 93
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 13,
+            "weight": 73
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 14,
+            "weight": 98
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 15,
+            "weight": 2
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 17,
+            "weight": 61
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 18,
+            "weight": 8
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 19,
+            "weight": 36
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 20,
+            "weight": 87
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 21,
+            "weight": 67
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 22,
+            "weight": 96
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 23,
+            "weight": 11
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 24,
+            "weight": 43
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 25,
+            "weight": 74
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 26,
+            "weight": 54
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 27,
+            "weight": 70
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 28,
+            "weight": 4
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 29,
+            "weight": 30
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 30,
+            "weight": 53
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 31,
+            "weight": 44
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 32,
+            "weight": 17
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 33,
+            "weight": 53
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 34,
+            "weight": 61
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 35,
+            "weight": 48
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 36,
+            "weight": 10
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 37,
+            "weight": 37
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 38,
+            "weight": 93
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 39,
+            "weight": 80
+        },
+        {
+            "id_i_node": 16,
+            "id_j_node": 40,
+            "weight": 49
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 0,
+            "weight": 75
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 1,
+            "weight": 94
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 3,
+            "weight": 90
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 2,
+            "weight": 48
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 4,
+            "weight": 13
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 5,
+            "weight": 14
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 6,
+            "weight": 67
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 7,
+            "weight": 99
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 8,
+            "weight": 96
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 9,
+            "weight": 76
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 10,
+            "weight": 47
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 11,
+            "weight": 28
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 12,
+            "weight": 90
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 13,
+            "weight": 17
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 14,
+            "weight": 53
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 15,
+            "weight": 89
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 16,
+            "weight": 62
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 18,
+            "weight": 2
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 19,
+            "weight": 16
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 20,
+            "weight": 84
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 21,
+            "weight": 16
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 22,
+            "weight": 83
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 23,
+            "weight": 45
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 24,
+            "weight": 59
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 25,
+            "weight": 33
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 26,
+            "weight": 39
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 27,
+            "weight": 63
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 28,
+            "weight": 54
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 29,
+            "weight": 39
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 30,
+            "weight": 51
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 31,
+            "weight": 41
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 32,
+            "weight": 2
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 33,
+            "weight": 90
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 34,
+            "weight": 56
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 35,
+            "weight": 81
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 36,
+            "weight": 1
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 37,
+            "weight": 49
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 38,
+            "weight": 39
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 39,
+            "weight": 95
+        },
+        {
+            "id_i_node": 17,
+            "id_j_node": 40,
+            "weight": 5
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 0,
+            "weight": 96
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 1,
+            "weight": 31
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 3,
+            "weight": 17
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 2,
+            "weight": 35
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 4,
+            "weight": 85
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 5,
+            "weight": 68
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 6,
+            "weight": 16
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 7,
+            "weight": 48
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 8,
+            "weight": 73
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 9,
+            "weight": 2
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 10,
+            "weight": 32
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 11,
+            "weight": 66
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 12,
+            "weight": 31
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 13,
+            "weight": 8
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 14,
+            "weight": 2
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 15,
+            "weight": 73
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 16,
+            "weight": 77
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 17,
+            "weight": 27
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 19,
+            "weight": 33
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 20,
+            "weight": 64
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 21,
+            "weight": 53
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 22,
+            "weight": 68
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 23,
+            "weight": 81
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 24,
+            "weight": 81
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 25,
+            "weight": 31
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 26,
+            "weight": 49
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 27,
+            "weight": 42
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 28,
+            "weight": 92
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 29,
+            "weight": 11
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 30,
+            "weight": 33
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 31,
+            "weight": 29
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 32,
+            "weight": 7
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 33,
+            "weight": 51
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 34,
+            "weight": 67
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 35,
+            "weight": 78
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 36,
+            "weight": 79
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 37,
+            "weight": 56
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 38,
+            "weight": 84
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 39,
+            "weight": 86
+        },
+        {
+            "id_i_node": 18,
+            "id_j_node": 40,
+            "weight": 13
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 0,
+            "weight": 41
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 1,
+            "weight": 47
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 3,
+            "weight": 93
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 2,
+            "weight": 57
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 4,
+            "weight": 89
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 5,
+            "weight": 64
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 6,
+            "weight": 35
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 7,
+            "weight": 13
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 8,
+            "weight": 74
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 9,
+            "weight": 39
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 10,
+            "weight": 28
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 11,
+            "weight": 32
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 12,
+            "weight": 100
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 13,
+            "weight": 18
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 14,
+            "weight": 84
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 15,
+            "weight": 44
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 16,
+            "weight": 14
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 17,
+            "weight": 43
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 18,
+            "weight": 88
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 20,
+            "weight": 6
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 21,
+            "weight": 72
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 22,
+            "weight": 49
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 23,
+            "weight": 55
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 24,
+            "weight": 46
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 25,
+            "weight": 42
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 26,
+            "weight": 46
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 27,
+            "weight": 21
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 28,
+            "weight": 49
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 29,
+            "weight": 50
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 30,
+            "weight": 11
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 31,
+            "weight": 20
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 32,
+            "weight": 100
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 33,
+            "weight": 35
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 34,
+            "weight": 75
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 35,
+            "weight": 19
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 36,
+            "weight": 64
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 37,
+            "weight": 75
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 38,
+            "weight": 70
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 39,
+            "weight": 48
+        },
+        {
+            "id_i_node": 19,
+            "id_j_node": 40,
+            "weight": 9
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 0,
+            "weight": 31
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 1,
+            "weight": 27
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 3,
+            "weight": 2
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 2,
+            "weight": 33
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 4,
+            "weight": 22
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 5,
+            "weight": 44
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 6,
+            "weight": 26
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 7,
+            "weight": 75
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 8,
+            "weight": 24
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 9,
+            "weight": 58
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 10,
+            "weight": 56
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 11,
+            "weight": 1
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 12,
+            "weight": 44
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 13,
+            "weight": 2
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 14,
+            "weight": 81
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 15,
+            "weight": 12
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 16,
+            "weight": 63
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 17,
+            "weight": 61
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 18,
+            "weight": 32
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 19,
+            "weight": 64
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 21,
+            "weight": 89
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 22,
+            "weight": 23
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 23,
+            "weight": 80
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 24,
+            "weight": 87
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 25,
+            "weight": 29
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 26,
+            "weight": 18
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 27,
+            "weight": 22
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 28,
+            "weight": 53
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 29,
+            "weight": 57
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 30,
+            "weight": 88
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 31,
+            "weight": 31
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 32,
+            "weight": 28
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 33,
+            "weight": 45
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 34,
+            "weight": 61
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 35,
+            "weight": 18
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 36,
+            "weight": 30
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 37,
+            "weight": 22
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 38,
+            "weight": 4
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 39,
+            "weight": 39
+        },
+        {
+            "id_i_node": 20,
+            "id_j_node": 40,
+            "weight": 23
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 0,
+            "weight": 20
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 1,
+            "weight": 23
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 3,
+            "weight": 53
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 2,
+            "weight": 94
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 4,
+            "weight": 63
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 5,
+            "weight": 58
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 6,
+            "weight": 23
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 7,
+            "weight": 65
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 8,
+            "weight": 34
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 9,
+            "weight": 22
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 10,
+            "weight": 2
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 11,
+            "weight": 21
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 12,
+            "weight": 34
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 13,
+            "weight": 18
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 14,
+            "weight": 16
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 15,
+            "weight": 62
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 16,
+            "weight": 75
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 17,
+            "weight": 67
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 18,
+            "weight": 86
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 19,
+            "weight": 60
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 20,
+            "weight": 55
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 22,
+            "weight": 37
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 23,
+            "weight": 56
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 24,
+            "weight": 91
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 25,
+            "weight": 63
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 26,
+            "weight": 8
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 27,
+            "weight": 84
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 28,
+            "weight": 34
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 29,
+            "weight": 94
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 30,
+            "weight": 8
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 31,
+            "weight": 70
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 32,
+            "weight": 88
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 33,
+            "weight": 56
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 34,
+            "weight": 36
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 35,
+            "weight": 58
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 36,
+            "weight": 22
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 37,
+            "weight": 100
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 38,
+            "weight": 97
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 39,
+            "weight": 54
+        },
+        {
+            "id_i_node": 21,
+            "id_j_node": 40,
+            "weight": 69
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 0,
+            "weight": 31
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 1,
+            "weight": 82
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 3,
+            "weight": 85
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 2,
+            "weight": 23
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 4,
+            "weight": 51
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 5,
+            "weight": 8
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 6,
+            "weight": 58
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 7,
+            "weight": 18
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 8,
+            "weight": 72
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 9,
+            "weight": 60
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 10,
+            "weight": 74
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 11,
+            "weight": 43
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 12,
+            "weight": 78
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 13,
+            "weight": 79
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 14,
+            "weight": 92
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 15,
+            "weight": 65
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 16,
+            "weight": 41
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 17,
+            "weight": 4
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 18,
+            "weight": 2
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 19,
+            "weight": 23
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 20,
+            "weight": 23
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 21,
+            "weight": 90
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 23,
+            "weight": 26
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 24,
+            "weight": 6
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 25,
+            "weight": 29
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 26,
+            "weight": 49
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 27,
+            "weight": 4
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 28,
+            "weight": 36
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 29,
+            "weight": 52
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 30,
+            "weight": 63
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 31,
+            "weight": 66
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 32,
+            "weight": 93
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 33,
+            "weight": 28
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 34,
+            "weight": 27
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 35,
+            "weight": 60
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 36,
+            "weight": 16
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 37,
+            "weight": 43
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 38,
+            "weight": 10
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 39,
+            "weight": 71
+        },
+        {
+            "id_i_node": 22,
+            "id_j_node": 40,
+            "weight": 19
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 0,
+            "weight": 85
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 1,
+            "weight": 83
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 3,
+            "weight": 87
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 2,
+            "weight": 62
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 4,
+            "weight": 17
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 5,
+            "weight": 31
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 6,
+            "weight": 61
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 7,
+            "weight": 87
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 8,
+            "weight": 71
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 9,
+            "weight": 21
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 10,
+            "weight": 74
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 11,
+            "weight": 65
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 12,
+            "weight": 47
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 13,
+            "weight": 65
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 14,
+            "weight": 79
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 15,
+            "weight": 38
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 16,
+            "weight": 73
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 17,
+            "weight": 37
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 18,
+            "weight": 48
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 19,
+            "weight": 67
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 20,
+            "weight": 42
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 21,
+            "weight": 4
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 22,
+            "weight": 7
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 24,
+            "weight": 19
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 25,
+            "weight": 40
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 26,
+            "weight": 65
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 27,
+            "weight": 24
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 28,
+            "weight": 74
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 29,
+            "weight": 32
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 30,
+            "weight": 69
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 31,
+            "weight": 49
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 32,
+            "weight": 22
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 33,
+            "weight": 93
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 34,
+            "weight": 91
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 35,
+            "weight": 24
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 36,
+            "weight": 28
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 37,
+            "weight": 57
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 38,
+            "weight": 2
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 39,
+            "weight": 56
+        },
+        {
+            "id_i_node": 23,
+            "id_j_node": 40,
+            "weight": 11
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 0,
+            "weight": 95
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 1,
+            "weight": 24
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 3,
+            "weight": 45
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 2,
+            "weight": 3
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 4,
+            "weight": 31
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 5,
+            "weight": 34
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 6,
+            "weight": 98
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 7,
+            "weight": 50
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 8,
+            "weight": 44
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 9,
+            "weight": 64
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 10,
+            "weight": 2
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 11,
+            "weight": 63
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 12,
+            "weight": 75
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 13,
+            "weight": 70
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 14,
+            "weight": 8
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 15,
+            "weight": 74
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 16,
+            "weight": 26
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 17,
+            "weight": 100
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 18,
+            "weight": 91
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 19,
+            "weight": 20
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 20,
+            "weight": 48
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 21,
+            "weight": 2
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 22,
+            "weight": 1
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 23,
+            "weight": 13
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 25,
+            "weight": 86
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 26,
+            "weight": 77
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 27,
+            "weight": 67
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 28,
+            "weight": 38
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 29,
+            "weight": 46
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 30,
+            "weight": 70
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 31,
+            "weight": 74
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 32,
+            "weight": 81
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 33,
+            "weight": 19
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 34,
+            "weight": 15
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 35,
+            "weight": 16
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 36,
+            "weight": 72
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 37,
+            "weight": 41
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 38,
+            "weight": 73
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 39,
+            "weight": 21
+        },
+        {
+            "id_i_node": 24,
+            "id_j_node": 40,
+            "weight": 64
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 0,
+            "weight": 23
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 1,
+            "weight": 47
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 3,
+            "weight": 60
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 2,
+            "weight": 80
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 4,
+            "weight": 82
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 5,
+            "weight": 17
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 6,
+            "weight": 42
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 7,
+            "weight": 39
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 8,
+            "weight": 71
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 9,
+            "weight": 31
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 10,
+            "weight": 79
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 11,
+            "weight": 83
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 12,
+            "weight": 39
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 13,
+            "weight": 88
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 14,
+            "weight": 14
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 15,
+            "weight": 21
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 16,
+            "weight": 66
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 17,
+            "weight": 14
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 18,
+            "weight": 55
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 19,
+            "weight": 18
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 20,
+            "weight": 53
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 21,
+            "weight": 21
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 22,
+            "weight": 17
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 23,
+            "weight": 77
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 24,
+            "weight": 23
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 26,
+            "weight": 97
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 27,
+            "weight": 75
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 28,
+            "weight": 58
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 29,
+            "weight": 16
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 30,
+            "weight": 29
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 31,
+            "weight": 5
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 32,
+            "weight": 12
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 33,
+            "weight": 18
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 34,
+            "weight": 46
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 35,
+            "weight": 10
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 36,
+            "weight": 17
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 37,
+            "weight": 79
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 38,
+            "weight": 82
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 39,
+            "weight": 46
+        },
+        {
+            "id_i_node": 25,
+            "id_j_node": 40,
+            "weight": 67
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 0,
+            "weight": 63
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 1,
+            "weight": 50
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 3,
+            "weight": 40
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 2,
+            "weight": 78
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 4,
+            "weight": 80
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 5,
+            "weight": 94
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 6,
+            "weight": 3
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 7,
+            "weight": 50
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 8,
+            "weight": 65
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 9,
+            "weight": 5
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 10,
+            "weight": 66
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 11,
+            "weight": 90
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 12,
+            "weight": 100
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 13,
+            "weight": 71
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 14,
+            "weight": 45
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 15,
+            "weight": 95
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 16,
+            "weight": 13
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 17,
+            "weight": 19
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 18,
+            "weight": 57
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 19,
+            "weight": 57
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 20,
+            "weight": 53
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 21,
+            "weight": 65
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 22,
+            "weight": 20
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 23,
+            "weight": 91
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 24,
+            "weight": 12
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 25,
+            "weight": 88
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 27,
+            "weight": 16
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 28,
+            "weight": 83
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 29,
+            "weight": 43
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 30,
+            "weight": 20
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 31,
+            "weight": 66
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 32,
+            "weight": 13
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 33,
+            "weight": 69
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 34,
+            "weight": 35
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 35,
+            "weight": 5
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 36,
+            "weight": 1
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 37,
+            "weight": 75
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 38,
+            "weight": 82
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 39,
+            "weight": 66
+        },
+        {
+            "id_i_node": 26,
+            "id_j_node": 40,
+            "weight": 39
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 0,
+            "weight": 87
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 1,
+            "weight": 13
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 3,
+            "weight": 46
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 2,
+            "weight": 60
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 4,
+            "weight": 12
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 5,
+            "weight": 30
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 6,
+            "weight": 57
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 7,
+            "weight": 40
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 8,
+            "weight": 9
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 9,
+            "weight": 90
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 10,
+            "weight": 28
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 11,
+            "weight": 32
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 12,
+            "weight": 25
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 13,
+            "weight": 48
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 14,
+            "weight": 87
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 15,
+            "weight": 84
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 16,
+            "weight": 95
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 17,
+            "weight": 5
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 18,
+            "weight": 46
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 19,
+            "weight": 81
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 20,
+            "weight": 19
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 21,
+            "weight": 67
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 22,
+            "weight": 42
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 23,
+            "weight": 37
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 24,
+            "weight": 92
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 25,
+            "weight": 37
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 26,
+            "weight": 74
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 28,
+            "weight": 4
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 29,
+            "weight": 27
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 30,
+            "weight": 80
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 31,
+            "weight": 21
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 32,
+            "weight": 62
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 33,
+            "weight": 83
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 34,
+            "weight": 69
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 35,
+            "weight": 1
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 36,
+            "weight": 65
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 37,
+            "weight": 12
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 38,
+            "weight": 77
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 39,
+            "weight": 78
+        },
+        {
+            "id_i_node": 27,
+            "id_j_node": 40,
+            "weight": 46
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 0,
+            "weight": 69
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 1,
+            "weight": 45
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 3,
+            "weight": 47
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 2,
+            "weight": 39
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 4,
+            "weight": 32
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 5,
+            "weight": 60
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 6,
+            "weight": 36
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 7,
+            "weight": 6
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 8,
+            "weight": 36
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 9,
+            "weight": 56
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 10,
+            "weight": 48
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 11,
+            "weight": 95
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 12,
+            "weight": 34
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 13,
+            "weight": 95
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 14,
+            "weight": 71
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 15,
+            "weight": 30
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 16,
+            "weight": 10
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 17,
+            "weight": 50
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 18,
+            "weight": 72
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 19,
+            "weight": 41
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 20,
+            "weight": 52
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 21,
+            "weight": 92
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 22,
+            "weight": 84
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 23,
+            "weight": 51
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 24,
+            "weight": 23
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 25,
+            "weight": 57
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 26,
+            "weight": 9
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 27,
+            "weight": 17
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 29,
+            "weight": 1
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 30,
+            "weight": 69
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 31,
+            "weight": 70
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 32,
+            "weight": 69
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 33,
+            "weight": 54
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 34,
+            "weight": 9
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 35,
+            "weight": 68
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 36,
+            "weight": 1
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 37,
+            "weight": 70
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 38,
+            "weight": 88
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 39,
+            "weight": 100
+        },
+        {
+            "id_i_node": 28,
+            "id_j_node": 40,
+            "weight": 96
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 0,
+            "weight": 41
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 1,
+            "weight": 96
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 3,
+            "weight": 87
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 2,
+            "weight": 8
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 4,
+            "weight": 1
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 5,
+            "weight": 97
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 6,
+            "weight": 65
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 7,
+            "weight": 26
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 8,
+            "weight": 61
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 9,
+            "weight": 74
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 10,
+            "weight": 31
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 11,
+            "weight": 21
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 12,
+            "weight": 65
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 13,
+            "weight": 5
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 14,
+            "weight": 43
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 15,
+            "weight": 75
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 16,
+            "weight": 87
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 17,
+            "weight": 93
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 18,
+            "weight": 85
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 19,
+            "weight": 45
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 20,
+            "weight": 44
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 21,
+            "weight": 74
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 22,
+            "weight": 78
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 23,
+            "weight": 35
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 24,
+            "weight": 35
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 25,
+            "weight": 64
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 26,
+            "weight": 35
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 27,
+            "weight": 75
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 28,
+            "weight": 42
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 30,
+            "weight": 75
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 31,
+            "weight": 96
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 32,
+            "weight": 27
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 33,
+            "weight": 40
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 34,
+            "weight": 46
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 35,
+            "weight": 79
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 36,
+            "weight": 27
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 37,
+            "weight": 59
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 38,
+            "weight": 51
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 39,
+            "weight": 71
+        },
+        {
+            "id_i_node": 29,
+            "id_j_node": 40,
+            "weight": 87
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 0,
+            "weight": 60
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 1,
+            "weight": 60
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 3,
+            "weight": 93
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 2,
+            "weight": 89
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 4,
+            "weight": 41
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 5,
+            "weight": 8
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 6,
+            "weight": 87
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 7,
+            "weight": 56
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 8,
+            "weight": 96
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 9,
+            "weight": 73
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 10,
+            "weight": 34
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 11,
+            "weight": 44
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 12,
+            "weight": 1
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 13,
+            "weight": 28
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 14,
+            "weight": 80
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 15,
+            "weight": 70
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 16,
+            "weight": 24
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 17,
+            "weight": 100
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 18,
+            "weight": 81
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 19,
+            "weight": 35
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 20,
+            "weight": 17
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 21,
+            "weight": 15
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 22,
+            "weight": 58
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 23,
+            "weight": 86
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 24,
+            "weight": 100
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 25,
+            "weight": 24
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 26,
+            "weight": 5
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 27,
+            "weight": 62
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 28,
+            "weight": 72
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 29,
+            "weight": 16
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 31,
+            "weight": 44
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 32,
+            "weight": 42
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 33,
+            "weight": 46
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 34,
+            "weight": 86
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 35,
+            "weight": 24
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 36,
+            "weight": 8
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 37,
+            "weight": 50
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 38,
+            "weight": 75
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 39,
+            "weight": 61
+        },
+        {
+            "id_i_node": 30,
+            "id_j_node": 40,
+            "weight": 77
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 0,
+            "weight": 89
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 1,
+            "weight": 95
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 3,
+            "weight": 78
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 2,
+            "weight": 62
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 4,
+            "weight": 53
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 5,
+            "weight": 32
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 6,
+            "weight": 39
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 7,
+            "weight": 49
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 8,
+            "weight": 74
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 9,
+            "weight": 78
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 10,
+            "weight": 47
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 11,
+            "weight": 79
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 12,
+            "weight": 78
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 13,
+            "weight": 81
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 14,
+            "weight": 23
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 15,
+            "weight": 17
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 16,
+            "weight": 15
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 17,
+            "weight": 62
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 18,
+            "weight": 41
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 19,
+            "weight": 32
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 20,
+            "weight": 22
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 21,
+            "weight": 91
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 22,
+            "weight": 74
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 23,
+            "weight": 20
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 24,
+            "weight": 92
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 25,
+            "weight": 21
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 26,
+            "weight": 59
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 27,
+            "weight": 18
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 28,
+            "weight": 70
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 29,
+            "weight": 66
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 30,
+            "weight": 42
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 32,
+            "weight": 77
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 33,
+            "weight": 66
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 34,
+            "weight": 36
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 35,
+            "weight": 43
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 36,
+            "weight": 93
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 37,
+            "weight": 28
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 38,
+            "weight": 72
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 39,
+            "weight": 31
+        },
+        {
+            "id_i_node": 31,
+            "id_j_node": 40,
+            "weight": 39
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 0,
+            "weight": 31
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 1,
+            "weight": 35
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 3,
+            "weight": 56
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 2,
+            "weight": 76
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 4,
+            "weight": 100
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 5,
+            "weight": 71
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 6,
+            "weight": 42
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 7,
+            "weight": 60
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 8,
+            "weight": 17
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 9,
+            "weight": 84
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 10,
+            "weight": 41
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 11,
+            "weight": 85
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 12,
+            "weight": 2
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 13,
+            "weight": 33
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 14,
+            "weight": 33
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 15,
+            "weight": 14
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 16,
+            "weight": 55
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 17,
+            "weight": 2
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 18,
+            "weight": 96
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 19,
+            "weight": 51
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 20,
+            "weight": 95
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 21,
+            "weight": 47
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 22,
+            "weight": 35
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 23,
+            "weight": 68
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 24,
+            "weight": 1
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 25,
+            "weight": 77
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 26,
+            "weight": 86
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 27,
+            "weight": 51
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 28,
+            "weight": 3
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 29,
+            "weight": 94
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 30,
+            "weight": 84
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 31,
+            "weight": 53
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 33,
+            "weight": 41
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 34,
+            "weight": 36
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 35,
+            "weight": 61
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 36,
+            "weight": 39
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 37,
+            "weight": 8
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 38,
+            "weight": 81
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 39,
+            "weight": 9
+        },
+        {
+            "id_i_node": 32,
+            "id_j_node": 40,
+            "weight": 100
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 0,
+            "weight": 34
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 1,
+            "weight": 2
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 3,
+            "weight": 30
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 2,
+            "weight": 98
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 4,
+            "weight": 89
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 5,
+            "weight": 5
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 6,
+            "weight": 43
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 7,
+            "weight": 83
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 8,
+            "weight": 65
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 9,
+            "weight": 85
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 10,
+            "weight": 3
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 11,
+            "weight": 33
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 12,
+            "weight": 46
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 13,
+            "weight": 55
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 14,
+            "weight": 85
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 15,
+            "weight": 72
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 16,
+            "weight": 57
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 17,
+            "weight": 40
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 18,
+            "weight": 74
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 19,
+            "weight": 50
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 20,
+            "weight": 96
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 21,
+            "weight": 73
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 22,
+            "weight": 74
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 23,
+            "weight": 50
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 24,
+            "weight": 62
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 25,
+            "weight": 59
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 26,
+            "weight": 56
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 27,
+            "weight": 79
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 28,
+            "weight": 92
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 29,
+            "weight": 94
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 30,
+            "weight": 12
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 31,
+            "weight": 81
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 32,
+            "weight": 100
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 34,
+            "weight": 25
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 35,
+            "weight": 34
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 36,
+            "weight": 50
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 37,
+            "weight": 65
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 38,
+            "weight": 61
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 39,
+            "weight": 90
+        },
+        {
+            "id_i_node": 33,
+            "id_j_node": 40,
+            "weight": 68
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 0,
+            "weight": 38
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 1,
+            "weight": 96
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 3,
+            "weight": 7
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 2,
+            "weight": 48
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 4,
+            "weight": 38
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 5,
+            "weight": 58
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 6,
+            "weight": 52
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 7,
+            "weight": 50
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 8,
+            "weight": 15
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 9,
+            "weight": 96
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 10,
+            "weight": 67
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 11,
+            "weight": 66
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 12,
+            "weight": 4
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 13,
+            "weight": 95
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 14,
+            "weight": 38
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 15,
+            "weight": 57
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 16,
+            "weight": 53
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 17,
+            "weight": 40
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 18,
+            "weight": 47
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 19,
+            "weight": 93
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 20,
+            "weight": 19
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 21,
+            "weight": 34
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 22,
+            "weight": 61
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 23,
+            "weight": 50
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 24,
+            "weight": 60
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 25,
+            "weight": 23
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 26,
+            "weight": 18
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 27,
+            "weight": 87
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 28,
+            "weight": 13
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 29,
+            "weight": 88
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 30,
+            "weight": 19
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 31,
+            "weight": 3
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 32,
+            "weight": 63
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 33,
+            "weight": 17
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 35,
+            "weight": 62
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 36,
+            "weight": 44
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 37,
+            "weight": 36
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 38,
+            "weight": 2
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 39,
+            "weight": 29
+        },
+        {
+            "id_i_node": 34,
+            "id_j_node": 40,
+            "weight": 24
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 0,
+            "weight": 48
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 1,
+            "weight": 28
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 3,
+            "weight": 90
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 2,
+            "weight": 44
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 4,
+            "weight": 53
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 5,
+            "weight": 52
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 6,
+            "weight": 98
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 7,
+            "weight": 63
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 8,
+            "weight": 54
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 9,
+            "weight": 15
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 10,
+            "weight": 36
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 11,
+            "weight": 57
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 12,
+            "weight": 83
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 13,
+            "weight": 54
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 14,
+            "weight": 48
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 15,
+            "weight": 17
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 16,
+            "weight": 82
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 17,
+            "weight": 66
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 18,
+            "weight": 95
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 19,
+            "weight": 26
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 20,
+            "weight": 82
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 21,
+            "weight": 20
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 22,
+            "weight": 12
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 23,
+            "weight": 17
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 24,
+            "weight": 31
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 25,
+            "weight": 41
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 26,
+            "weight": 87
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 27,
+            "weight": 21
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 28,
+            "weight": 8
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 29,
+            "weight": 91
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 30,
+            "weight": 81
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 31,
+            "weight": 36
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 32,
+            "weight": 79
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 33,
+            "weight": 1
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 34,
+            "weight": 65
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 36,
+            "weight": 73
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 37,
+            "weight": 87
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 38,
+            "weight": 42
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 39,
+            "weight": 53
+        },
+        {
+            "id_i_node": 35,
+            "id_j_node": 40,
+            "weight": 27
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 0,
+            "weight": 20
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 1,
+            "weight": 77
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 3,
+            "weight": 37
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 2,
+            "weight": 41
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 4,
+            "weight": 34
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 5,
+            "weight": 41
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 6,
+            "weight": 75
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 7,
+            "weight": 45
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 8,
+            "weight": 89
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 9,
+            "weight": 71
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 10,
+            "weight": 78
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 11,
+            "weight": 16
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 12,
+            "weight": 75
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 13,
+            "weight": 41
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 14,
+            "weight": 98
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 15,
+            "weight": 6
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 16,
+            "weight": 58
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 17,
+            "weight": 27
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 18,
+            "weight": 65
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 19,
+            "weight": 24
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 20,
+            "weight": 18
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 21,
+            "weight": 76
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 22,
+            "weight": 4
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 23,
+            "weight": 20
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 24,
+            "weight": 18
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 25,
+            "weight": 95
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 26,
+            "weight": 70
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 27,
+            "weight": 86
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 28,
+            "weight": 50
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 29,
+            "weight": 91
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 30,
+            "weight": 30
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 31,
+            "weight": 59
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 32,
+            "weight": 53
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 33,
+            "weight": 28
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 34,
+            "weight": 56
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 35,
+            "weight": 84
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 37,
+            "weight": 85
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 38,
+            "weight": 36
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 39,
+            "weight": 28
+        },
+        {
+            "id_i_node": 36,
+            "id_j_node": 40,
+            "weight": 7
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 0,
+            "weight": 20
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 1,
+            "weight": 49
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 3,
+            "weight": 2
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 2,
+            "weight": 77
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 4,
+            "weight": 58
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 5,
+            "weight": 95
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 6,
+            "weight": 6
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 7,
+            "weight": 85
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 8,
+            "weight": 5
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 9,
+            "weight": 34
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 10,
+            "weight": 16
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 11,
+            "weight": 22
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 12,
+            "weight": 18
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 13,
+            "weight": 16
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 14,
+            "weight": 42
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 15,
+            "weight": 56
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 16,
+            "weight": 41
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 17,
+            "weight": 12
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 18,
+            "weight": 95
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 19,
+            "weight": 28
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 20,
+            "weight": 4
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 21,
+            "weight": 53
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 22,
+            "weight": 41
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 23,
+            "weight": 22
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 24,
+            "weight": 73
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 25,
+            "weight": 64
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 26,
+            "weight": 62
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 27,
+            "weight": 88
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 28,
+            "weight": 63
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 29,
+            "weight": 79
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 30,
+            "weight": 88
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 31,
+            "weight": 22
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 32,
+            "weight": 38
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 33,
+            "weight": 40
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 34,
+            "weight": 5
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 35,
+            "weight": 88
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 36,
+            "weight": 60
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 38,
+            "weight": 50
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 39,
+            "weight": 37
+        },
+        {
+            "id_i_node": 37,
+            "id_j_node": 40,
+            "weight": 66
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 0,
+            "weight": 40
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 1,
+            "weight": 45
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 3,
+            "weight": 52
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 2,
+            "weight": 59
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 4,
+            "weight": 5
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 5,
+            "weight": 11
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 6,
+            "weight": 23
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 7,
+            "weight": 91
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 8,
+            "weight": 93
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 9,
+            "weight": 88
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 10,
+            "weight": 99
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 11,
+            "weight": 76
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 12,
+            "weight": 15
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 13,
+            "weight": 11
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 14,
+            "weight": 32
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 15,
+            "weight": 22
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 16,
+            "weight": 44
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 17,
+            "weight": 12
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 18,
+            "weight": 88
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 19,
+            "weight": 80
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 20,
+            "weight": 31
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 21,
+            "weight": 56
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 22,
+            "weight": 7
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 23,
+            "weight": 49
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 24,
+            "weight": 89
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 25,
+            "weight": 67
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 26,
+            "weight": 52
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 27,
+            "weight": 50
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 28,
+            "weight": 43
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 29,
+            "weight": 12
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 30,
+            "weight": 60
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 31,
+            "weight": 84
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 32,
+            "weight": 1
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 33,
+            "weight": 59
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 34,
+            "weight": 98
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 35,
+            "weight": 45
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 36,
+            "weight": 6
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 37,
+            "weight": 21
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 39,
+            "weight": 64
+        },
+        {
+            "id_i_node": 38,
+            "id_j_node": 40,
+            "weight": 92
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 0,
+            "weight": 45
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 1,
+            "weight": 41
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 3,
+            "weight": 39
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 2,
+            "weight": 91
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 4,
+            "weight": 44
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 5,
+            "weight": 11
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 6,
+            "weight": 4
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 7,
+            "weight": 44
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 8,
+            "weight": 81
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 9,
+            "weight": 91
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 10,
+            "weight": 29
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 11,
+            "weight": 18
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 12,
+            "weight": 55
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 13,
+            "weight": 29
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 14,
+            "weight": 50
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 15,
+            "weight": 55
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 16,
+            "weight": 79
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 17,
+            "weight": 12
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 18,
+            "weight": 62
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 19,
+            "weight": 30
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 20,
+            "weight": 83
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 21,
+            "weight": 44
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 22,
+            "weight": 10
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 23,
+            "weight": 72
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 24,
+            "weight": 32
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 25,
+            "weight": 11
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 26,
+            "weight": 3
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 27,
+            "weight": 64
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 28,
+            "weight": 20
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 29,
+            "weight": 13
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 30,
+            "weight": 45
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 31,
+            "weight": 7
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 32,
+            "weight": 28
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 33,
+            "weight": 94
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 34,
+            "weight": 46
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 35,
+            "weight": 15
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 36,
+            "weight": 88
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 37,
+            "weight": 40
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 38,
+            "weight": 76
+        },
+        {
+            "id_i_node": 39,
+            "id_j_node": 40,
+            "weight": 45
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 0,
+            "weight": 78
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 1,
+            "weight": 49
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 3,
+            "weight": 62
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 2,
+            "weight": 3
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 4,
+            "weight": 70
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 5,
+            "weight": 47
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 6,
+            "weight": 24
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 7,
+            "weight": 27
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 8,
+            "weight": 90
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 9,
+            "weight": 60
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 10,
+            "weight": 59
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 11,
+            "weight": 31
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 12,
+            "weight": 59
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 13,
+            "weight": 28
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 14,
+            "weight": 68
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 15,
+            "weight": 11
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 16,
+            "weight": 15
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 17,
+            "weight": 43
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 18,
+            "weight": 75
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 19,
+            "weight": 69
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 20,
+            "weight": 48
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 21,
+            "weight": 85
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 22,
+            "weight": 86
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 23,
+            "weight": 44
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 24,
+            "weight": 40
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 25,
+            "weight": 40
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 26,
+            "weight": 17
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 27,
+            "weight": 96
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 28,
+            "weight": 94
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 29,
+            "weight": 61
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 30,
+            "weight": 48
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 31,
+            "weight": 26
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 32,
+            "weight": 12
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 33,
+            "weight": 89
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 34,
+            "weight": 63
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 35,
+            "weight": 77
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 36,
+            "weight": 6
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 37,
+            "weight": 67
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 38,
+            "weight": 71
+        },
+        {
+            "id_i_node": 40,
+            "id_j_node": 39,
+            "weight": 20
+        }
+    ],
+    "requests": [
+        {
+            "id_pickup_node": 1,
+            "id_delivery_node": 21
+        },
+        {
+            "id_pickup_node": 2,
+            "id_delivery_node": 22
+        },
+        {
+            "id_pickup_node": 3,
+            "id_delivery_node": 23
+        },
+        {
+            "id_pickup_node": 4,
+            "id_delivery_node": 24
+        },
+        {
+            "id_pickup_node": 5,
+            "id_delivery_node": 25
+        },
+        {
+            "id_pickup_node": 6,
+            "id_delivery_node": 26
+        },
+        {
+            "id_pickup_node": 7,
+            "id_delivery_node": 27
+        },
+        {
+            "id_pickup_node": 8,
+            "id_delivery_node": 28
+        },
+        {
+            "id_pickup_node": 9,
+            "id_delivery_node": 29
+        },
+        {
+            "id_pickup_node": 10,
+            "id_delivery_node": 30
+        },
+        {
+            "id_pickup_node": 11,
+            "id_delivery_node": 31
+        },
+        {
+            "id_pickup_node": 12,
+            "id_delivery_node": 32
+        },
+        {
+            "id_pickup_node": 13,
+            "id_delivery_node": 33
+        },
+        {
+            "id_pickup_node": 14,
+            "id_delivery_node": 34
+        },
+        {
+            "id_pickup_node": 15,
+            "id_delivery_node": 35
+        },
+        {
+            "id_pickup_node": 16,
+            "id_delivery_node": 36
+        },
+        {
+            "id_pickup_node": 17,
+            "id_delivery_node": 37
+        },
+        {
+            "id_pickup_node": 18,
+            "id_delivery_node": 38
+        },
+        {
+            "id_pickup_node": 19,
+            "id_delivery_node": 39
+        },
+        {
+            "id_pickup_node": 20,
+            "id_delivery_node": 40
+        }
+    ]
+}

@@ -7,7 +7,10 @@ from .greedyRandom import GreedyRandom
 import numpy as np
 from datetime import datetime
 
-class GeneticAlgoritm:
+from ..utils.observerPattern import Subject, Observer
+from typing import List
+
+class GeneticAlgoritm(Subject):
     def __init__(self, instance: Instance):
         """
         Genetic Algoritm method of the TSPPD problem.
@@ -20,9 +23,58 @@ class GeneticAlgoritm:
         self._mutation_rate = 0.3
         self._max_iteration = 2 * self._n_population
 
+        if self._n_population > 200:
+            self._n_population = 200
+
+        if self._max_iteration > 200:
+            self._max_iteration = 200
+
+        self._observers: List[Observer] = []
+        self._iteration_counter = 0
+        self._current_solution = None
+        self._best_solution = None
+
     @property
     def instance(self):
         return self._instance
+    
+    @property
+    def n_population(self):
+        return self._n_population
+    
+    @property
+    def mutation_rate(self):
+        return self._mutation_rate
+    
+    @property
+    def max_iteration(self):
+        return self._max_iteration
+    
+    @property
+    def iteration_counter(self):
+        return self._iteration_counter
+    
+    @property
+    def current_solution(self):
+        return self._current_solution
+    
+    @property
+    def best_solution(self):
+        return self._best_solution
+    
+    def attach(self, observer: Observer) -> None:
+        self._observers.append(observer)
+
+    def detach(self, observer: Observer) -> None:
+        self._observers.remove(observer)
+
+    def notify_new_solution(self) -> None:
+        for observer in self._observers:
+            observer.new_solution_found(self)
+    
+    def notify_best_new_solution(self) -> None:
+        for observer in self._observers:
+            observer.new_best_solution_found(self)
 
     def _is_tour_admissible(self, tour):
         for i in range(0, len(tour)):
@@ -156,11 +208,16 @@ class GeneticAlgoritm:
         best_solution = [-1,np.inf,np.array([])]
         for i in range(self._max_iteration):
             min_solution = min(mutated_pop)
+
+            self._current_solution = min_solution
+            self._iteration_counter += 1
+            self.notify_new_solution()
+
             min_solution_cost = min_solution.cost
-            mean_solution_cost = np.mean([solution.cost for solution in mutated_pop])
+            # mean_solution_cost = np.mean([solution.cost for solution in mutated_pop])
             #mean_solution_cost = statistics.median(population_set)
 
-            if i%10==0: print(i, min_solution_cost, mean_solution_cost, datetime.now().strftime("%d/%m/%y %H:%M"))
+            # if i%10==0: print(i, min_solution_cost, mean_solution_cost, datetime.now().strftime("%d/%m/%y %H:%M"))
             #fitnes_list = self.get_all_fitnes(mutated_pop,self._cities_dict)
             
             #Saving the best solution
@@ -168,15 +225,18 @@ class GeneticAlgoritm:
                 best_solution[0] = i # a che iterazione l'ho trovata
                 best_solution[1] = min_solution_cost # qual è il valore di fitness
                 best_solution[2] = min_solution # dammi l'ordine di visita dei nodi
+
+                self._best_solution = min_solution
+                self.notify_best_new_solution()
             
             progenitor_list = self._progenitor_selection(population_set)
             new_population_set = self._mate_population(progenitor_list)
             
             mutated_pop = self._mutate_population(new_population_set)
         
-        print("Best solution:\n")
-        print("Found at iteration: " + str(best_solution[0]) + "\n")
-        print("With cost: " + str(best_solution[1]) + "\n")
+        #print("Best solution:\n")
+        #print("Found at iteration: " + str(best_solution[0]) + "\n")
+        #print("With cost: " + str(best_solution[1]) + "\n")
 
         return best_solution[2]
     

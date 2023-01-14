@@ -4,7 +4,10 @@ from ..problem.solution import Solution
 import copy
 import random
 
-class LargeNeighborhoodSearch:
+from ..utils.observerPattern import Subject, Observer
+from typing import List
+
+class LargeNeighborhoodSearch(Subject):
     def __init__(self, instance: Instance, initial_solution: Solution):
         """
         Large Neighborhood Search method of the TSPPD problem.
@@ -20,10 +23,53 @@ class LargeNeighborhoodSearch:
         self._max_number_of_worsening = 100
         self._nodes_to_repair = []
 
+        self._observers: List[Observer] = []
+        self._feasible_solutions_counter = 0
+        self._current_solution = None
+        self._best_solution = None
+
     @property
     def instance(self):
         return self._instance
     
+    @property
+    def destruction_rate(self):
+        return self._destruction_rate
+    
+    @property
+    def k_max(self):
+        return self._k_max
+    
+    @property
+    def max_number_of_worsening(self):
+        return self._max_number_of_worsening
+    
+    @property
+    def feasible_solutions_counter(self):
+        return self._feasible_solutions_counter
+    
+    @property
+    def current_solution(self):
+        return self._current_solution
+    
+    @property
+    def best_solution(self):
+        return self._best_solution
+    
+    def attach(self, observer: Observer) -> None:
+        self._observers.append(observer)
+
+    def detach(self, observer: Observer) -> None:
+        self._observers.remove(observer)
+
+    def notify_new_solution(self) -> None:
+        for observer in self._observers:
+            observer.new_solution_found(self)
+    
+    def notify_best_new_solution(self) -> None:
+        for observer in self._observers:
+            observer.new_best_solution_found(self)
+
     def _stop_condition(self, k, number_of_worsening):
         return k > self._k_max or number_of_worsening > self._max_number_of_worsening
     
@@ -106,6 +152,9 @@ class LargeNeighborhoodSearch:
 
         while not self._stop_condition(k, number_of_worsening):
             current_solution = self._repair(self._destroy(k_solution))
+            self._current_solution = current_solution
+            self._feasible_solutions_counter += 1
+            self.notify_new_solution()
             if self._accept(current_solution, k_solution):
                 k_solution = current_solution
                 k = k + 1
@@ -114,6 +163,8 @@ class LargeNeighborhoodSearch:
             if k_solution.cost < best_solution.cost:
                 best_solution = k_solution
                 number_of_worsening = 0
+                self._best_solution = best_solution
+                self.notify_best_new_solution()
 
         return best_solution
     

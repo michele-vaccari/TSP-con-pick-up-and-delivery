@@ -50,10 +50,11 @@ L’applicazione è formata da 3 componenti:
 
 * Installare le seguenti librerie:
     ```bat
-    pip install --force-reinstall -v "pip==22.3.1"
     pip install --force-reinstall -v "click==8.1.3"
     pip install --force-reinstall -v "numpy==1.24.1"
     pip install --force-reinstall -v "pytest==7.2.0"
+    pip install --force-reinstall -v "openpyxl==3.0.10"
+    pip install --force-reinstall -v "stopwatch==2.0.1"
     ```
 
 ## Esempi di utilizzo
@@ -106,6 +107,14 @@ Options:
                                   Choose the solver method to use.  [required]
   --help                          Show this message and exit.
 ```
+
+### Eseguire i benchmark di tutti gli algoritmi
+* Aprire un terminale Powershell
+* Attivare il virtual enviroment di python
+* Lanciare la cli nel seguente modo:
+  ```bat
+  python tsppdcli.py benchmark --output-excel-spreadsheets-dir-path benchmark | tee output.txt
+  ```
 
 ## Come contribuire al progetto
 Se vuoi partecipare allo sviluppo di questo progetto o per ulteriori delucidazioni contattami all'indirizzo: [michele.vaccari@edu.unife.it](mailto:michele.vaccari@edu.unife.it)

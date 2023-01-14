@@ -8,6 +8,9 @@ from tsppd.solver.largeNeighborhoodSearch import LargeNeighborhoodSearch
 import random
 import copy
 
+from ..utils.observerPattern import Subject, Observer
+from typing import List
+
 class GreedyRandomizedAdaptiveSearchProcedure:
     def __init__(self, instance: Instance):
         """
@@ -21,9 +24,43 @@ class GreedyRandomizedAdaptiveSearchProcedure:
         self._max_iterations_number = 10
         self._restricted_candidate_list_items = 2 * self._max_iterations_number
 
+        self._observers: List[Observer] = []
+        self._feasible_solutions_counter = 0
+        self._current_solution = None
+
     @property
     def instance(self):
         return self._instance
+    
+    @property
+    def max_iterations_number(self):
+        return self._max_iterations_number
+    
+    @property
+    def restricted_candidate_list_items(self):
+        return self._restricted_candidate_list_items
+    
+    @property
+    def feasible_solutions_counter(self):
+        return self._feasible_solutions_counter
+    
+    @property
+    def current_solution(self):
+        return self._current_solution
+    
+    def attach(self, observer: Observer) -> None:
+        self._observers.append(observer)
+
+    def detach(self, observer: Observer) -> None:
+        self._observers.remove(observer)
+
+    def notify_new_solution(self) -> None:
+        for observer in self._observers:
+            observer.new_solution_found(self)
+    
+    def notify_best_new_solution(self) -> None:
+        for observer in self._observers:
+            observer.new_best_solution_found(self)
     
     def _build_restricted_candidate_list(self):
         greedy_random_solutions = []
@@ -53,6 +90,9 @@ class GreedyRandomizedAdaptiveSearchProcedure:
         return True
 
     def _performs_path_relinking(self, initial_solution, guiding_solution):
+        if initial_solution == guiding_solution:
+            return guiding_solution
+
         # find node to relocate
         nodes_to_relocate = {}
         for index in range(0, len(guiding_solution.solution_nodes_id)):
@@ -60,7 +100,10 @@ class GreedyRandomizedAdaptiveSearchProcedure:
                 nodes_to_relocate[index] = guiding_solution.solution_nodes_id[index]
         
         if not nodes_to_relocate:
-            return min(self._path_relinking_best_solutions)
+            if not self._path_relinking_best_solutions:
+                return guiding_solution
+            else:
+                return min(self._path_relinking_best_solutions)
         
         # try to relocate
         admissible_solutions = []
@@ -86,10 +129,17 @@ class GreedyRandomizedAdaptiveSearchProcedure:
             largeNeighborhoodSearch = LargeNeighborhoodSearch(self._instance, initial_solution)
             largeNeighborhoodSearchSolution = largeNeighborhoodSearch.calculate_solution()
             if path_relinking:
-                grasp_solutions.append(copy.deepcopy(self._performs_path_relinking(initial_solution, largeNeighborhoodSearchSolution)))
+                path_relinking_solution = self._performs_path_relinking(initial_solution, largeNeighborhoodSearchSolution)
+                grasp_solutions.append(copy.deepcopy(path_relinking_solution))
+                self._current_solution = path_relinking_solution
+                self._feasible_solutions_counter += 1
+                self.notify_new_solution()
                 self._path_relinking_best_solutions = []
             else:
                 grasp_solutions.append(copy.deepcopy(largeNeighborhoodSearchSolution))
+                self._current_solution = largeNeighborhoodSearchSolution
+                self._feasible_solutions_counter += 1
+                self.notify_new_solution()
         
         return min(grasp_solutions)
 
