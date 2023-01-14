@@ -25,7 +25,7 @@ Instance generator benchmark - START
 * computation with R = 29 ...
 * computation with R = 30 ...
 Instance generator benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Instance generator benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\00 Instance generator benchmark.xlsx
 Time taken for instance generator benchmark: 3.8444640999659896 seconds
 
 Brute force enumerator benchmark - START
@@ -35,7 +35,7 @@ Brute force enumerator benchmark - START
 * computation with R = 5 ...
 * computation with R = 6 ...
 Brute force enumerator benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Brute force enumerator benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\01 Brute force enumerator benchmark.xlsx
 Time taken for brute force enumerator benchmark: 31720.0219352 seconds
 
 Oneil Hoffman enumerator benchmark - START
@@ -47,7 +47,7 @@ Oneil Hoffman enumerator benchmark - START
 * computation with R = 7 ...
 * computation with R = 8 ...
 Oneil Hoffman enumerator benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Oneil Hoffman enumerator benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\02 Oneil Hoffman enumerator benchmark.xlsx
 Time taken for oneil hoffman enumerator benchmark: 12347.941715199966 seconds
 
 Greedy Pickup First benchmark - START
@@ -81,7 +81,7 @@ Greedy Pickup First benchmark - START
 * computation with R = 29 ...
 * computation with R = 30 ...
 Greedy Pickup First benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Greedy Pickup First benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\03 Greedy Pickup First benchmark.xlsx
 Time taken for greedy pickup first benchmark: 2.0932680999976583 seconds
 
 Greedy Request Order benchmark - START
@@ -115,7 +115,7 @@ Greedy Request Order benchmark - START
 * computation with R = 29 ...
 * computation with R = 30 ...
 Greedy Request Order benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Greedy Request Order benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\04 Greedy Request Order benchmark.xlsx
 Time taken for greedy request order benchmark: 2.3669036000064807 seconds
 
 Greedy Nearest Neighbor benchmark - START
@@ -149,7 +149,7 @@ Greedy Nearest Neighbor benchmark - START
 * computation with R = 29 ...
 * computation with R = 30 ...
 Greedy Nearest Neighbor benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Greedy Nearest Neighbor benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\05 Greedy Nearest Neighbor benchmark.xlsx
 Time taken for greedy nearest neighbor benchmark: 36.13214489999518 seconds
 
 Greedy Random benchmark - START
@@ -183,7 +183,7 @@ Greedy Random benchmark - START
 * computation with R = 29 ...
 * computation with R = 30 ...
 Greedy Random benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Greedy Random benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\06 Greedy Random benchmark.xlsx
 Time taken for greedy random benchmark: 1.71261190000223 seconds
 
 Greedy best solutions:
@@ -248,7 +248,7 @@ City Insert benchmark - START
 * computation with R = 29 ...
 * computation with R = 30 ...
 City Insert benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\City Insert benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\07 City Insert benchmark.xlsx
 Time taken for city insert benchmark: 2997.9329253998585 seconds
 
 City Swap benchmark - START
@@ -282,7 +282,7 @@ City Swap benchmark - START
 * computation with R = 29 ...
 * computation with R = 30 ...
 City Swap benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\City Swap benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\08 City Swap benchmark.xlsx
 Time taken for city swap benchmark: 2211.317351799924 seconds
 
 Simulated Annealing benchmark - START
@@ -316,7 +316,7 @@ Simulated Annealing benchmark - START
 * computation with R = 29 ...
 * computation with R = 30 ...
 Simulated Annealing benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Simulated Annealing benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\09 Simulated Annealing benchmark.xlsx
 Time taken for simulated annealing benchmark: 1114.2895513999974 seconds
 
 Tabu Search benchmark - START
@@ -350,7 +350,7 @@ Tabu Search benchmark - START
 * computation with R = 29 ...
 * computation with R = 30 ...
 Tabu Search benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Tabu Search benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\10 Tabu Search benchmark.xlsx
 Time taken for tabu search benchmark: 26581.362874299986 seconds
 
 Large Neighborhood Search benchmark - START
@@ -385,7 +385,7 @@ Large Neighborhood Search benchmark - START
 * computation with R = 30 ...
 Large Neighborhood Search benchmark
 - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Large Neighborhood Search benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\11 Large Neighborhood Search benchmark.xlsx
 Time taken for large neighborhood search benchmark: 41056.14006799995 seconds
 
 Multi Start Local Search benchmark - START
@@ -419,7 +419,7 @@ Multi Start Local Search benchmark - START
 * computation with R = 29 ...
 * computation with R = 30 ...
 Multi Start Local Search benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Multi Start Local Search benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\12 Multi Start Local Search benchmark.xlsx
 Time taken for multi start local search benchmark: 13386.291639900068 seconds
 
 Greedy Randomized Adaptive Search Procedure benchmark - START
@@ -453,7 +453,7 @@ Greedy Randomized Adaptive Search Procedure benchmark - START
 * computation with R = 29 ...
 * computation with R = 30 ...
 Greedy Randomized Adaptive Search Procedure benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Greedy Randomized Adaptive Search Procedure benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\13 Greedy Randomized Adaptive Search Procedure benchmark.xlsx
 Time taken for greedy randomized adaptive search procedure benchmark: 16765.102690199856 seconds
 
 Greedy Randomized Adaptive Search Procedure with Path Relinking benchmark - START
@@ -487,7 +487,7 @@ Greedy Randomized Adaptive Search Procedure with Path Relinking benchmark - STAR
 * computation with R = 29 ...
 * computation with R = 30 ...
 Greedy Randomized Adaptive Search Procedure with Path Relinking benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Greedy Randomized Adaptive Search Procedure with Path Relinking benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\14 Greedy Randomized Adaptive Search Procedure with Path Relinking benchmark.xlsx
 Time taken for greedy randomized adaptive search procedure with path relinking benchmark: 84467.26572320005 seconds
 
 Genetic Algorithm benchmark - START
@@ -521,5 +521,5 @@ Genetic Algorithm benchmark - START
 * computation with R = 29 ...
 * computation with R = 30 ...
 Genetic Algorithm benchmark - END
-See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\Genetic Algorithm benchmark.xlsx
+See the results on: C:\dev\TSP-con-pick-up-and-delivery\doc\benchmark\15 Genetic Algorithm benchmark.xlsx
 Time taken for genetic algorithm benchmark: 113706.11896840001 seconds
