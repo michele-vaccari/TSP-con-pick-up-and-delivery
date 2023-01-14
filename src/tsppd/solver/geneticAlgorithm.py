@@ -23,6 +23,12 @@ class GeneticAlgoritm(Subject):
         self._mutation_rate = 0.3
         self._max_iteration = 2 * self._n_population
 
+        if self._n_population > 200:
+            self._n_population = 200
+
+        if self._max_iteration > 200:
+            self._max_iteration = 200
+
         self._observers: List[Observer] = []
         self._iteration_counter = 0
         self._current_solution = None
