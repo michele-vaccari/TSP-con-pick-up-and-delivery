@@ -259,7 +259,7 @@ def benchmark(output_excel_spreadsheets_dir_path):
     print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
 
     enumerator_requests_benchmark_start = 2
-    enumerator_requests_benchmark_end = 3
+    enumerator_requests_benchmark_end = 6
 
     # Brute force enumerator
     algoritm_name = "Brute force enumerator"
@@ -272,6 +272,9 @@ def benchmark(output_excel_spreadsheets_dir_path):
     print("{} benchmark - END".format(algoritm_name))
     print("See the results on: {}".format(workbook_path))
     print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
+
+    enumerator_requests_benchmark_start = 2
+    enumerator_requests_benchmark_end = 8
 
     # Oneil Hoffman enumerator
     algoritm_name = "Oneil Hoffman enumerator"
@@ -286,7 +289,7 @@ def benchmark(output_excel_spreadsheets_dir_path):
     print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
 
     greedy_requests_benchmark_start = 2
-    greedy_requests_benchmark_end = 3
+    greedy_requests_benchmark_end = 30
 
     # Greedy Pickup First
     algoritm_name = "Greedy Pickup First"
@@ -431,7 +434,7 @@ def benchmark(output_excel_spreadsheets_dir_path):
     print("Time taken for {} benchmark: {} seconds\n".format(algoritm_name.lower(), stopwatch.duration))
 
     multi_start_local_search_requests_benchmark_start = 2
-    multi_start_local_search_requests_benchmark_end = 3
+    multi_start_local_search_requests_benchmark_end = 30
 
     # Multi Start Local Search
     algoritm_name = "Multi Start Local Search"
