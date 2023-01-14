@@ -93,8 +93,8 @@ class SimulatedAnnealing(Subject):
     def _random_city_swap(self) -> Solution:
         current_solution_nodes_id = self.initial_solution.solution_nodes_id.copy()
 
-        first_node_position = random.randint(1, len(self.initial_solution.solution_nodes_id) - 1)
-        second_node_position = random.randint(1, len(self.initial_solution.solution_nodes_id) - 1)
+        first_node_position = random.randint(1, len(self.initial_solution.solution_nodes_id) - 2)
+        second_node_position = random.randint(1, len(self.initial_solution.solution_nodes_id) - 2)
         current_solution_nodes_id[first_node_position], current_solution_nodes_id[second_node_position] = current_solution_nodes_id[second_node_position], current_solution_nodes_id[first_node_position]
 
         if self._is_tour_admissible(current_solution_nodes_id):
