@@ -22,6 +22,9 @@ class BruteForceEnumeratorBenchmark(Observer):
         self._best_solution_trend_sheet_row_index = None
 
     def new_solution_found(self, subject: Subject) -> None:
+        if self._current_requests >= 6:
+            return
+
         self._stopwatch.stop()
 
         self._solution_trend_sheet_row_index += 1
@@ -33,6 +36,9 @@ class BruteForceEnumeratorBenchmark(Observer):
         self._stopwatch.start()
     
     def new_best_solution_found(self, subject: Subject) -> None:
+        if self._current_requests >= 6:
+            return
+
         self._stopwatch.stop()
 
         self._best_solution_trend_sheet_row_index += 1
@@ -75,21 +81,23 @@ class BruteForceEnumeratorBenchmark(Observer):
             print("* computation with R = {} ...".format(requests))
             self._current_requests = requests
 
-            # header of solution trend sheet
-            self._solution_trend_sheet = workbook.create_sheet("Trend soluzioni R = {}".format(self._current_requests))
-            self._solution_trend_sheet_row_index = 1
-            self._solution_trend_sheet.cell(row=self._solution_trend_sheet_row_index, column=1).value = "Numero iterazione"
-            self._solution_trend_sheet.cell(row=self._solution_trend_sheet_row_index, column=2).value = "Nuova soluzione scoperta al tempo (s)"
-            self._solution_trend_sheet.cell(row=self._solution_trend_sheet_row_index, column=3).value = "Nodi della soluzione"
-            self._solution_trend_sheet.cell(row=self._solution_trend_sheet_row_index, column=4).value = "Costo della soluzione"
+            if self._current_requests < 6:
+                # header of solution trend sheet
+                self._solution_trend_sheet = workbook.create_sheet("Trend soluzioni R = {}".format(self._current_requests))
+                self._solution_trend_sheet_row_index = 1
+                self._solution_trend_sheet.cell(row=self._solution_trend_sheet_row_index, column=1).value = "Numero iterazione"
+                self._solution_trend_sheet.cell(row=self._solution_trend_sheet_row_index, column=2).value = "Nuova soluzione scoperta al tempo (s)"
+                self._solution_trend_sheet.cell(row=self._solution_trend_sheet_row_index, column=3).value = "Nodi della soluzione"
+                self._solution_trend_sheet.cell(row=self._solution_trend_sheet_row_index, column=4).value = "Costo della soluzione"
 
             # header of best solution trend sheet
-            self._best_solution_trend_sheet = workbook.create_sheet("Trend migliori soluzioni R = {}".format(self._current_requests))
-            self._best_solution_trend_sheet_row_index = 1
-            self._best_solution_trend_sheet.cell(row=self._best_solution_trend_sheet_row_index, column=1).value = "Numero iterazione"
-            self._best_solution_trend_sheet.cell(row=self._best_solution_trend_sheet_row_index, column=2).value = "Nuova migliore soluzione scoperta al tempo (s)"
-            self._best_solution_trend_sheet.cell(row=self._best_solution_trend_sheet_row_index, column=3).value = "Nodi della soluzione"
-            self._best_solution_trend_sheet.cell(row=self._best_solution_trend_sheet_row_index, column=4).value = "Costo della soluzione"
+            if self._current_requests < 6:
+                self._best_solution_trend_sheet = workbook.create_sheet("Trend migliori soluzioni R = {}".format(self._current_requests))
+                self._best_solution_trend_sheet_row_index = 1
+                self._best_solution_trend_sheet.cell(row=self._best_solution_trend_sheet_row_index, column=1).value = "Numero iterazione"
+                self._best_solution_trend_sheet.cell(row=self._best_solution_trend_sheet_row_index, column=2).value = "Nuova migliore soluzione scoperta al tempo (s)"
+                self._best_solution_trend_sheet.cell(row=self._best_solution_trend_sheet_row_index, column=3).value = "Nodi della soluzione"
+                self._best_solution_trend_sheet.cell(row=self._best_solution_trend_sheet_row_index, column=4).value = "Costo della soluzione"
 
             self._stopwatch = Stopwatch(2)
     
