@@ -4,7 +4,10 @@ from ..problem.solution import Solution
 
 from collections import deque
 
-class TabuSearch:
+from ..utils.observerPattern import Subject, Observer
+from typing import List
+
+class TabuSearch(Subject):
     def __init__(self, instance: Instance, initial_solution: Solution):
         """
         Tabu Search method of the TSPPD problem.
@@ -17,6 +20,11 @@ class TabuSearch:
 
         self._next_solution_move = None
 
+        self._observers: List[Observer] = []
+        self._feasible_solutions_counter = 0
+        self._current_solution = None
+        self._best_solution = None
+
     @property
     def instance(self):
         return self._instance
@@ -24,6 +32,32 @@ class TabuSearch:
     @property
     def initial_solution(self):
         return self._initial_solution
+    
+    @property
+    def feasible_solutions_counter(self):
+        return self._feasible_solutions_counter
+    
+    @property
+    def current_solution(self):
+        return self._current_solution
+    
+    @property
+    def best_solution(self):
+        return self._best_solution
+    
+    def attach(self, observer: Observer) -> None:
+        self._observers.append(observer)
+
+    def detach(self, observer: Observer) -> None:
+        self._observers.remove(observer)
+
+    def notify_new_solution(self) -> None:
+        for observer in self._observers:
+            observer.new_solution_found(self)
+    
+    def notify_best_new_solution(self) -> None:
+        for observer in self._observers:
+            observer.new_best_solution_found(self)
 
     def _is_tour_admissible(self, tour):
         for i in range(0, len(tour)):
@@ -69,17 +103,31 @@ class TabuSearch:
         k = 1
         current_solution = self.initial_solution
         best_solution = current_solution
+        
+        self._current_solution = current_solution
+        self._feasible_solutions_counter += 1
+        self.notify_new_solution()
+        self._best_solution = best_solution
+        self.notify_best_new_solution()
 
         # step 2: explore neighborhood
         stop = False
         stall = 0
         while not stop:
-            next_solution = self._city_swap(current_solution)
-            #if next_solution == current_solution:
-            #    stall = stall + 1
-            if next_solution.cost < best_solution.cost:
+            if current_solution != None:
+                next_solution = self._city_swap(current_solution)
+
+                self._current_solution = current_solution
+                self._feasible_solutions_counter += 1
+                self.notify_new_solution()
+
+            if next_solution != None and next_solution.cost < best_solution.cost:
                 stall = 0
                 best_solution = next_solution
+
+                self._best_solution = best_solution
+                self.notify_best_new_solution()
+
                 current_solution = next_solution
                 # step 3: stop or loop
                 k = k + 1
@@ -88,7 +136,7 @@ class TabuSearch:
                     return best_solution
                 else:
                     continue
-            if self._next_solution_move in self._tabu_list:
+            if next_solution != None and self._next_solution_move in self._tabu_list:
                 continue
             else:
                 current_solution = next_solution
@@ -103,7 +151,6 @@ class TabuSearch:
                 return best_solution
             else:
                 continue
-    
 
     def calculate_solution(self) -> Solution:
         return self._tabu_search()

@@ -136,3 +136,6 @@ dmypy.json
 /doc/slideshow/*.out
 /doc/slideshow/*.nav
 /doc/slideshow/*.aux
+
+# Benchmark files
+/src/benchmark/*
