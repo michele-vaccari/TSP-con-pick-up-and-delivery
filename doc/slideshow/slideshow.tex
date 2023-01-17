@@ -7,6 +7,8 @@
 
 \usepackage{appendixnumberbeamer}
 
+\usepackage{amsmath}
+
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
 
@@ -66,7 +68,8 @@
 
 \end{frame}
 
-\begin{frame}[allowframebreaks]{S-TSPPD - Notazione}
+\section{Modello matematico per S-TSPPD}
+\begin{frame}[allowframebreaks]{Notazione}
 	\begin{itemize}
 		\item
 		Numero di richieste di prelievo e consegna: $n$
@@ -117,7 +120,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{S-TSPPD - Modello matematico}
+\begin{frame}{Modello matematico}
 
      	\[ min{ \sum_{(i,j) \in E} c_i x_{ij}} \]
 	tale che
@@ -147,7 +150,91 @@
 	Il vincolo \ref{stsppd-c2} richiede che ogni nodo entri ed esca in tutti i percorsi ammissibili, ma di per sé lascia aperta la possibilità di sotto-tour, formando una rappresentazione completa del TSP. \\
 	Il vincolo \ref{stsppd-c3} consente di eliminare i sotto-tour, formando una rappresentazione completa del TSP. \\
 	Il vincolo \ref{stsppd-c4} richiede che i ritiri avvengano prima delle rispettive consegne
+
+\end{frame}
+
+\section{Modello matematico per A-TSPPD}
+\begin{frame}[allowframebreaks]{Notazione}
+	\begin{itemize}
+		\item
+		Numero di richieste di prelievo e consegna: $n$
+		
+		\item
+		Nodi di pickup: $N_P = \{1, \dots, n\}$
+		
+		\item
+		Nodi di delivery: $N_D = \{n+1, \dots, 2n\}$
+		
+		\item
+		Una richiesta è identificata con la coppia di nodi $(i,n+i)$ e $i$ deve precedere $n+i$ in un percorso ammissibile
+		
+		\item
+		$N$ è definito come l'unione di $N_P$ e $N_D$ con l'aggiunta del nodo di deposito $\{0\}$
+		
+		\item
+		$A_{PD}$ è l'insieme degli archi \emph{orientati} che connettono $N_P \cup N_D$
 	
+		\item
+		$A$ è l'unione di $A_{PD}$ con tutti gli archi \emph{orientati} ammissibili che collegano il nodo di deposito
+		
+		\item
+		Il grafo $G=(N,A)$ comprende tutti i nodi e gli archi necessari per descrivere il A-TSPPD (il grafo è completo)
+		\begin{equation*}
+			\begin{aligned}
+			N= & \{0\} \cup N_P \cup N_D \\
+			A = & \{ (0,i) | i \in N_P \} \\
+			& \cup \{ (i,0) | i \in N_D \} \\
+			& \cup \{ (i,j) | i \in N_P , j \in ( N_P \cup N_D ) \setminus \{ i \} \} \\
+			& \cup \{ ( n + i, j) | i \in N_P , j \in (N_P \cup N_D ) \setminus \{ i , n + i \} \}
+			\end{aligned}
+		\end{equation*}
+		
+		L'insieme degli archi $A$ è definito in modo tale da includere solo archi ammissibili.
+		In altre parole, non è possibile che un percorso TSPPD inizi con una consegna o finisca con un prelievo.
+
+		\item
+		$c_{ij}$ è un costo non negativo per ogni arco $(i,j) \in A$
+
+		\item
+		$x_{ij} \in \{ 0, 1 \}$ è una variabile decisionale binaria per ogni $(i, j) \in A$ con il valore $x_{ij} = 1$ se l'arco $(i, j)$ è in una soluzione e $0$ altrimenti
+
+		\item
+		$\delta(S) = \{ (i, j) \in A | i \in S, j \notin S$ è il taglio contenente gli archi che collegano $S \subset N$ e $S^* \subset N$ 
+
+		\item
+		Per qualsiasi nodo $i \in N, \delta(i) = \delta( \{ i \})$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Modello matematico}
+
+     	\[ min{ \sum_{(i,j) \in A} c_i x_{ij}} \]
+	tale che
+	\begin{enumerate}
+		\item
+		\label{atsppd-c1}
+		$\sum_{(i,j) \in A} x_{ij} = 1 \quad \forall i \in N$
+
+		\item
+		\label{atsppd-c2}
+		$\sum_{(i,j) \in A} x_{ij} = 1 \quad \forall j \in N$
+
+		\item
+		\label{atsppd-c3}
+		$x(\delta(S)) \geq 1 \quad \forall S \subset N$
+	
+		\item
+		\label{atsppd-c4}
+		$x(\delta(i)) \geq 4 \quad \forall S \subset N, \{0, n+i\} \subset S, \{0,i\} \subset N \setminus S$
+
+		\item
+		$x_{ij} \in \{0,1\} \quad (i,j) \in A$
+	\end{enumerate}
+	
+	\footnotesize
+	I vincoli \ref{atsppd-c1} e \ref{atsppd-c2} richiedono che ogni nodo preceda e segua direttamente un altro nodo. \\
+	Il vincolo \ref{atsppd-c3} consente di eliminare i sotto-tour, formando una rappresentazione completa del TSP. \\
+	Il vincolo \ref{atsppd-c4} richiede che i ritiri avvengano prima delle rispettive consegne (è uguale al vincolo \ref{stsppd-c4} del S-TSPPD)
 
 \end{frame}
 
