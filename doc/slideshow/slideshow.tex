@@ -238,6 +238,31 @@
 
 \end{frame}
 
+\begin{frame}{Alcune considerazioni sul problema}
+	
+	\begin{itemize}
+	
+		\item
+		Di fatto il TSPPD è un TSP con in più i vincoli di precedenza.
+
+		\item
+		Sia S-TSPPD che A-TSPPD sono formulazioni che pongono dei problemi per il gran numero di vincoli
+
+		\item
+		Un'istanza S-TSP con $n$ coppie ha \( \#TSP = \frac{1}{2} (2n -1)!\) soluzioni distinte \cite{lin1965computer}, mentre un TSPPD della stessa dimensione ha \(\#TSPPD(n) = \frac{2n!}{2^n}\) \cite{ruland1997pickup}
+		
+		\item
+		La dimensione dell'insieme ammissibile del TSPPD cresce più lentamente rispetto al numero di coppie di nodi rispetto a quella del TSP
+
+		\item
+		Ovviamente, l'insieme delle soluzioni ammissibili del TSPPD è un sottoinsieme delle soluzioni fattibili del TSP
+		
+		\item
+		Se si ammettono solo coppie di nodi di ritiro e consegna nel percorso con relazioni di precedenza, la dimensione dell'insieme fattibile del TSP si riduce di \( \frac{1}{2^{n-1}!} \) \cite{ruland1997pickup}
+	\end{itemize}
+
+\end{frame}
+
 %\begin{frame}[allowframebreaks]{Considerazioni sul problerma}
 %	Questo problema di ottimizzazione è NP-hard, poiché coincide con il TSP quando la capacità del veicolo è sufficientemente grande.
 %	Anche il problema di verificare se esiste una soluzione ammissibile è un problema fortemente NP-hard, dato che il problema della 3-partizione è un caso particolare (si veda [10] per i dettagli).
@@ -245,6 +270,13 @@
 
 %\begin{frame}[allowframebreaks]{Interpretazione dei risultati del modello teorico nel problema reale}
 %\end{frame}
+
+\begin{frame}[allowframebreaks]{Bibliografia}
+
+	\bibliography{bibliografia.bib}
+	\bibliographystyle{abbrv}
+
+\end{frame}
 
 \begin{frame}[standout]
 Grazie per l'attenzione
