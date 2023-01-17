@@ -1,4 +1,4 @@
-\documentclass[10pt]{beamer}
+\documentclass[9pt]{beamer}
 
 \usetheme[progressbar=frametitle]{metropolis}
 \usepackage[italian]{babel}
@@ -59,13 +59,97 @@
 
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=1\textwidth]
+		\includegraphics[width=0.6\textwidth]
 		{../images/graph-tsppd-with-two-customers}	
 		\caption{Istanza con 2 richieste di prelievo e consegna}
 	\end{figure}
 
 \end{frame}
 
+\begin{frame}[allowframebreaks]{S-TSPPD - Notazione}
+	\begin{itemize}
+		\item
+		Numero di richieste di prelievo e consegna: $n$
+		
+		\item
+		Nodi di pickup: $V_P = \{1, \dots, n\}$
+		
+		\item
+		Nodi di delivery: $V_D = \{n+1, \dots, 2n\}$
+		
+		\item
+		Una richiesta è identificata con la coppia di nodi $(i,n+i)$ e $i$ deve precedere $n+i$ in un percorso ammissibile
+		
+		\item
+		$V$ è definito come l'unione di $V_P$ e $V_D$ con l'aggiunta del nodo di deposito $\{0\}$
+		
+		\item
+		$E_{PD}$ è l'insieme degli archi che connettono $V_P \cup V_D$
+	
+		\item
+		$E$ è l'unione di $E_{PD}$ con tutti gli archi ammissibili che collegano il nodo di deposito
+		
+		\item
+		Il grafo $G=(V,E)$ comprende tutti i nodi e gli archi necessari per descrivere il S-TSPPD (il grafo è completo)
+		\[ V=\{0\} \cup V_P \cup V_D \]
+		\[ E = \{ (0,i) | i \in V_P \} \cup \{ (0,i) | i \in V_D \} \cup E_{PD} \]
+		
+		L'insieme degli archi $E$ è definito in modo tale da includere solo archi ammissibili.
+		In altre parole, non è possibile che un percorso TSPPD inizi con una consegna o finisca con un prelievo.
+		
+		\item
+		Ogni arco $(i,j) \in E$ è uguale all'arco $(j, i)$
+
+		\item
+		Ogni arco ha gli stessi costi e variabili
+
+		\item
+		$c_{ij}$ è un costo non negativo per ogni arco $(i,j) \in E$
+
+		\item
+		$x_{ij} \in \{ 0, 1 \}$ è una variabile decisionale binaria per ogni $(i, j) \in E$ con il valore $x_{ij} = 1$ se l'arco $(i, j)$ è in una soluzione e $0$ altrimenti
+
+		\item
+		$\delta(S) = \{ (i, j) \in E | i \in S, j \notin S$ è il taglio contenente gli archi che collegano $S \subset V$ e $S^* \subset V$ 
+
+		\item
+		Per qualsiasi nodo $i \in V, \delta(i) = \delta( \{ i \})$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{S-TSPPD - Modello matematico}
+
+     	\[ min{ \sum_{(i,j) \in E} c_i x_{ij}} \]
+	tale che
+	\begin{enumerate}
+		\item
+		\label{stsppd-c1}
+		$x_0 = 1$
+
+		\item
+		\label{stsppd-c2}
+		$x(\delta(i)) = 2 \quad \forall i \in V$
+
+		\item
+		\label{stsppd-c3}
+		$x(\delta(i)) \geq 2 \quad \forall S \subset V$
+	
+		\item
+		\label{stsppd-c4}
+		$x(\delta(i)) \geq 4 \quad \forall S \subset V, \{0, n+i\} \subset S, \{0,i\} \subset V \setminus S$
+
+		\item
+		$x_{ij} \in \{0,1\} \quad (i,j) \in E$
+	\end{enumerate}
+	
+	\footnotesize
+	Il vincolo \ref{stsppd-c1} richiede che l'arco che collega il nodo di deposito faccia parte di qualsiasi soluzione ammissibile. \\
+	Il vincolo \ref{stsppd-c2} richiede che ogni nodo entri ed esca in tutti i percorsi ammissibili, ma di per sé lascia aperta la possibilità di sotto-tour, formando una rappresentazione completa del TSP. \\
+	Il vincolo \ref{stsppd-c3} consente di eliminare i sotto-tour, formando una rappresentazione completa del TSP. \\
+	Il vincolo \ref{stsppd-c4} richiede che i ritiri avvengano prima delle rispettive consegne
+	
+
+\end{frame}
 
 %\begin{frame}[allowframebreaks]{Considerazioni sul problerma}
 %	Questo problema di ottimizzazione è NP-hard, poiché coincide con il TSP quando la capacità del veicolo è sufficientemente grande.
