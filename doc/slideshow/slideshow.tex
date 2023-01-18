@@ -30,11 +30,14 @@
     \put(305,0){\makebox(0,0)[rt]{\includegraphics[width=4cm]{../images/logo-unife}}}
   \end{picture}}
 
+\usepackage{minted}
+\usepackage{multicol}
+
 \begin{document}
 
 \maketitle
 
-\begin{frame}{Indice}
+\begin{frame}[allowframebreaks]{Indice}
   \setbeamertemplate{section in toc}[sections numbered]
   \tableofcontents
 \end{frame}
@@ -324,7 +327,7 @@
 \end{frame}
 
 \subsection{Benchmark}
-\begin{frame}[allowframebreaks]{\subsecname}
+\begin{frame}{\subsecname}
 
 	\textbf{Automazione} \\
 	L'esecuzione e la raccolta dei dati durante i benchmark è stata automatizzata sempre utilizzando il linguaggio Python. Si è utilizzata la libreria Openpyxl in modo tale che i dati vengano collezionati in modo ordinato su fogli di calcolo.
@@ -343,7 +346,23 @@
 
 \end{frame}
 
+\subsection{Generatore di istanze}
+\begin{frame}[fragile]{\subsecname}
 
+	È possible generare un istanza del problema nel seguente modo:
+	\begin{itemize}
+		\item
+		\textbf{Istanza asimmetrica} \\
+		\mintinline[breaklines]{bash}{python tsppdcli.py generate-instance --requests 2 --weights-random --output-instance-path 2-request-weights-random.jsonn}
+		\item
+		\textbf{Istanza simmestrica} \\
+		\mintinline[breaklines]{bash}{python tsppdcli.py generate-instance --requests 2 --weights-as-euclidean-distance --output-instance-path 2-request-weights-euclidean-distance.json}
+	\end{itemize}
+
+	\textbf{Esempio di istanza} \\
+	\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/instances/2-request.json}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/instances/2-request.json}
+
+\end{frame}
 
 
 
