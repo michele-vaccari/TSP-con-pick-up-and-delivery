@@ -802,16 +802,33 @@ Sia dato il problema di ottimo associato al sistema di insiemi indipendenti $(E,
 \subsection{Local search neighborhood based}
 \begin{frame}[allowframebreaks]{\subsecname}
 
-La ricerca locale è l’algoritmo di riferimento per tutte le (meta)euristiche basate sul concetto di intorno.\\
-Data una soluzione $x$, l’intorno $N(x^k)$ è dato attraverso la \emph{MOSSA} che descrive operativamente cosa modifico di $x$ per generare tutte le soluzioni in $N(x^k)$. \\
-Se l’intorno gode della proprietà di raggiungibilità, cioè per ogni coppia di soluzioni esiste una successione di soluzioni che le collega, tale per cui ogni soluzione appartiene all’intorno della soluzione precedente, allora la ricerca è in grado di esplorare tutta la regione ammissibile $F$. \\
-Se esplorando l’intorno non trovo una soluzione migliore, allora vuol dire che sono in un ottimo locale per quell’intorno.
+	\begin{itemize}
+		\item
+		La ricerca locale è l’algoritmo di riferimento per tutte le (meta)euristiche basate sul concetto di intorno.
+		
+		\item	
+		Data una soluzione $x$, l’intorno $N(x^k)$ è dato attraverso la \emph{MOSSA} che descrive operativamente cosa modifico di $x$ per generare tutte le soluzioni in $N(x^k)$.
+
+		\item
+		Se l’intorno gode della proprietà di raggiungibilità, cioè per ogni coppia di soluzioni esiste una successione di soluzioni che le collega, tale per cui ogni soluzione appartiene all’intorno della soluzione precedente, allora la ricerca è in grado di esplorare tutta la regione ammissibile $F$.
+
+		\item
+		Se esplorando l’intorno non trovo una soluzione migliore, allora vuol dire che sono in un ottimo locale per quell’intorno.
+	\end{itemize}
 
 \framebreak
 
-Esistono diverse tecniche secondo cui esplorare l’intorno. Per tutte le euristiche implementate si è scelto l’approccio \emph{best improvement}, ovvero si resolve in modo esatto il sottoproblema trovando la soluzione migliore nell’intorno.\\
-Come soluzione di partenza viene utilizzata la migliore delle greedy (la soluzione che ha costo più basso). \\
-Consultando i file exel generati durante i benchmark si può valutare anche l’approccio \emph{first improvement} (si restituisce la prima soluzione che migliora l’ottimo corrente) e \emph{h-improvement} (si restituisce la migliore delle h soluzioni che migliorano l’ottimo corrente) senza dover rieseguire i benchmark, in quanto si è memorizzato l’andamento delle migliori soluzioni durante l’esplorazione dell’intorno.
+	\begin{itemize}
+		\item
+		Esistono diverse tecniche secondo cui esplorare l’intorno. Per tutte le euristiche implementate si è scelto l’approccio \emph{best improvement}, ovvero si resolve in modo esatto il sottoproblema trovando la soluzione migliore nell’intorno.
+
+		\item
+		Come soluzione di partenza viene utilizzata la migliore delle greedy (la soluzione che ha costo più basso).
+
+		\item
+		Consultando i file exel generati durante i benchmark si può valutare anche l’approccio \emph{first improvement} (si restituisce la prima soluzione che migliora l’ottimo corrente) e \emph{h-improvement} (si restituisce la migliore delle h soluzioni che migliorano l’ottimo corrente) senza dover rieseguire i benchmark, in quanto si è memorizzato l’andamento delle migliori soluzioni durante l’esplorazione dell’intorno.
+	\end{itemize}
+
 \end{frame}
 
 \subsection{City swap}
@@ -861,7 +878,7 @@ Consultando i file exel generati durante i benchmark si può valutare anche l’
 		\centering
 		\includegraphics[height=0.25\textheight]
 		{../images/city-swap}	
-		\caption{Archi eliminati al passo \ref{city-insert-case}}
+		\caption{Archi eliminati al passo \ref{city-swap-case}}
 		\end{figure}
 		\column{0.33\textwidth}
 		\begin{figure}[h]
@@ -872,7 +889,7 @@ Consultando i file exel generati durante i benchmark si può valutare anche l’
 		\end{figure}
 	\end{columns}
 
-	In questo caso è un 3 opt limitato agli archi incidenti su questi nodi
+	Il passo \ref{city-swap-case} è un 3 opt limitato agli archi incidenti su questi nodi
 	}
 \framebreak
 
@@ -933,7 +950,7 @@ Consultando i file exel generati durante i benchmark si può valutare anche l’
 		\begin{figure}[h]
 		\centering
 		\includegraphics[height=0.25\textheight]
-		{../images/city-insert}	
+		{../images/city-swap}	
 		\caption{Archi eliminati al passo \ref{city-insert-case}}
 		\end{figure}
 		\column{0.33\textwidth}
@@ -945,7 +962,7 @@ Consultando i file exel generati durante i benchmark si può valutare anche l’
 		\end{figure}
 	\end{columns}
 
-	Per il passo \ref{city-insert-case} è un 2 opt limitato agli archi incidenti su questi nodi}
+	Il passo \ref{city-insert-case} è un 3 opt limitato agli archi incidenti su questi nodi}
 	
 \framebreak
 
@@ -958,6 +975,26 @@ Consultando i file exel generati durante i benchmark si può valutare anche l’
 
 \end{frame}
 
+\subsection{Osservazioni}
+\begin{frame}{\subsecname}
+
+	\begin{itemize}
+	
+		\item
+		Gli algoritmi Node-based Neighborhood City Swap e City Insert portano ad un ottimo locale
+
+		\item
+		Ad ogni iterazione si tratta di risolvere un problema di ottimizzazione. Quindi la procedura restituisce, nel caso di best improvement, la migliore soluzione dell’intorno
+
+		\item
+		Resta intrappolata negli ottimi locali
+
+		\item
+		La soluzione prodotta è determinata dalla scelta dell’intorno, dalla strategia di esplorazione e dal punto iniziale, che determina come risultato l’ottimo locale del bacino di attrazione su cui è posizionato il punto iniziale (se si segue una strategia best improvement)
+		
+	\end{itemize}
+
+\end{frame}
 
 %\begin{frame}[allowframebreaks]{Considerazioni sul problerma}
 %	Questo problema di ottimizzazione è NP-hard, poiché coincide con il TSP quando la capacità del veicolo è sufficientemente grande.
