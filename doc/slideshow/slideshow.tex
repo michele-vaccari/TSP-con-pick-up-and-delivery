@@ -32,6 +32,9 @@
 
 \usepackage{minted}
 \usepackage{multicol}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{graphicx}
 
 \begin{document}
 
@@ -402,6 +405,132 @@
 
 \end{frame}
 
+\subsection{O’Neil -- Hoffman enumerator}
+\begin{frame}[allowframebreaks, fragile]{\subsecname}
+
+	\begin{columns}[T,onlytextwidth]
+		\column{0.5\textwidth}
+		\begin{minted}[fontsize=\tiny, escapeinside=;;, tabsize=2]{c}
+function Initialize()
+	for all ;$i \in nodes$; do
+		;$arcs(i) \leftarrow ordered \{j | j \in nodes \setminus \{ 0 \} , j \neq i\}$;
+	;$tour \leftarrow (0)$;
+	;$best \leftarrow \emptyset$;
+
+function Enumerate()
+	;$n_1 \leftarrow last\,node\,in\,tour$;
+	for all ;$n_2 \in arcs(current)$; do
+		if ;$n_2 \in tour$;
+			continue
+		else if ;$cost(tour) + cost(n_1, n_2) \geq cost(best)$;
+			continue
+		else if ;$n_2 \in N_D$; and ;$pickup(n_2) \notin tour$;
+			continue
+
+	;$tour \leftarrow tour + next$;
+	if ;$|tour| \geq n - 1$; then
+		;$c \leftarrow cost(tour) + cost(n_2, 0)$;
+		if ;$best = \emptyset$; or ;$c < cost(best)$;
+			;$best \leftarrow tour + 0$;
+	else
+		Enumerate()
+
+	;$tour \leftarrow tour - next$;
+
+Initialize()
+Enumerate()
+		\end{minted}
+		\column{0.5\textwidth}
+		
+		{\scriptsize
+		\textbf{Descrizione dell’algoritmo} \\
+
+		L'algoritmo O’Neil -- Hoffman \cite{o2018exact} utilizza una funzione ricorsiva per cercare l'insieme ammissibile dei percorsi TSPPD, tenendo traccia della migliore soluzione scoperta in ogni punto dell'albero di ricerca.
+
+		L'algoritmo mantiene un nodo corrente e un percorso parziale che inizia con $0$ (nodo deposito).
+
+		Ogni ricorsione ripercorre gli archi a partire dal nodo corrente e aggiunge ogni arco ammissibile al tour individualmente prima della ricorsione. Se il costo aggiunto da un arco fa sì che il costo di un percorso parziale sia superiore a quello del tour migliore conosciuto, quell'arco viene ignorato e la sua sezione dell'albero di ricerca viene effettivamente esplorata. Se un percorso completo migliora la soluzione migliore conosciuta, viene memorizzato come nuovo ottimo candidato.
+
+		La chiave della ricerca efficace e della scoperta precoce di buone soluzioni è la tecnica di ordinamento degli archi. Durante l'inizializzazione, ad ogni nodo viene assegnato un vettore ordinato di nodi successivi. Come funzione di ordinamento utilizziamo il costo ascendente dell'arco, ma altri possono essere facilmente incorporati.
+
+		I nodi che non sono fattibili per il percorso parziale corrente vengono saltati.
+
+		}
+	
+	  \end{columns}
+
+\framebreak
+
+	\textbf{Codice} \\
+	\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/oneilHoffmanEnumerator.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/oneilHoffmanEnumerator.py}
+
+	\textbf{Esempio}
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]
+	{../images/graph-tsppd-with-two-customers}	
+	\caption{Istanza iniziale}
+	\end{figure}
+
+	\textbf{Esecuzione}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../images/graph-oneil-hoffman-solutions-tsppd-with-two-customers}	
+	\caption{Soluzioni esplorate}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/02 Performance dell'algoritmo O'Neil - Hoffman Enumerator}
+	\end{figure}
+
+\end{frame}
+
+
+\subsection{Confronto}
+\begin{frame}[allowframebreaks]{\subsecname}
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/03 Confronto tra Enumerator}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Soluzioni ammissibili esplorate} \\
+	I due algoritmi differiscono, oltre che per il tempo di esecuzione anche per il numero di soluzioni ammissibili esplorate
+
+	\begin{table}[h!]
+		\centering
+		\begin{adjustbox}{max width=\textwidth}
+			\begin{tabular}{c c c c c}
+				\toprule
+				\multirow{2}*{Numero di richieste} & \multicolumn{2}{c}{Brute Force Enumerator} & \multicolumn{2}{c}{O'Neil - Hoffman Enumerator}\\
+				& Durata (in secondi) & Soluzioni ammissibili esplorate & Durata (in secondi) & Soluzioni ammissibili esplorate \\
+				\midrule
+				2 & 0.0153248 & 6 & 0.0038664 & 3 \\
+				3 & 0.1156512 & 90 & 0.0322244 & 10 \\
+				4 & 2.909126001 & 2520 & 0.4625963 & 3 \\
+				5 & 264.0195523 & 113400 & 12.0428853 & 23 \\
+				6 & 31364.97748 & 7484400 & 114.5520907 & 115 \\
+				7 & N.A. & N.A. & 1289.389417 & 191 \\
+				8 & N.A. & N.A. & 10930.72769 & 24 \\
+				\bottomrule
+			\end{tabular}
+		\end{adjustbox}
+		\caption{Numero di soluzioni ammissibili esplorate dagli enumeratori}
+	\end{table}
+
+	L’enumerazione può essere una tecnica valida per risolvere piccoli TSPPD. Se guidata da alcune informazioni sul problema, l'enumerazione può essere in grado di scoprire rapidamente percorsi validi senza l'onere della formulazione del modello.
+
+\end{frame}
 
 
 %\begin{frame}[allowframebreaks]{Considerazioni sul problerma}
