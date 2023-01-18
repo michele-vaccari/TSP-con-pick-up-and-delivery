@@ -833,7 +833,7 @@ Sia dato il problema di ottimo associato al sistema di insiemi indipendenti $(E,
 
 \subsection{City swap}
 \begin{frame}[allowframebreaks, fragile]{\subsecname}
-	\textbf{Definizione del'algoritmo} \\
+	\textbf{Definizione dell'algoritmo} \\
 	\emph{City swap} è l’intorno ottenuto dallo scambio di 2 nodi (anzichè 2 archi) nel ciclo.
 
 	\textbf{Codice} \\
@@ -903,8 +903,8 @@ Sia dato il problema di ottimo associato al sistema di insiemi indipendenti $(E,
 \end{frame}
 
 \subsection{City insert}
-\begin{frame}[allowframebreaks, fragile]{\subsecname}
-	\textbf{Definizione del'algoritmo} \\
+\begin{frame}[allowframebreaks]{\subsecname}
+	\textbf{Definizione dell'algoritmo} \\
 	\emph{City insert} è l’intorno ottenuto dalla cancellazione di 1 nodo nel ciclo e dal suo reinserimento in un altro punto.
 
 	\textbf{Codice} \\
@@ -995,6 +995,217 @@ Sia dato il problema di ottimo associato al sistema di insiemi indipendenti $(E,
 	\end{itemize}
 
 \end{frame}
+
+
+
+%%%
+%%%   TODO
+%%%
+
+
+
+%%%
+%%%   MULTI START LOCAL SEARCH
+%%%
+\subsection{Multi Start Local Search}
+\begin{frame}[allowframebreaks]{\subsecname}
+
+	\begin{itemize}
+	
+		\item
+		Per sfuggire agli ottimi locali con strategie che restano nell’ambito della filosofia Local Search è possibile \emph{agire sul punto di arrivo uscendo dall’ottimo locale corrente} attraverso una mossa di \emph{diversificazione} che sposti il punto corrente, da cui riprendere la ricerca, nel bacino di attrazione di un altro ottimo locale
+
+		\item
+		Studi sperimentali hanno comprovato che per problemi di ottimizzazione combinatoria numerosi ottimi locali sono di bassa qualità
+
+		\item
+		Quindi è ragionevole cercare una strategia per continuare la ricerca anche dopo avere determinate un ottimo locale
+
+		\item
+		Ad esempio iterando il procedimento a partire da un altro punto iniziale
+
+		\item
+		\emph{Occorre una strategia per il restart} che sfrutti il fatto che statisticamente le buone soluzioni sono clusterizzate
+
+		\item
+		Quindi piuttosto che ripartire da un punto casuale è meglio perturbare l’ottimo locale corrente
+		
+	\end{itemize}
+
+\framebreak
+
+	\textbf{Definizione dell'algoritmo} \\
+	Itero più volte una ricerca locale, ogni volta partendo da un punto iniziale diverso
+
+	\textbf{Codice} \\
+	\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/multiStartLocalSearch.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/multiStartLocalSearch.py}
+
+	\textbf{Parametri utilizzati nell'algoritmo}
+	\begin{itemize}
+		\item
+		Iterazioni massime: 10
+		\item
+		Strategia per partire da un punto diverso: Greedy random (random restart / blind search)
+		\item
+		Local Search utilizzata: Large Neighborhood Search
+		\item
+		Criterio di stop: numero massimo di iterazioni raggiunto
+	\end{itemize}
+
+\framebreak
+
+	\textbf{Rischi}
+	\begin{itemize}
+		\item
+		Se due soluzioni iniziali appartengono allo stesso bacino di attrazione, la ricerca converge allo stesso ottimo locale
+		\item
+		La generazione totalmente random del punto iniziale non permette un controllo a priori
+	\end{itemize}
+
+\framebreak
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/14 Performance dell'algoritmo Multi Start Local Search}
+	\end{figure}
+
+\end{frame}
+
+%%%
+%%%   GREEDY RANDOMIZED ADAPTIVE SEARCH PROCEDURE
+%%%
+\subsection{Greedy Randomized Adaptive Search Procedure}
+\begin{frame}[allowframebreaks]{\subsecname}
+
+	\begin{itemize}
+	
+		\item
+		Per sfuggire agli ottimi locali con strategie che restano nell’ambito della filosofia Local Search è possibile agire \emph{moltiplicando i punti di partenza} e riapplicare una nuova LS a partire da ciascuno di essi
+
+		\item
+		È naturale pensare a un algoritmo greedy per la costruzione della soluzione ammissibile di partenza di una ricerca locale
+
+		\item
+		Con le sole greedy e ricerca locale possiamo già creare delle meta-euristiche che forniscono risultati migliori dei singoli algoritmi
+
+		\item
+		Le \emph{Meta-euristiche} sono metodi risolutivi che orchestrano una interazione tra procedure locali di miglioramento e strategie di livello superiore che permettono di sfuggire agli ottimi locali, e operare una esplorazione il più possibile robusta (indipendente dal punto di partenza) della regione ammissibile
+
+		\item
+		La Multi Start Local Search applica ripetutamente una ricerca locale LS a partire da punti iniziali diversi ottenuti in modo casuale. La generazione random dei punti iniziali ha i seguenti svantaggi:
+		\begin{itemize}
+			\item
+			nessuna garanzia sulla \emph{qualità} della \emph{soluzione iniziale}, il che richiede molto sforzo computazionale per la fase iniziale della ricerca per migliorare una soluzione mediocre
+			\item
+			spesso sono punti che appartengono al bacino di attrazione di ottimi locali (\emph{soluzione finale di ogni LS}) non molto buoni
+			\item
+			potenzialmente si converge più volte allo stesso ottimo locale (quando più punti iniziali appartengono allo stesso bacino di attrazione)
+		\end{itemize}
+
+		\item
+		La Greedy Randomized Adaptive Search Procedure è un’evoluzione della Multi Start Local Search. Intervenendo sulla generazione dei punti iniziali della Multi Start Local Search in modo tale da avere contemporaneamente le seguenti condizioni:
+		\begin{itemize}
+			\item
+			garantire una sufficiente diversità delle soluzioni prodotte all’iterare della procedura, tale che le soluzioni appartengano a bacini di attrazione di ottimi locali diversi, per non convergere più volte allo stesso ottimo locale
+			\item
+			spesso sono punti che appartengono al bacino di attrazione di ottimi locali (\emph{soluzione finale di ogni LS}) non molto buoni
+			\item
+			non perdere troppo nella qualità della soluzione iniziale per non investire troppo nella prima fase di ogni LS
+		\end{itemize}
+		
+	\end{itemize}
+
+\framebreak
+
+	\textbf{Definizione dell'algoritmo} \\
+	\textbf{\footnotesize Passo 1: Greedy \& Random} \\
+	Ad ogni passo della greedy seleziono a caso un elemento tra i migliori $k$ (dimensione della restricted candidate list) \\
+	\textbf{\footnotesize Passo 2: Greedy \& Random \& Local Search} \\
+	Applico una LS a ciascuna soluzione prodotta dalla greedy randomizzata, e ripetendo $k$ volte la procedura.
+
+	\textbf{Codice} \\
+	\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyRandomizedAdaptiveSearchProcedure.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyRandomizedAdaptiveSearchProcedure.py}
+
+\framebreak
+
+	\textbf{Parametri utilizzati nell'algoritmo}
+	\begin{itemize}
+		\item
+		Iterazioni massime: 10
+		\item
+		Dimensione della restricted candidate list: 20
+		\item
+		Strategia per partire da un punto diverso: scelgo a caso un elemento dalla restricted candidate list
+		\item
+		Local Search utilizzata: Large Neighborhood Search
+		\item
+		Criterio di stop: numero massimo di iterazioni raggiunto
+	\end{itemize}
+
+\framebreak
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/15 Performance dell'algoritmo Greedy Randomized Adaptive Search Procedure}
+	\end{figure}
+
+\framebreak
+
+	Un limite è dato dalla mancanza di memoria della procedura. Ogni restart è indipendente dai precedenti. \\
+	Guardando al profilo della funzione obiettivo su $F$, spesso si osserva che gli ottimi locali sono concentrati in una regione limitata (Proximate Optimality Principle). \\
+
+	\textbf{Definizione dell'algoritmo} \\
+	\textbf{\footnotesize Passo 3: Greedy \& Local Search \& Path Relinking} \\
+	Si raccolgono le soluzioni elite, e si opera una ricerca nello spazio ristretto alle soluzioni simili ad esse, secondo una tecnica, detta \emph{PATH RELINKING}, che esplora le soluzioni che si ottengono operando delle mosse a partire da una soluzione elite di partenza $p$ avvicinandosi a una soluzione elite target $t$
+
+	\textbf{Parth Relinking} \\
+	Partendo da una soluzione iniziale ($s_i$), con la ricerca locale si ottiene una soluzione target $s^*$. Opero in successione delle mosse di scambio di componenti per avvicinarmi alla soluzione target. In pratica:
+	\begin{itemize}
+		\item
+		Ad ogni passo, la mossa potenziale consiste nel modificare una componente di $s_i$ sostituendola con una del target $s^*$, per ciascuna delle componenti per cui $s_i$ e $s^*$ differiscono. Si procede selezionando la mossa più conveniente
+		\item
+		Il valore della funzione lungo il percorso non è monotono, ma spesso lungo il percorso si individuano soluzioni migliori sia di $s_i$ che di $s^*$
+	\end{itemize}
+
+	\textbf{Codice} \\
+	\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyRandomizedAdaptiveSearchProcedure.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyRandomizedAdaptiveSearchProcedure.py}
+
+\framebreak
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/16 Performance dell'algoritmo Greedy Randomized Adaptive Search Procedure con Path Relinking}
+	\end{figure}
+
+\end{frame}
+
+\subsection{Confronto}
+\begin{frame}[allowframebreaks]{\subsecname}
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/17a Confronto tra Greedy Randomized Adaptive Search Procedure}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Performance costo soluzione}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/17b Confronto tra Greedy Randomized Adaptive Search Procedure}
+	\end{figure}
+
+\end{frame}
+
 
 %\begin{frame}[allowframebreaks]{Considerazioni sul problerma}
 %	Questo problema di ottimizzazione è NP-hard, poiché coincide con il TSP quando la capacità del veicolo è sufficientemente grande.
