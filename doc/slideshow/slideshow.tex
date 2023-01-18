@@ -69,7 +69,8 @@
 \end{frame}
 
 \section{Modello matematico per S-TSPPD}
-\begin{frame}[allowframebreaks]{Notazione}
+\subsection{Notazione}
+\begin{frame}[allowframebreaks]{\subsecname}
 	\begin{itemize}
 		\item
 		Numero di richieste di prelievo e consegna: $n$
@@ -120,7 +121,8 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Modello matematico}
+\subsection{Modello matematico}
+\begin{frame}{\subsecname}
 
      	\[ min{ \sum_{(i,j) \in E} c_i x_{ij}} \]
 	tale che
@@ -154,7 +156,8 @@
 \end{frame}
 
 \section{Modello matematico per A-TSPPD}
-\begin{frame}[allowframebreaks]{Notazione}
+\subsection{Notazione}
+\begin{frame}[allowframebreaks]{\subsecname}
 	\begin{itemize}
 		\item
 		Numero di richieste di prelievo e consegna: $n$
@@ -206,7 +209,8 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Modello matematico}
+\subsection{Modello matematico}
+\begin{frame}{\subsecname}
 
      	\[ min{ \sum_{(i,j) \in A} c_i x_{ij}} \]
 	tale che
@@ -263,6 +267,86 @@
 
 \end{frame}
 
+\subsection{Soluzioni ammissibili per l'istanza d'esempio}
+\begin{frame}{\subsecname}
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.6\textwidth]
+		{../images/graph-all-solutions-tsppd-with-two-customers}	
+		\caption{Soluzioni ammissibili per l'istanza con 2 richieste di prelievo e consegna}
+	\end{figure}
+
+\end{frame}
+
+\section{Progetto}
+
+\subsection{Organizzazione}
+\begin{frame}[allowframebreaks]{\subsecname}
+
+	\textbf{Strumenti utilizzati}
+	\begin{itemize}
+		\item
+		Linguaggio Python 3.10 con le seguenti librerie:
+		\begin{itemize}
+			\item
+			Click
+			\item
+			Numpy
+			\item
+			Pytest
+			\item
+			Openpyxl
+			\item
+			Stopwatch
+		\end{itemize}
+		\item
+		Visual Studio Code come editor di testo
+		\item
+		Git per il versionamento del codice
+	\end{itemize}
+
+\framebreak
+
+	\textbf{Arichitettura} \\
+	L’applicazione è formata da 3 componenti:
+	\begin{itemize}
+		\item
+		\textbf{problem:} è il package che contiene le entità utilizzate per modellare il problema e un generatore di istanze casuali
+		\item
+		\textbf{solver:} è il package che contiene gli algoritmi implementati. Utilizza le entità definite nel package problem
+		\item
+		\textbf{cli:} è una Command Line Interface che consente di generare istanze del problema e testare i vari algoritmi
+	\end{itemize}
+
+	\textbf{Repository GitHub} \href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery}
+
+\end{frame}
+
+\subsection{Benchmark}
+\begin{frame}[allowframebreaks]{\subsecname}
+
+	\textbf{Automazione} \\
+	L'esecuzione e la raccolta dei dati durante i benchmark è stata automatizzata sempre utilizzando il linguaggio Python. Si è utilizzata la libreria Openpyxl in modo tale che i dati vengano collezionati in modo ordinato su fogli di calcolo.
+
+	\textbf{Esecuzione} \\
+	I benchmark sono stati eseguiti su un PC con:
+	\begin{itemize}
+		\item
+		\textbf{Sistema operativo:} Windows 10
+		\item
+		\textbf{Processore:} Intel Core i5-4570 CPU  3.20 GHz
+		\item
+		\textbf{RAM:} 16.0 GB
+	\end{itemize}
+	Il tempo di esecuzione complessivo dei benchmark è stato di circa $10$ giorni. Nel dettaglio: $346399.9\;secondi \rightarrow 5773.332\;minuti \rightarrow 240.5555\;ore \rightarrow 10.02315\;giorni$
+
+\end{frame}
+
+
+
+
+
 %\begin{frame}[allowframebreaks]{Considerazioni sul problerma}
 %	Questo problema di ottimizzazione è NP-hard, poiché coincide con il TSP quando la capacità del veicolo è sufficientemente grande.
 %	Anche il problema di verificare se esiste una soluzione ammissibile è un problema fortemente NP-hard, dato che il problema della 3-partizione è un caso particolare (si veda [10] per i dettagli).
@@ -271,7 +355,7 @@
 %\begin{frame}[allowframebreaks]{Interpretazione dei risultati del modello teorico nel problema reale}
 %\end{frame}
 
-\begin{frame}[allowframebreaks]{Bibliografia}
+\begin{frame}{Bibliografia}
 
 	\bibliography{bibliografia.bib}
 	\bibliographystyle{abbrv}
