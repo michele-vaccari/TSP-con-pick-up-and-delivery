@@ -35,6 +35,7 @@
 \usepackage{multirow}
 \usepackage{adjustbox}
 \usepackage{graphicx}
+\usepackage{caption}
 
 \begin{document}
 
@@ -539,6 +540,260 @@ Enumerate()
 \end{frame}
 
 %%%
+%%%   ALGORITMI EURISTICI COSTRUTTIVI
+%%%
+
+\section{Algoritmi euristici costruttivi}
+
+\subsection{Greedy}
+\begin{frame}[allowframebreaks]{\subsecname}
+
+Gli algoritmi greedy (voraci) determinano la soluzione attraverso una sequenza di decisioni parziali (localmente ottime), \emph{senza mai modificare le decisioni gia prese}. \\
+
+Sono di facile implementazione e notevole efficienza computazionale, ma, sia pure con alcune eccezioni di notevole rilievo (Matroidi), \emph{non garantiscono l'ottimalità, e a volte neppure l’ammissibilità della soluzione prodotta.}
+
+\textbf{Definizione di algoritmo greedy} \\
+Sia dato il problema di ottimo associato al sistema di insiemi indipendenti $(E,F)$ con funzione obiettivo $c$, si dice Greedy un algoritmo $A$ costruttivo iterativo che costruisce l'insieme $X \in F$, soluzione ammissibile del problema, partendo dall'insieme vuoto ed inserendovi ad ogni passo l’elemento di $E$ più “promettente” fra quelli che non violano l’indipendenza dell'insieme.
+
+\framebreak
+
+\textbf{Procedure Greedy  (template)}
+
+	\begin{itemize}
+	
+	\item
+	Soluzione iniziale $S_0 = \emptyset$
+	
+	\item
+	ad ogni step $k$
+	\begin{itemize}
+		\item
+		seleziona $e_k$ come l’elemento di $E$ più promettente (\emph{criterio best}) tra quelli non ancora esaminati, 
+		\item
+		valuta se la soluzione parziale $S_k \cup e_k \in F$ (\emph{test di indipendenza} o di ammissibilità delle soluzioni parziali)
+	\end{itemize}
+	
+	\item
+	termina avendo esaminato tutto $E$ o quando $S_k$ è massimale ($S_n := S_k$). 
+	
+	\end{itemize}
+	
+	Per costruzione $X=S_n$  è massimale. 	La complessità di “Greedy” dipende dalla complessità delle procedure \emph{Best} e \emph{Ind}, essendo predefinito il numero massimo di iterazioni ($n$). Per costruire un algoritmo greedy è sufficiente definire $E$ ed $F$, e specificare \emph{Best} e \emph{Ind} nell’ambito del template.
+
+	\textbf{Codice} \\
+	\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyTemplate.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyTemplate.py}
+\end{frame}
+
+\subsection{Greedy Pickup First}
+\begin{frame}[allowframebreaks]{\subsecname}
+	\textbf{Definizione del criterio best e test di ammissibilità}
+      \begin{description}[style=unboxed,leftmargin=0cm]
+        \item[criterio best] seleziono prima i nodi pick-up in ordine di richiesta, poi i nodi di delivery in ordine di richiesta
+	  \item[test di ammissibilità] verifico che le precedenze tra i nodi siano sempre rispettate (lo sono per costruzione)
+      \end{description}
+
+	\textbf{Codice} \\
+		\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyPickupFirst.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyPickupFirst.py}
+
+\framebreak
+
+\textbf{Esempio}
+\begin{columns}[T,onlytextwidth]
+	\column{0.5\textwidth}
+	\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.4\textheight]
+	{../images/graph-tsppd-with-two-customers}	
+	\caption{Istanza iniziale}
+	\end{figure}
+	\column{0.5\textwidth}
+	\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.4\textheight]
+	{../images/graph-greedy-pickup-first-solution-tsppd-with-two-customers}	
+	\caption{Soluzione generata}
+	\end{figure}
+\end{columns}
+
+\framebreak
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/04 Performance dell'algoritmo Greedy Pickup First}
+	\end{figure}
+
+\end{frame}
+
+\subsection{Greedy Request Order}
+\begin{frame}[allowframebreaks]{\subsecname}
+	\textbf{Definizione del criterio best e test di ammissibilità}
+      \begin{description}[style=unboxed,leftmargin=0cm]
+        \item[criterio best] seleziono prima i nodi pick-up e di delivery in ordine di richiesta
+	  \item[test di ammissibilità] verifico che le precedenze tra i nodi siano sempre rispettate (lo sono per costruzione)
+      \end{description}
+
+	\textbf{Codice} \\
+		\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyRequestOrder.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyRequestOrder.py}
+
+\framebreak
+
+\textbf{Esempio}
+\begin{columns}[T,onlytextwidth]
+	\column{0.5\textwidth}
+	\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.4\textheight]
+	{../images/graph-tsppd-with-two-customers}	
+	\caption{Istanza iniziale}
+	\end{figure}
+	\column{0.5\textwidth}
+	\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.4\textheight]
+	{../images/graph-greedy-request-order-solution-tsppd-with-two-customers}	
+	\caption{Soluzione generata}
+	\end{figure}
+\end{columns}
+
+\textbf{N.B.} In questo caso la soluzione generata è la soluzione ottima
+
+\framebreak
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/05 Performance dell'algoritmo Greedy Request Order}
+	\end{figure}
+
+\end{frame}
+
+\subsection{Greedy Nearest Neighbor}
+\begin{frame}[allowframebreaks]{\subsecname}
+	\textbf{Definizione del criterio best e test di ammissibilità}
+      \begin{description}[style=unboxed,leftmargin=0cm]
+        \item[criterio best] seleziono il nodo successivo più vicino rispetto al nodo corrente
+	  \item[test di ammissibilità] verifico che le precedenze tra i nodi siano sempre rispettate
+      \end{description}
+
+	\textbf{Codice} \\
+		\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyNearestNeighbor.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyNearestNeighbor.py}
+
+\framebreak
+
+\textbf{Esempio}
+\begin{columns}[T,onlytextwidth]
+	\column{0.5\textwidth}
+	\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.4\textheight]
+	{../images/graph-tsppd-with-two-customers}	
+	\caption{Istanza iniziale}
+	\end{figure}
+	\column{0.5\textwidth}
+	\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.4\textheight]
+	{../images/graph-greedy-nearest-neighbor-solution-tsppd-with-two-customers}	
+	\caption{Soluzione generata}
+	\end{figure}
+\end{columns}
+
+\framebreak
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/06 Performance dell'algoritmo Greedy Nearest Neighbor}
+	\end{figure}
+
+\end{frame}
+
+\subsection{Greedy Random}
+\begin{frame}[allowframebreaks]{\subsecname}
+	\textbf{Definizione del criterio best e test di ammissibilità}
+	\begin{description}[style=unboxed,leftmargin=0cm]
+		\item[criterio best] seleziono il nodo successivo a caso
+		\item[test di ammissibilità] verifico che le precedenze tra i nodi siano sempre rispettate
+	\end{description}
+
+	\textbf{Codice} \\
+		\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyRandom.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/greedyRandom.py}
+
+\framebreak
+
+	\textbf{Esempio}
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]
+	{../images/graph-tsppd-with-two-customers}	
+	\caption{Istanza iniziale}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Esecuzione}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.45\textwidth]
+	{../images/graph-all-solutions-with-cost-tsppd-with-two-customers}	
+	\caption{Possibili soluzioni generate}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/07 Performance dell'algoritmo Greedy Random}
+	\end{figure}
+
+\end{frame}
+
+\subsection{Confronto}
+\begin{frame}[allowframebreaks]{\subsecname}
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/08a Confronto tra Greedy}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Performance costo soluzione}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/08b Confronto tra Greedy}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Performance errore assoluto}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/08c Confronto tra Greedy}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Performance errore relativo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/08d Confronto tra Greedy}
+	\end{figure}
+
+\end{frame}
+
+%%%
 %%%   ALGORITMI EURISTICI DI MIGLIORAMENTO
 %%%
 
@@ -558,6 +813,151 @@ Esistono diverse tecniche secondo cui esplorare l’intorno. Per tutte le eurist
 Come soluzione di partenza viene utilizzata la migliore delle greedy (la soluzione che ha costo più basso). \\
 Consultando i file exel generati durante i benchmark si può valutare anche l’approccio \emph{first improvement} (si restituisce la prima soluzione che migliora l’ottimo corrente) e \emph{h-improvement} (si restituisce la migliore delle h soluzioni che migliorano l’ottimo corrente) senza dover rieseguire i benchmark, in quanto si è memorizzato l’andamento delle migliori soluzioni durante l’esplorazione dell’intorno.
 \end{frame}
+
+\subsection{City swap}
+\begin{frame}[allowframebreaks, fragile]{\subsecname}
+	\textbf{Definizione del'algoritmo} \\
+	\emph{City swap} è l’intorno ottenuto dallo scambio di 2 nodi (anzichè 2 archi) nel ciclo.
+
+	\textbf{Codice} \\
+	\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/citySwap.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/citySwap.py}
+
+	\textbf{Esempio}
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.35\textwidth]
+	{../images/graph-tsppd-with-two-customers}	
+	\caption{Istanza iniziale}
+	\end{figure}
+
+\framebreak
+	{\footnotesize
+	\textbf{Esecuzione} \\
+	La soluzione di partenza è la migliore delle greedy $\rightarrow s_0 = [0,1,3,2,4] \quad c(s_0) = 189$
+
+	\textbf{Passi dell’algoritmo:}
+	\begin{enumerate}
+		\item
+		Scambio il $3$ con il $2 \rightarrow s_1 = [0,1,2,3,4,0] \quad c(s_1) = 232$
+
+		\item
+		\label{city-swap-case}
+		Scambio il $2$ con il $3 \rightarrow s_2 = [0,1,2,3,4,0] \quad c(s_2) = 232$
+	\end{enumerate}
+	\textbf{N.B.} La tabu search mi impedirebbe il punto \ref{city-swap-case}
+
+	\captionsetup{justification=centering,font=footnotesize}
+
+      \begin{columns}[T,onlytextwidth]
+		\column{0.33\textwidth}
+		\begin{figure}[h]
+		\centering
+		\includegraphics[height=0.25\textheight]
+		{../images/graph-greedy-request-order-solution-tsppd-with-two-customers}	
+		\caption{Soluzione $s_0$}
+		\end{figure}
+		\column{0.33\textwidth}
+		\begin{figure}[h]
+		\centering
+		\includegraphics[height=0.25\textheight]
+		{../images/city-swap}	
+		\caption{Archi eliminati al passo \ref{city-insert-case}}
+		\end{figure}
+		\column{0.33\textwidth}
+		\begin{figure}[h]
+		\centering
+		\includegraphics[height=0.25\textheight]
+		{../images/graph-greedy-pickup-first-solution-tsppd-with-two-customers}	
+		\caption{Soluzione $s_1$}
+		\end{figure}
+	\end{columns}
+
+	In questo caso è un 3 opt limitato agli archi incidenti su questi nodi
+	}
+\framebreak
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/10 Performance dell'algoritmo City Swap}
+	\end{figure}
+
+\end{frame}
+
+\subsection{City insert}
+\begin{frame}[allowframebreaks, fragile]{\subsecname}
+	\textbf{Definizione del'algoritmo} \\
+	\emph{City insert} è l’intorno ottenuto dalla cancellazione di 1 nodo nel ciclo e dal suo reinserimento in un altro punto.
+
+	\textbf{Codice} \\
+	\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/citySwap.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/citySwap.py}
+
+	\textbf{Esempio}
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.35\textwidth]
+	{../images/graph-tsppd-with-two-customers}	
+	\caption{Istanza iniziale}
+	\end{figure}
+
+\framebreak
+	{\footnotesize
+	\textbf{Esecuzione} \\
+	La soluzione di partenza è la migliore delle greedy $\rightarrow s_0 = [0,1,3,2,4] \quad c(s_0) = 189$
+
+	\textbf{Passi dell’algoritmo:}
+	\begin{enumerate}
+		\item
+		\label{city-insert-case}
+		Cancello il $3$ e lo reinserisco dopo il $2 \rightarrow s_1 = [0,1,2,3,4] \quad c(s_1) = 232$
+		\item
+		Cancello il $3$ e lo reinserisco dopo il $4 \rightarrow s_2 = [0,1,2,4,3] \quad c(s_2) = 316$
+		\item
+		Cancello l’$1$ e lo reinserisco dopo il $2 \rightarrow s_3 = [0,2,1,3,4] \quad c(s_3) = 192$
+		\item
+		Cancello il $2$ e lo reiserisco dopo l’$1 \rightarrow s_4 = [0,1,2,3,4] \quad c(s_4) = 232$
+	\end{enumerate}
+
+	\captionsetup{justification=centering,font=footnotesize}
+
+      \begin{columns}[T,onlytextwidth]
+		\column{0.33\textwidth}
+		\begin{figure}[h]
+		\centering
+		\includegraphics[height=0.25\textheight]
+		{../images/graph-greedy-request-order-solution-tsppd-with-two-customers}	
+		\caption{Soluzione $s_0$}
+		\end{figure}
+		\column{0.33\textwidth}
+		\begin{figure}[h]
+		\centering
+		\includegraphics[height=0.25\textheight]
+		{../images/city-insert}	
+		\caption{Archi eliminati al passo \ref{city-insert-case}}
+		\end{figure}
+		\column{0.33\textwidth}
+		\begin{figure}[h]
+		\centering
+		\includegraphics[height=0.25\textheight]
+		{../images/graph-greedy-pickup-first-solution-tsppd-with-two-customers}	
+		\caption{Soluzione $s_1$}
+		\end{figure}
+	\end{columns}
+
+	Per il passo \ref{city-insert-case} è un 2 opt limitato agli archi incidenti su questi nodi}
+	
+\framebreak
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/09 Performance dell'algoritmo City Insert}
+	\end{figure}
+
+\end{frame}
+
 
 %\begin{frame}[allowframebreaks]{Considerazioni sul problerma}
 %	Questo problema di ottimizzazione è NP-hard, poiché coincide con il TSP quando la capacità del veicolo è sufficientemente grande.
