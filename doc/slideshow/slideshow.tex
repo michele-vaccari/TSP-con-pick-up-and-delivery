@@ -20,7 +20,7 @@
 
 \title{TSP con pick up and delivery}
 \subtitle{Progetto del corso di Ricerca Operativa}
-\date{13 dicembre 2022}
+\date{20 gennaio 2023}
 \author{Michele Vaccari - Matricola 121955}
 \institute{Università degli studi di Ferrara\\Corso di laurea magistrale in Ingegneria Informatica e dell'Automazione\\AA 2020-2021}
 
@@ -41,10 +41,10 @@
 
 \maketitle
 
-\begin{frame}[allowframebreaks]{Indice}
-  \setbeamertemplate{section in toc}[sections numbered]
-  \tableofcontents
-\end{frame}
+%\begin{frame}[allowframebreaks]{Indice}
+%  \setbeamertemplate{section in toc}[sections numbered]
+%  \tableofcontents
+%\end{frame}
 
 %%%
 %%%   INTRODUZIONE
@@ -1476,14 +1476,177 @@ end
 
 \end{frame}
 
+\section{Algoritmi euristici population based}
 
-%\begin{frame}[allowframebreaks]{Considerazioni sul problerma}
-%	Questo problema di ottimizzazione è NP-hard, poiché coincide con il TSP quando la capacità del veicolo è sufficientemente grande.
-%	Anche il problema di verificare se esiste una soluzione ammissibile è un problema fortemente NP-hard, dato che il problema della 3-partizione è un caso particolare (si veda [10] per i dettagli).
-%\end{frame}
+\subsection{Genetic Algorithm}
+\begin{frame}[allowframebreaks]{\subsecname}
 
-%\begin{frame}[allowframebreaks]{Interpretazione dei risultati del modello teorico nel problema reale}
-%\end{frame}
+	Algoritmi basati sulla teoria dell’evoluzione di Darwin
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.65\textheight]
+	{../images/block-diagram-genetic-algorithm}
+	\caption{Diagramma a blocchi del Genetic Algorithm}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Parametri utilizzati nell'algoritmo}
+	\begin{itemize}
+		\item
+		Numero elementi della popolazione iniziale: $\#\;nodi^2$ se $\leq 200$, altrimenti $200$
+		\item
+		Numero di iterazioni massime: $2 \times \#\;popolazione\;iniziale$ se $\leq 200$, altrimenti $200$
+		\item
+		Popolazione: generata utilizzando la \emph{Greedy Random}
+		\item
+		Codifica: lista in ordine di visita dei nodi
+		\item
+		Metodo di scelta dei genitori: \emph{Roulette Wheel}
+		\item
+		Crossover: custom (vedi slide \ref{crossover})
+		\item
+		Elitismo: il migliore individuo passa alla generazione successiva sovrascrivendo il peggiore
+		\item
+		Tasso di mutazione: 0.3
+		\item
+		Condizione di stop: numero iterazioni massime raggiunto
+	\end{itemize}
+
+	\textbf{Codice} \\
+	\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/geneticAlgorithm.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/geneticAlgorithm.py}
+
+\framebreak \label{crossover}
+	
+	\textbf{Crossover} \\
+ 	Un individuo è un tour. \\
+	Il normale cross over a 1 punto non funziona.
+
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../images/crossover-1a}
+	\end{figure}
+
+	I nodi 4, 9, sono visitati 2 volte in O1. \\
+	I nodi 1, 5, sono visitati 2 volte in O2.
+
+\framebreak
+
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../images/crossover-1b}
+	\end{figure}
+
+	I nodi 8, 9, sono visitati 2 volte in O3. \\
+	I nodi 1, 6, sono visitati 2 volte in O4.
+
+\framebreak
+
+	I nodi visitati 2 volte possono essere o di pickup o di delivery.
+
+	\textbf{Caso 1: tutti i nodi visitati 2 volte sono delivery (vedi O3)} \\
+	Si fa ereditare al figlio, dal secondo genitore, solo la posizione relativa dei nodi e non quella assoluta $\Rightarrow$ nella prima parte del figlio si mantiene la posizione assoluta dei geni del primo genitore, e solo quella relativa dell’altro genitore nella seconda parte. \\
+Ruolo asimmetrico dei genitori in ciascun figlio dovuto alla asimmetria nell’ereditare le parti della sequenza (nessun figlio eredita la posizione assoluta nella seconda parte della sequenza di alcun genitore, quell’informazione viene \emph{persa}).
+
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../images/crossover-1c}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Caso 2: tutti i nodi visistati 2 volte sono pickup (vedi O2)} \\
+	Nella prima parte del figlio si mantiene la posizione assoluta dei geni del primo genitore, nella seconda parte si cancellano i nodi duplicati e si inseriscono i nodi di pickup nella prima parte, rispettando l’ordine relativo.
+
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../images/crossover-1d}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Caso 3: i nodi visitati 2 volte sono sia pickup che delivery (vedi O1 e O4)} \\
+	Tratto i nodi di delivery come il \emph{Caso 1} mentre i nodi di pickup come il \emph{Caso 2}
+
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../images/crossover-1e}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/19 Performance dell'algoritmo Genetic Algorithm}
+	\end{figure}
+
+\end{frame}
+
+\subsection{Confronto}
+\begin{frame}[allowframebreaks]{\subsecname}
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/20a Confronto tra algoritmi}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Performance costo soluzione}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/20b Confronto tra algoritmi}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Performance errore assoluto}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/20c Confronto tra algoritmi}
+	\end{figure}
+
+\framebreak
+
+	\textbf{Performance errore relativo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/20d Confronto tra algoritmi}
+	\end{figure}
+
+\end{frame}
+
+\subsection{Conclusioni}
+\begin{frame}{\subsecname}
+
+	\begin{itemize}
+		\item
+		Per istanze del problema piccole (fino $n = 6$) è possibile utilizzare il metodo enumerativo avendo la certezza di trovare un ottimo globale
+		\item
+		Le procedure euristiche di tipo Greedy, producono velocemente i risultati ma in generale non trovano soluzioni ottimali
+		\item
+		Si può osservare che nella maggior parte dei casi si è sempre riusciti a migliorare la soluzione iniziale trovata tramite le 3 greedy utilizzando i diversi algoritmi di miglioramento
+		\item
+		Tra gli algoritmi di miglioramento implementati il più veloce è il Simulated Annealing mentre l'algoritmo che da la miglior soluzione (con le istanze testate) è il Tabu Search
+		\item
+		In generale non c’è dominanza tra le varie euristiche. Con un tuning accurato è possible migliorare ulteriormente i vari algoritmi sia in termini di soluzioni prodotte per una classe di istanze che in termini di velocità di esecuzione
+		\item
+		I vari algoritmi restituiscono soluzioni applicabili anche a contesti reali (è possible integrare il codice sviluppato in piattaforme/applicativi reali)
+	\end{itemize}
+
+\end{frame}
 
 \begin{frame}{Bibliografia}
 
