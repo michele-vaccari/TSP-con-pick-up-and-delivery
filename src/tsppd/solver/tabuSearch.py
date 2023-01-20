@@ -16,7 +16,7 @@ class TabuSearch(Subject):
         """
         self._instance = instance
         self._initial_solution = initial_solution
-        self._tabu_list = deque([], 20) # memorizzo le mosse proibite, se scambio due nodi (34 e 37) allora le mosse da memorizzare sono [34,37] e [37,34]
+        self._tabu_list = deque([], 20)
 
         self._next_solution_move = None
 
@@ -95,8 +95,7 @@ class TabuSearch(Subject):
         return best_solution
     
     def _stopping_condition(self, k, stall):
-        return k == 20 or stall == 20 # |R|=10
-        # return k == 3 or stall == 3 # |R|=30
+        return k == 20 or stall == 15
 
     def _tabu_search(self):
         # step 1
