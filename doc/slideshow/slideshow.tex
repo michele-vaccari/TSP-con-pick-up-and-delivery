@@ -797,7 +797,8 @@ Sia dato il problema di ottimo associato al sistema di insiemi indipendenti $(E,
 %%%   ALGORITMI EURISTICI DI MIGLIORAMENTO
 %%%
 
-\section{Algoritmi euristici di miglioramento}
+\section{Algoritmi euristici di miglioramento\newline
+\footnotesize{Local search neighborhood based}}
 
 \subsection{Local search neighborhood based}
 \begin{frame}[allowframebreaks]{\subsecname}
@@ -996,13 +997,282 @@ Sia dato il problema di ottimo associato al sistema di insiemi indipendenti $(E,
 
 \end{frame}
 
+\section{Algoritmi euristici di miglioramento\newline
+\footnotesize{Oltre la local search}}
 
+\subsection{Oltre la Local Search}
+\begin{frame}{\subsecname}
+	
+	Per uscire dal bacino di attrazione degli ottimi locali si devono accettare anche dei peggioramenti. \\
+	Per evitare di tornare su soluzioni già visitate e andare in loop è possibile:
+	\begin{itemize}
+		\item
+		Accettare peggioramenti con probabilità decrescente (Simulated Annealing)
+		\item
+		Memorizzare le $N$ ultime mosse eseguite (Tabu Search)
+		\item
+		Allargare la visione strettamente locale della local search
+	\end{itemize}
+
+\end{frame}
 
 %%%
-%%%   TODO
+%%%   SIMULATED ANNEALING
 %%%
+\subsection{Simulated Annealing}
+\begin{frame}[allowframebreaks, fragile]{\subsecname}
 
+	Annealing è il processo di raffreddamento secondo cui un solido raggiunge uno stato di energia minima che gli conferisce stabilità. \\
+	Il metodo converge all’ottimo globale con opportuni parametri.
 
+	\textbf{Descrizione dell'algoritmo} \\
+	Ad ogni iterazione una soluzione è scelta a caso dall’intorno della soluzione corrente: l’intorno non viene esplorato, bensì campionato. \\
+	Se la mossa applicata alla soluzione porta ad un miglioramento, viene sempre accettata. \\
+	Altrimenti, la decisione se spostarsi ad una soluzione peggiore dipende da una funzione casuale $e^{-\Delta / T}$ dove:
+	\begin{itemize}
+		\item
+		$\Delta = costo(sol_{ottenuta\,dal\,campionamento\,dell'intorno}) - costo(sol_{migliore\,corrente})$
+		\item
+		$T$ = parametro temperatura che diminuisce durante l'euristica
+	\end{itemize}
+
+\framebreak
+
+	\textbf{Parametri utilizzati nell'algoritmo}
+	\begin{itemize}
+		\item
+		Soluzione iniziale: la migliore soluzione ottenuta dale greedy
+		\item
+		Intorno utilizzato: city swap
+		\item
+		Temperatura iniziale: 900
+		\item
+		Tasso di raffreddamento: 0.92
+		\item
+		Temperatura finale: 0.1
+		\item
+		Iterazioni per temperatura: 5
+	\end{itemize}
+
+	\textbf{Codice} \\
+	\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/simulatedAnnealing.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/simulatedAnnealing.py}
+
+\framebreak
+
+	\textbf{Schema dell'algoritmo}
+\begin{minted}[fontsize=\scriptsize, escapeinside=;;, tabsize=2]{c}
+Simulated Annealing(problem) return a solution
+
+	;$T \leftarrow determine\,a\,starting\,temperature$;
+	;$current \leftarrow generate\,an\,initial\,solution$;
+	;$best \leftarrow current$;
+	while ;$(not\,yet\,frozen)$; do // finchè ;$T > T_{frozen}$;
+		while ;$not\,yet\,at\,equilibrium\,for\,this\,temperature$; do
+			;$next \leftarrow a\,random\,solution\,selected\,from\,Neighbor(current)$;
+			;$\Delta E \leftarrow f(next) - f(current)$;
+			if ;$\Delta E < 0 $; then ;$current \leftarrow next $; // miglioramento
+				if ;$f(next) < f(best)$; then ;$best \leftarrow next$; // aggiorno best
+			else
+				;$choose\,a\,random\,number\,r\,uniformly\,in\,[0,1]$;
+				if ;$r < e^{-\Delta E / T} $; then ;$current \leftarrow next $; // accetta peggioramento con prob ;$ e^{-\Delta E / T} > 0 $;
+		end while
+		;$lower\,the\,temperature\,T$; // equilibrio raggiunto per T
+	end while // processo di raffreddamento terminato
+	return best
+\end{minted}
+
+\framebreak
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/11 Performance dell'algoritmo Simulated Annealing}
+	\end{figure}
+\end{frame}
+
+%%%
+%%%   TABU SEARCH
+%%%
+\subsection{Tabu search}
+\begin{frame}[allowframebreaks, fragile]{\subsecname}
+
+	\textbf{Descrizione dell'algoritmo} \\
+	Ad ogni iterazione si seleziona la miglior soluzione dell’intorno, diversa dalla soluzione corrente, anche peggiore, così da poter sfuggire al bacino di attrazione dell’ottimo locale in cui mi trovo (mantenendo comunque in memoria le soluzioni migliori visitate). \\
+	Per evitare loop, e ritornare nello stesso bacino di attrazione utilizzo la \emph{Tabu List} di dimensione fissata. \\
+	L’algoritmo termina (stop condition) nel caso in cui il massimo numero di iterazioni sia stato raggiunto oppure sia stato raggiunto il massimo numero di passi senza miglioramenti (stalllo). \\
+	\textbf{Eccezioni:} il criterio di aspirazione permette di visitare soluzioni tabù con valore di funzione obiettivo migliore di quella dell’ottimo candidato (sono sicuramente soluzioni mai visitate). \\
+
+\framebreak
+	\textbf{Note} \\
+	Nella lista tabù memorizzo le mosse proibite. Se durante la ricerca scambio due nodi (29 e 39) allora le mosse da memorizzare sono [29,39] e [39,29].
+Prima di scegliere una nuova soluzione dovrò sempre controllare che i due nodi selezionati per lo scambio non siano già presenti nella Tabu List.
+
+	\textbf{Parametri utilizzati nell'algoritmo}
+	\begin{itemize}
+		\item
+		Soluzione iniziale: la migliore soluzione ottenuta dale greedy
+		\item
+		Intorno utilizzato: city swap
+		\item
+		Dimensione della tabu list: 20
+		\item
+		Numero massimo di iterazioni: 20
+		\item
+		Stallo massimo: 15
+	\end{itemize}
+
+	\textbf{Codice} \\
+	\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/tabuSearch.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/tabuSearch.py}
+
+\framebreak
+
+	\textbf{Schema dell'algoritmo}
+\begin{minted}[fontsize=\tiny, escapeinside=;;, tabsize=2]{c}
+// Step 1 (init)
+k = 1
+Build an initial solution ;$S_{1}$;
+;$S_{best} = S_{1}$;
+
+// Step 2 (explore neighborhood)
+;$At\,iter\,k$;
+	;$select\,S_{c} \neq S_{k} \in Neighborhood(S_{k})$; // possibily the best in ;$N(S_{k})$;
+	if ;$f(S_{c}) < f(S_{best})$; then	
+		;$S_{best} := S_{c} , S_{k+1} := S_{c}$;
+		goto Step 3 // aspiration criteria
+	if ;$the\,move\,that\,transforms\,S_{k} \rightarrow S_{c} \in tabu-list$; then
+		goto Step 2 	// skip ;$S_{c}$;
+	else // the move ;$S_k \leftarrow S_{c}\,is\,not\,forbidden$;
+	      ;$S_{k+1} := S_{c}$; // update current solution
+		;$insert\,the\,inverted\,move\,(S_{c} \rightarrow S_{k})\,in\,the\,tabu\,list$;
+		;$remove\,the\,last\,tabu\,move\,from\,the\,tabu-list$; // FIFO policy
+goto Step 3
+
+// Step 3 (stop or loop)
+k = k + 1
+if (stopping condition = true) then STOP
+	return(;$S_{best}$;)
+else
+	goto Step 2
+\end{minted}
+
+\framebreak
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/12 Performance dell'algoritmo Tabu Search}
+	\end{figure}
+\end{frame}
+
+%%%
+%%%   VERY LARGE SIZE NEIGHBORHOOD
+%%%
+\subsection{Very large size neighborhood}
+\begin{frame}[allowframebreaks, fragile]{\subsecname}
+
+	\begin{itemize}
+		\item
+		Per sfuggire agli ottimi locali con strategie che restano nell’ambito della filosofia Local Search è possibile utilizzare intorni di grandi dimensioni
+
+		\item
+		Maggiore è l’ampiezza dell’intorno e migliore la qualità dell’ottimo locale determinato dalla Local Search
+
+		\item
+		Esistono diverse strategie da adottare per l’esplorazione di intorni di grandi dimensioni, tipicamente si tratta di strategie non esatte
+
+		\item
+		Se la dimensione dell’intorno è vasta, non è possibile operare una esplorazione esaustiva esplicita
+
+		\item
+		Una possibilità è individuare un sottoinsieme dell’intorno in modo stocastico campionando casualmente le soluzioni nell’intorno secondo una legge probabilistica
+	\end{itemize}
+
+\framebreak
+
+	\begin{itemize}
+		\item
+		Le strategie di LNS appartengono alla famiglia delle VLNS e sono caratterizzate dal fatto che le soluzioni dell’intorno sono ottenute applicando una mossa di \emph{destroy} e una di \emph{repair}
+
+		\item
+		\emph{Destroy} distrugge una parte della soluzione corrente, scelta secondo una procedura non deterministica in modo che la parte modificata vari ad ogni iterazione
+
+		\item
+		La procedura di \emph{Repair} deve assegnare valore alle variabili “cancellate” in modo da ripristinare l’ammissibilità (e possibilmente nel modo migliore rispetto alla funzione obiettivo).
+
+		\item
+		L’intorno è implicitamente definito dall’insieme di tutte le soluzioni ottenibili applicando le procedure destroy \& repair
+
+		\item
+		Il tasso di distruzione (\% delle variabili rimesso in discussione) caratterizza l’intorno che generalmente è esponenziale rispetto alle dimensioni dell’istanza
+	\end{itemize}
+
+\framebreak
+
+	\begin{columns}[T,onlytextwidth]
+		\column{0.5\textwidth}
+\textbf{Template}
+\begin{minted}[fontsize=\scriptsize, escapeinside=;;, tabsize=2]{c}
+Procedure ;$Large\,Neighborhood\,Search$;
+;$x^{0}$; = GenerateInitialSolution
+k = 0
+;$x^{*}$; = ;$x^{k}$;
+repeat
+	;$x^{’}$; = rep (dest(;$x^{k}$;))
+	if accept(;$x^{’}$;, ;$x^{k}$;) then ;$x^{k}$; = ;$x^{’}$;, k = k + 1
+	if c(;$x^{k}$;) < c(;$x^{*}$;) then ;$x^{*}$; = ;$x^{k}$;
+until StopCondition
+return (;$x^{*}$;)
+end
+\end{minted}
+		\column{0.5\textwidth}
+		\textbf{Descrizione dell’algoritmo} \\
+		{\scriptsize
+		La procedura mantiene 3 variabili:
+		\begin{itemize}
+			\item
+			$x^{*}$ la migliore soluzione trovata (ottimo candidato)
+			\item
+			$x^{’}$ la nuova soluzione tentativo
+			\item
+			$x^{k}$ la soluzione corrente all’iterazione k
+		\end{itemize}
+		$dest(.)$ e $rep(.)$ sono gli operatori di destroy e repair. \\
+		La funzione $accept$ può essere implementata in vari modi, il più semplice secondo il criterio di improvement rispetto alla soluzione corrente (accetto solo se miglioro). \\
+		LNS non esplora l’intorno ma lo campiona, come nel \emph{Simulated Annealing}.
+
+		}
+	
+	  \end{columns}
+
+\framebreak
+
+	\textbf{Parametri utilizzati nell'algoritmo}
+	\begin{itemize}
+		\item
+		Soluzione iniziale: la migliore soluzione ottenuta dale greedy
+		\item
+		Operatore destroy: rimuovo dalla soluzione un numero di nodi pari al tasso di distruzione (non rimuovo il primo e l’ultimo nodo, è il nodo deposito)
+		\item
+		Tasso di distruzione: 0.3
+		\item
+		Operatore repair: procedura ``hand made``. Prima ricolloco i nodi di pickup e, ogni volta che reinserisco un nodo nella soluzione cerco di reinserirlo nel modo ottimale (in modo che il costo della soluzione sia minimo). Poi ricolloco i nodi di delivery e, ogni volta che reinserisco un nodo nella soluzione cerco di reinserirlo nel modo ottimale (in modo che il costo della soluzione sia minimo).
+		\item
+		Criterio di stop: ho raggiunto 2 miglioramenti oppure ho raggiunto 100 peggioramenti
+	\end{itemize}
+
+	\textbf{Codice} \\
+	\href{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/largeNeighborhoodSearch.py}{https://github.com/michele-vaccari/TSP-con-pick-up-and-delivery/blob/main/src/tsppd/solver/largeNeighborhoodSearch.py}
+
+\framebreak
+
+	\textbf{Performance nel tempo}
+      	\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]
+	{../charts/13 Performance dell'algoritmo Large Neighborhood Search}
+	\end{figure}
+
+\end{frame}
 
 %%%
 %%%   MULTI START LOCAL SEARCH
