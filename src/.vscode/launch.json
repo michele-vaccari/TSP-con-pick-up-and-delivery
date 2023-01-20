@@ -15,22 +15,22 @@
             //"args": ["generate-instance", "--requests", "30", "--output-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\30-request-weights-random.json"],
             //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\10-request-weights-random.json", "--solver-method", "enumerator"],
 
-            //"args": ["generate-instance", "--requests", "3", "--output-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\3-request-weights-random.json"],
+            //"args": ["generate-instance", "--requests", "2", "--weights-as-euclidean-distance", "--output-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\2-request.json"],
             //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\3-request-weights-random.json", "--solver-method", "enumerator"],
 
             //"args": ["generate-instance", "--requests", "2", "--output-instance-path", "${workspaceFolder}/instances/2-request-weights-random.json"],
             //"args": ["solve", "--input-instance-path", "${workspaceFolder}/instances/2-request-weights-random.json", "--solver-method", "brute-force-enumerator"],
 
-            //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\2-request-weights-random.json", "--solver-method", "brute-force-enumerator"],
-            //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\2-request-weights-random.json", "--solver-method", "oneil-hoffman-enumerator"],
+            //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\2-request.json", "--solver-method", "brute-force-enumerator"],
+            //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\2-request.json", "--solver-method", "oneil-hoffman-enumerator"],
             
             //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\2-request-weights-random.json", "--solver-method", "greedy-pickup-first"],
             //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\2-request-weights-random.json", "--solver-method", "greedy-request-order"],
-            //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\2-request-weights-random.json", "--solver-method", "greedy-nearest-neighbor"],
+            //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\2-request.json", "--solver-method", "greedy-nearest-neighbor"],
             //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\10-request-weights-random.json", "--solver-method", "greedy-random"],
 
-            //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\10-request-weights-random.json", "--solver-method", "city-swap"],
-            //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\30-request-weights-random.json", "--solver-method", "city-insert"],
+            //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\2-request.json", "--solver-method", "city-insert"],
+            "args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\2-request.json", "--solver-method", "city-swap"],
 
             //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\10-request-weights-random.json", "--solver-method", "simulated-annealing"],
             //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\10-request-weights-random.json", "--solver-method", "tabu-search"],
@@ -41,7 +41,7 @@
             //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\10-request-weights-random.json", "--solver-method", "greedy-randomized-adaptive-search-procedure-with-path-relinking"],
 
             //"args": ["solve", "--input-instance-path", "C:\\dev\\TSP-con-pick-up-and-delivery\\src\\instances\\5-request-weights-random.json", "--solver-method", "genetic-algorithm"],
-            "args": ["benchmark", "--output-excel-spreadsheets-dir-path", "${workspaceFolder}/benchmark"],
+            //"args": ["benchmark", "--output-excel-spreadsheets-dir-path", "${workspaceFolder}/benchmark"],
 
             "justMyCode": true
         }
