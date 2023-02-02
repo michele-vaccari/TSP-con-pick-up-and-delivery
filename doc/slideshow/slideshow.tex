@@ -152,7 +152,7 @@
 	
 		\item
 		\label{stsppd-c4}
-		$x(\delta(i)) \geq 4 \quad \forall S \subset V, \{0, n+i\} \subset S, \{0,i\} \subset V \setminus S$
+		$x(\delta(i)) \geq 4 \quad \forall S \subset V, \{0, n+i\} \subset S, \{0,i\} \subset V \setminus S$	% TODO: Fix this costraint
 
 		\item
 		$x_{ij} \in \{0,1\} \quad (i,j) \in E$
@@ -240,7 +240,7 @@
 	
 		\item
 		\label{atsppd-c4}
-		$x(\delta(i)) \geq 4 \quad \forall S \subset N, \{0, n+i\} \subset S, \{0,i\} \subset N \setminus S$
+		$x(\delta(i)) \geq 4 \quad \forall S \subset N, \{0, n+i\} \subset S, \{0,i\} \subset N \setminus S$ 	% TODO: Fix this costraint!!!
 
 		\item
 		$x_{ij} \in \{0,1\} \quad (i,j) \in A$
@@ -821,7 +821,7 @@ Sia dato il problema di ottimo associato al sistema di insiemi indipendenti $(E,
 
 	\begin{itemize}
 		\item
-		Esistono diverse tecniche secondo cui esplorare l’intorno. Per tutte le euristiche implementate si è scelto l’approccio \emph{best improvement}, ovvero si resolve in modo esatto il sottoproblema trovando la soluzione migliore nell’intorno.
+		Esistono diverse tecniche secondo cui esplorare l’intorno. Per tutte le euristiche implementate si è scelto l’approccio \emph{best improvement}, ovvero si risolve in modo esatto il sottoproblema trovando la soluzione migliore nell’intorno.
 
 		\item
 		Come soluzione di partenza viene utilizzata la migliore delle greedy (la soluzione che ha costo più basso).
@@ -1041,7 +1041,7 @@ Sia dato il problema di ottimo associato al sistema di insiemi indipendenti $(E,
 	\textbf{Parametri utilizzati nell'algoritmo}
 	\begin{itemize}
 		\item
-		Soluzione iniziale: la migliore soluzione ottenuta dale greedy
+		Soluzione iniziale: la migliore soluzione ottenuta dalle greedy
 		\item
 		Intorno utilizzato: city swap
 		\item
@@ -1110,7 +1110,7 @@ Prima di scegliere una nuova soluzione dovrò sempre controllare che i due nodi 
 	\textbf{Parametri utilizzati nell'algoritmo}
 	\begin{itemize}
 		\item
-		Soluzione iniziale: la migliore soluzione ottenuta dale greedy
+		Soluzione iniziale: la migliore soluzione ottenuta dalle greedy
 		\item
 		Intorno utilizzato: city swap
 		\item
@@ -1249,7 +1249,7 @@ end
 	\textbf{Parametri utilizzati nell'algoritmo}
 	\begin{itemize}
 		\item
-		Soluzione iniziale: la migliore soluzione ottenuta dale greedy
+		Soluzione iniziale: la migliore soluzione ottenuta dalle greedy
 		\item
 		Operatore destroy: rimuovo dalla soluzione un numero di nodi pari al tasso di distruzione (non rimuovo il primo e l’ultimo nodo, è il nodo deposito)
 		\item
